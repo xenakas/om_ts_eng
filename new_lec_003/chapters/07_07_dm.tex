@@ -1,0 +1,120 @@
+% !TEX root = ../om_ts_003.tex
+
+\begin{frame} % frame name
+	
+	\videotitle{Forecast comparison}
+	
+\end{frame}
+
+
+
+\begin{frame}{Forecast comparison: Plan}
+	\begin{itemize}[<+->]
+		\item Diebold-Mariano test
+		\item Test \alert{assumptions}
+		\item Test implementation
+	\end{itemize}
+	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Diebold-Mariano Test}
+	
+	\begin{itemize}[<+->]
+		\item Used to compare \alert{two} forecasts
+		\item Compares the forecasts for the specified \alert{forecast  horizon} $h$ 
+		\item Not optimal for \alert{model comparison}
+		\item Not suitable for \alert{pairwise} comparison of multiple forecasts
+	\end{itemize}
+	
+\end{frame}
+
+\begin{frame}
+	\frametitle{DM test assumptions}
+	
+	Consider difference of two \alert{ forecast losses}:
+	\[
+	d_t = e_{A,t}^2 - e_{B,t}^2, \quad e_{\text{Model},t} = \hat y_{\text{Model},t} - y_t
+	\]
+	\pause
+	Difference $d_t$ assumed to be \alert{stationary}:\pause
+	\[
+	\E(d_t) = \mu_d,
+	\]
+	\pause
+	\[
+	\Cov(d_t, d_{t-k}) = \gamma_k,
+	\]\pause
+	in particular,
+	\[
+	\Var(d_t) = \gamma_0
+	\]
+	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Test method}
+	Under the correct $H_0: \mu_d = 0$:
+	\[
+	DM = \frac{\bar d}{se(\bar d)} \to \cN(0;1),
+	\]
+	where $se^2(\bar d)$ is a consistent estimator for $\Var(\bar d)$
+	\pause
+	
+	In practice, we  evaluate the regression on a constant
+	\[
+	\hat d_t = \hat \beta_1,
+	\]
+	\pause
+	get $\hat\beta_1 = \bar d$ and use  \alert{robust standard errors},
+	\[
+	DM = \frac{\hat \beta_1}{se_{HAC}(\hat\beta_1)}.
+	\]
+\end{frame}
+
+\begin{frame}
+	\frametitle{How does robust estimators work?}
+	
+	Compare forecasts for $P$ steps ahead,
+	\[
+	\Var(\bar d) = \frac{\Var(d_1) + \Var(d_2) + \ldots + 2\Cov(d_1, d_2) + \ldots}{P^2}
+	\]\pause
+	From the stationarity of $d_t$, the variance of $\Var(\bar d)$ is
+	\[
+	\frac{P\gamma_0 + 2(P-1) \gamma_1 + 2(P-2)\gamma_2 +\ldots}{P^2}
+	\]\pause
+	The naive estimator for the variance of $\widehat\Var(\bar d)$ is
+	\[
+	\frac{ P\hat\gamma_0 + 2(P-1) \hat\gamma_1 + 2(P-2)\hat\gamma_2 +\ldots}{P^2}
+	\]
+\end{frame}
+
+
+
+\begin{frame}
+	\frametitle{Why compare forecasts?}
+	
+	\alert{Nuance}: comparison of forecasts and comparison of models are different tasks.
+	\pause
+	
+	\
+	
+	A model can win a lot \alert{in simplicity} and lose a little in predictions.
+	\pause
+	
+	\
+	
+	On a small sample \alert{loss of information} about the quality of forecasts on the training sample is significant.
+	\pause
+	
+
+\end{frame}
+
+
+\begin{frame}{Forecast comparison: Summary}
+	
+	\begin{itemize}[<+->]
+		\item The Diebold-Mariano test is suitable for comparing \alert{two} forecasts
+		\item Comparing forecasts and comparing models are \alert{slightly different} tasks
+	\end{itemize}
+\end{frame}

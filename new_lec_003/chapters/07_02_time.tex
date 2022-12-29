@@ -1,0 +1,169 @@
+% !TEX root = ../om_ts_003.tex
+
+\begin{frame} % frame name
+	
+	\videotitle{More predictors!}
+	
+	% https://www.youtube.com/watch?v=7CCBsshm-cQ
+	
+\end{frame}
+
+
+
+\begin{frame}{More predictors: Plan}
+	\begin{itemize}[<+->]
+		\item \alert{Trend} predictors
+		\item \alert{Seasonal} and \alert{holiday} dummy
+		\item \alert{Cosines} and \alert{sines} as predictors
+	\end{itemize}
+	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Let's use the time!}
+	
+	Let's take $t$ and $\sqrt{t}$ as an example
+	\pause
+	
+	\alert{Training} sample:
+	\[
+	\begin{pmatrix}
+		y_1 \\
+		y_2 \\
+		y_3 \\
+		\vdots \\
+		y_T
+	\end{pmatrix} \quad
+	\begin{pmatrix}
+		1 & \sqrt{1} \\
+		2 & \sqrt{2} \\
+		3 & \sqrt{3} \\
+		\vdots & \vdots \\
+		T & \sqrt{T} \\
+	\end{pmatrix}
+	\]
+	\pause
+	Sample for \alert{prediction}:
+	\[
+	\begin{pmatrix}
+		?
+	\end{pmatrix} \quad
+	\begin{pmatrix}
+		T+1 & \sqrt{T+1} \\
+	\end{pmatrix}
+	\]
+	
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Monotonic transformations of time}
+	
+	\begin{itemize}[<+->]
+		\item You can always \alert{try}!
+		\item For algorithms based on  \alert{decision trees} (random forest, gradient boosting)
+		additional monotonic time transformations are \alert{useless}
+		\item Be aware of the possible transformation \alert{of the original variable} (logarithm, Box-Cox transformation)
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Seasonal and holiday dummy}
+	
+	If there are \alert{not many} seasons, then it is reasonable to include a dummy for each season
+	
+	\pause
+	\alert{Training} sample for quarterly data:
+	\[
+	\begin{pmatrix}
+		y_1 \\
+		y_2 \\
+		y_3 \\
+		y_4 \\
+		y_5 \\
+		y_6 \\
+		\vdots \\
+		y_T
+	\end{pmatrix} \quad
+	\begin{pmatrix}
+		1 & 0 & 0 & 0 \\
+		0 & 1 & 0 & 0 \\
+		0 & 0 & 1 & 0 \\
+		0 & 0 & 0 & 1 \\
+		1 & 0 & 0 & 0 \\
+		0 & 1 & 0 & 0 \\
+		\vdots & \vdots & \vdots & \vdots \\
+		0 & 0 & 1 & 0 \\
+	\end{pmatrix}
+	\]
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{The dummy variable trap}
+	
+	
+	In \alert{regression}, be aware of the dummy variable \alert{trap}! \pause
+	
+	\begin{itemize}[<+->]
+		\item Either use a dummy for every season and a model without a constant,
+		\item or use a dummy for all seasons except one and a model with a constant
+	\end{itemize}
+	
+	\pause
+	Algorithms based on  \alert{decision trees} (random forest, gradient boosting) are
+	\alert{resistant} to the dummy variable trap
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Why do we need sines and cosines?}
+	
+	Adding all dummy variables works \alert{poorly}  if you need \alert{a lot} of them. \pause
+	
+	It is hardly worth adding 365 dummy variables for \alert{daily} data. \pause
+	
+	Sine and cosine will help to decrease the  \alert{number} of predictors!
+	
+	\pause
+	Two facts:
+	\begin{itemize}[<+->]
+		\item The period of $\sin t$ and $\cos t$ is $2\pi$
+		\item Multiplying the argument by $a$ reduces the \alert{period} by a factor of $a$
+	\end{itemize}
+	
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Fourier expansion}
+	
+	\begin{block}{Theorem}
+		Any continuous and differentiable function $f$ with period $2\pi$ can be represented as
+		\[
+		f(t) = c + \sum_{k=1}^{\infty} a_k \cos(kt) + b_k \sin (kt)
+		\]
+	\end{block}
+	
+	\pause
+	Practical recipe for daily data:
+	\begin{itemize}[<+->]
+		\item Add predictors $\cos\left(\frac{2\pi}{365} \cdot t\right)$ and $\sin\left(\frac{2\pi}{365} \cdot t\right) $
+		\item Add predictors $\cos\left(\frac{2\pi}{365} \cdot 2t\right)$ and $\sin\left(\frac{2\pi}{365} \cdot 2t\right) $
+		\item Add predictors $\cos\left(\frac{2\pi}{365} \cdot 3t\right)$ and $\sin\left(\frac{2\pi}{365} \cdot 3t\right) $
+		\item \ldots
+	\end{itemize}
+	
+	
+	
+	
+\end{frame}
+
+\begin{frame}{More predictors: Summary}
+	
+	\begin{itemize}[<+->]
+		\item Use \alert{time} as a predictor
+		\item Seasonality in predictors can be reflected using \alert{dummy variables} or
+		using \alert{cosine} and \alert{sine} functions
+	\end{itemize}
+\end{frame}

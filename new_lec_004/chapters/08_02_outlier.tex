@@ -1,0 +1,93 @@
+% !TEX root = ../om_ts_004.tex
+
+\begin{frame} % frame name
+	
+	\videotitle{Anomaly detection}
+	
+\end{frame}
+
+
+
+\begin{frame}{Anomaly detection: Plan}
+	\begin{itemize}[<+->]
+		\item Which observation is \alert{anomalous}?
+		\item Algorithms for \alert{detection and correction} of anomalies
+		\item \alert{Why} we look for anomalies?
+	\end{itemize}
+	
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Which observation is considered anomalous?}
+	
+	
+	\pause
+	Categorizing the observations into anomalous and ordinary one is \alert{subjective}.
+	
+	\pause
+	Informally, an anomalous observation \alert{doesn't fit} into the \alert{normal dynamics} of the series.
+	
+	\pause
+	What is considered a "normal dynamics"? What does "not fitting in" mean?
+	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Anomaly detection algorithm}
+	
+	\begin{itemize}
+		\onslide<1->{\item We take any algorithm that allows us to obtain   \alert{residuals}  $\hat u_t$ from the series}
+
+		\onslide<2->{Residuals is the difference between the actual value and the prediction within the training set}
+		
+
+		\onslide<3->{The $ARIMA$, $ETS$, \ldots models, as well as the $STL$ algorithm will do}
+		
+		
+		\onslide<4->{\item Estimate \alert{standard error} of the residuals}
+		
+		\onslide<5->{\item If the absolute value of the remainder is greater than \alert{three} standard errors, we consider the observation to be anomalous}
+		
+	\end{itemize}
+	
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Correction of anomalies}
+	
+	\pause
+	We subtract the remainder from the anomalous observation:
+	\[
+	y_t^{imp} = y_t - \hat u_t
+	\]
+	
+\end{frame}
+
+
+
+\begin{frame}
+	\frametitle{Why look for anomalous sightings?}
+	
+	\begin{itemize}[<+->]
+		\item Sometimes anomaly detection is the \alert{main goal}
+		\item Possibility to get \alert{more accurate} predictions for the corrected series
+		\item Possibility to get \alert{more accurate} predictions by using the corrected series as a predictor
+	\end{itemize}
+	
+	
+\end{frame}
+
+
+
+\begin{frame}{Anomaly detection: Summary}
+	
+	\begin{itemize}[<+->]
+		\item We take any algorithm (STL, ARIMA, ETS, \ldots) that extracts \alert{residual} from the series
+		\item There are \alert{a bunch} of special algorithms
+		\item If the remainder \alert{is large}, then we consider the observation to be anomalous
+		\item To correct the anomalous observation, we replace the its remainder with  \alert{zero}
+		\item \alert{Correction} of anomalous observations before forecasting can improve forecasts!
+	\end{itemize}
+\end{frame}

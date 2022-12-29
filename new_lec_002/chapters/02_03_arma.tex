@@ -1,0 +1,312 @@
+% !TEX root = ../om_ts_002.tex
+
+\begin{frame} % frame name
+	
+	\videotitle{ARMA equation}
+	
+\end{frame}
+
+
+
+\begin{frame}{ARMA equation: Plan}
+	\begin{itemize}[<+->]
+		\item Definition
+		\item Non-uniqueness of solutions
+	\end{itemize}
+		
+\end{frame}
+
+\begin{frame}
+	\frametitle{About the purpose of old problems}
+	
+	Goal: A simple equation for a wide variety of processes
+	
+	\pause
+	
+	Problems:
+	\begin{itemize}
+		\item \alert{Non-uniqueness of equation} for one process
+	\end{itemize}
+	\pause
+	
+	Requirement \alert{reversibility of the equation} \pause
+	\begin{itemize}
+		\item $MA(\infty)$ has \alert{infinite} number of parameters
+	\end{itemize}
+	
+	\pause
+	Let's try \alert{adding lags} $y_t$ to the equation!
+	
+	
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{New problem}
+	
+	\[
+	y_t - y_{t-1} = u_t - u_{t-1}, \text{ where } (u_t) \text{ is white noise}
+	\]
+	
+	\pause
+	Solutions:
+	\pause
+	\begin{itemize}[<+->]
+		\item $y_t = u_t$;
+		\item $y_t = u_t - 0.7$;
+		\item $y_t = u_t - 0.8$
+	\end{itemize}
+	
+	\pause
+	
+	\alert{Infinite} number of solutions
+	
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{ARMA equation}
+	
+	\begin{block}{Definition}
+		Equation
+		\[
+		y_t = c + \beta_1 y_{t-1} + \ldots + \beta_p y_{t-p} + u_t + \alpha_1 u_{t-1} + \ldots + \alpha_q u_{t-q},
+		\]
+		where $(u_t)$ is white noise, we'll call an $ARMA$  equation
+		
+	\end{block}
+
+	\alert{ARMA — Autoregression and Moving Average}	
+	
+	\pause
+	\begin{block}{Definition}
+		An equation of the form $P(L) y_t = c + Q(L) u_t$,
+		where $(u_t)$ is white noise, $P(L)$ and $Q(L)$ are lag polynomials with $P(0)=Q(0)=1$, we'll call  an $ARMA$ equation
+	\end{block}
+	
+\end{frame}
+
+\begin{frame}
+	\frametitle{ARMA equation: Summary}
+	
+	
+	An equation is not a process! \pause 
+	
+	Why?
+	
+
+	\begin{itemize}[<+->]
+		\item One equation has \alert{many solutions}
+		\item One process can be described by \alert{several equations}
+	\end{itemize}
+	
+\end{frame}
+
+
+
+\begin{frame} % frame name
+	
+	\videotitle{ARMA process}
+	
+\end{frame}
+
+
+
+\begin{frame}{ARMA process}
+	\begin{itemize}[<+->]
+		\item Equation irreducibility
+		\item Solution structure
+		\item ARMA process
+	\end{itemize}
+	
+\end{frame}
+
+
+
+\begin{frame}
+	\frametitle{Irreducibility of Equation}
+	
+	\begin{block}{Definition}
+		$ARMA$ an equation of the form $P(L) y_t = c + Q(L) u_t$ is called \alert{irreducible},
+		if the polynomials $P(L)$ and $Q(L)$ do not have common roots
+	\end{block}
+	
+	\pause
+	Reducible Equation:
+	\[
+	y_t - y_{t-1} = u_t - u_{t-1} \text{ or } (1- L)y_t = (1 - L)u_t
+	\]
+	\pause
+	Irreducible equation:
+	\[
+	y_t - y_{t-1} = u_t - 0.5u_{t-1} \text{ or } (1- L)y_t = (1 - 0.5L)u_t
+	\]
+	
+\end{frame}
+
+
+
+
+
+\begin{frame}
+	\frametitle{Initial Conditions}
+	Irreducible $ARMA$ equation:
+	\[
+	y_t = 0.5 y_{t-1} + u_t, \text{ where } (u_t) \text{ is white noise}
+	\]
+	
+	\pause
+	Let's try different initial conditions:
+	\pause
+	\begin{itemize}
+		\item $\alert{y_0=0}$
+	\end{itemize}
+	\pause
+	$y_1 = u_1$, $y_2 = u_2 + 0.5 u_1$, $y_3 = u_3 + 0.5 u_2 + 0.25 u_1$, \ldots
+	\pause \pause
+	\begin{itemize}
+		\item $\alert{y_0=2u_1}$
+	\end{itemize}
+	\pause
+	$y_1 = 2u_1$, $y_2 = u_2 + u_1$, $y_3 = u_3 + 0.5 u_2 + 0.5 u_1$, \ldots
+	\pause
+	
+	The initial conditions also determine the past $y_t$!
+	
+\end{frame}
+
+\begin{frame}
+	\frametitle{ARMA Solutions}
+	
+	\begin{block}{Theorem I}
+		Any $ARMA$ equation with at least one $y_t$ lag has an infinite number of solutions
+	\end{block}
+	
+	\pause
+	\begin{block}{Theorem II}
+		In order to obtain a unique solution of an $ARMA$  equation of the form $P(L)y_t = c + Q(L) u_t$,
+		it suffices to specify the initial conditions in an amount equal to the power of $P(L)$
+	\end{block}
+	\pause
+	\[
+	y_t = 0.6 y_{t-1} + 0.08y_{t-2} + u_t \pause \text{ and } \alert{y_0 = u_0, y_1 = u_0 + 4}
+	\]
+	
+\end{frame}
+
+\begin{frame}
+	\frametitle{And how many stationary solutions?}
+	
+	\begin{block}{Correct theorem}
+		If an $ARMA$ equation $P(L) y_t = c + Q(L) u_t$ is irreducible, then it
+		\begin{itemize}
+			\item has exactly one stationary solution if the lag polynomial $P(\ell)$ has all roots $\abs{\ell_i} \neq 1$;
+			\item has no stationary solutions if the lag polynomial $P(\ell)$ has a root with $\abs{\ell_i} = 1$
+		\end{itemize}
+	\end{block}
+	
+	\pause
+	\begin{itemize}
+		\item $y_t = 0.5 y_{t-1} + u_t, P(L) = 1 - 0.5L, \ell_1 = 2$: \pause one stationary solution;
+	\end{itemize}
+	\pause
+	\begin{itemize}
+		\item $y_t = y_{t-1} + u_t, P(L) = 1 - L, \ell_1 = 1$: no stationary solutions
+	\end{itemize}
+	
+\end{frame}
+
+
+
+\begin{frame}
+	\frametitle{AR process}
+	
+	\begin{block}{Definition}
+		$AR(p)$ process with equation
+		\[
+		y_t = c + \beta_1 y_{t-1} + \ldots + \beta_p y_{t-p} + u_t,
+		\]
+		where $(u_t)$ is white noise and $\beta_p \neq 0$, is the
+		solution of this equation in  the form of $MA(\infty)$ with respect to $(u_t)$
+	\end{block}
+	
+	\pause
+	\begin{block}{Definition with lags}
+		$AR(p)$ process with equation
+		\[
+		P(L)y_t = c + u_t,
+		\]
+		where $(u_t)$ is white noise, $P(L)$ has power $p$ and $P(0)=1$, is the 
+		solution of this equation in the form of $MA(\infty)$ with respect to~$(u_t)$
+	\end{block}
+	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Definitions by different authors}
+	
+
+
+	In our definition of $AR(p)$, the process is necessarily \alert{stationary}.
+	
+	\pause
+	Some  authors \alert{do not include}  the requirement of stationarity in the definition of $AR(p)$.
+	
+\end{frame}
+
+\begin{frame}
+	\frametitle{ARMA process}
+	
+	\begin{block}{Definition}
+		$ARMA(p, q)$ process with equation
+		\[
+		y_t = c + \beta_1 y_{t-1} + \ldots + \beta_p y_{t-p} + u_t + \alpha_1 u_{t-1} + \ldots + \alpha_q u_{t-q},
+		\]
+		where $(u_t)$ is white noise, $\beta_p \neq 0$, $\alpha_q \neq 0$ and the equation is irreducible, is the
+		solution of this equation in the form of $MA(\infty)$ with respect to $(u_t)$
+	\end{block}
+	
+	\pause
+	\begin{block}{Definition with lags}
+		$ARMA(p,q)$ process with equation
+		\[
+		P(L)y_t = c + Q(L)u_t,
+		\]
+		where $(u_t)$ is white noise, $P(L)$ and $Q(L)$ have powers $p$ and $q$, respectively, are irreducible and $P(0)=Q(0)=1$, is 	the solution of this equation in  the form $MA(\infty)$ with respect to $(u_t)$
+	\end{block}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{What about non-uniqueness?}
+	
+	The same $ARMA(p, q)$ process $(y_t)$ can be described by different equations!
+	\pause
+	
+	\begin{block}{Reversibility}
+		If the series $(y_t)$ is an $ARMA(p, q)$ process with the equation $P(L) y_t = c + Q(L) u_t$,
+		then this equation will be unique if the $MA$ part satisfies the reversibility condition.
+	\end{block}
+	
+	\pause
+	Condition for $ARMA$ reversibility of the equation:
+	\begin{itemize}
+		\item the characteristic polynomial $\phi_{MA}(\lambda)$ has all roots $\abs{\lambda_i} <1$;
+		\item the lag polynomial $Q(L)$ has all roots $\abs{\ell_i} >1$
+	\end{itemize}
+	
+	
+\end{frame}
+
+
+
+\begin{frame}
+	\frametitle{ARMA process: Summary}
+	\begin{itemize}[<+->]
+		\item The process is stationary by \alert{definition}
+		\item $AR$ and $MA$ processes are \alert{special cases} of the $ARMA$ process
+		\item Theoretical $ACF$ and $PACF$ decrease \alert{exponentially}
+		\item The reversibility condition guarantees \alert{uniqueness}
+		\item An irreducible equation either has a \alert{unique} stationary solution  or it does not exist
+	\end{itemize}
+\end{frame}

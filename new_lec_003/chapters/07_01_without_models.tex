@@ -1,0 +1,179 @@
+% !TEX root = ../om_ts_003.tex
+
+\begin{frame} % frame name
+	
+	\videotitle{Forecasting without a model}
+	
+\end{frame}
+
+
+
+\begin{frame}{Forecasting without a model: Plan}
+	\begin{itemize}[<+->]
+		\item Converting time series into \alert{cross-sectional} data
+		\item Add \alert{lags} to the $y_t$ variable
+		\item Use \alert{aggregation} and \alert{sliding} or \alert{growing} windows
+	\end{itemize}
+	
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Forecasting}
+	
+	\begin{block}{Adding predictors}
+		There are algorithms that, based on the training sample of the dependent variable $y$,
+		learning matrix of predictors $X$, and new predictors $X_F$ build a forecast $\hat y_F$
+	\end{block}
+	
+	\pause
+	
+	\alert{Random Forest}, \alert{gradient boosting}\ldots{ }\pause and even \alert{linear regression}!
+	
+	\pause
+	
+	You can \alert{average} ARIMA/ETS forecasts and forecasts from other algorithms
+	
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{How to create predictors?}
+	
+	From one column $y$ you can create an entire matrix of  predictors~$X$!
+	
+	\begin{itemize}[<+->]
+		\item Use \alert{lags} $y_{t-k}$
+		\item Use \alert{functions of lags} as predictors
+	\end{itemize}
+	
+	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Using $y$ lags}
+	
+	For example, let's take two lags, $Ly_t$ and $L^2 y_t$
+	\pause
+	
+	\alert{Training} sample:
+	\[
+	\begin{pmatrix}
+		y_3 \\
+		y_4 \\
+		y_5 \\
+		\vdots \\
+		y_T
+	\end{pmatrix} \quad
+	\begin{pmatrix}
+		y_1 & y_2 \\
+		y_2 & y_3 \\
+		y_3 & y_4 \\
+		\vdots & \vdots \\
+		y_{T-2} & y_{T-1} \\
+	\end{pmatrix}
+	\]
+	\pause
+	Sample for \alert{prediction}:
+	\[
+	\begin{pmatrix}
+		?
+	\end{pmatrix} \quad
+	\begin{pmatrix}
+		y_{T-1} & y_{T} \\
+	\end{pmatrix}
+	\]
+	
+\end{frame}
+
+\begin{frame}
+	\frametitle{How many lags to add?}
+	
+	\begin{itemize}[<+->]
+		\item Each added lag \alert{reduces} the training sample!
+		\item It is reasonable to add \alert{closest lags} $Ly_t$, $L^2y_t$
+		\item For seasonal data it is reasonable to add a \alert{seasonal lag} $L^{12} y_t$
+		\item Some algorithms   are  \alert{sensitive to extra predictors} (e.g. regression)
+		\item Some algorithms  are \alert{insensitive to extra predictors} (e.g. a random forest)
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Functions of lags}
+	When predicting $y_{t}$ we can use any function of \alert{previous} $y_{t-1}$, $y_{t-2}$, \ldots lags
+	
+	\pause
+	
+	For example:
+	\begin{itemize}[<+->]
+		\item $\Delta y_{t-1} = y_{t-1} - y_{t-2}$;
+		\item $\max\{ y_{t-1}, y_{t-2}, y_{t-3} \}$;
+		\item $\min\{ y_{t-1}, y_{t-2}, \ldots, y_1\}$.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Typical Predictor}
+	
+	\begin{itemize}[<+->]
+		\item \alert{Aggregate function}:
+		
+		Min, Max, Mean, Median, Range, Sample Variance, Sample Standard Deviation, \ldots
+		
+		\item 		
+		\alert{Sliding Window}: The aggregate function can be applied to, say, the previous three values $y_{t-1}$, $y_{t-2}$, $y_{t-3}$.
+		
+		\item 		
+		\alert{Growing Window}: The aggregate function can be applied to all previous values $y_{t-1}$, $y_{t-2}$, \ldots, $y_{1}$.
+	\end{itemize}
+	
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Using $y$ lag functions}
+	
+	For example, let's take the maximum as a sliding window and the minimum as a growing window
+	\pause
+	
+	\alert{Training} sample:
+	\[
+	\begin{pmatrix}
+		y_3 \\
+		y_4 \\
+		y_5 \\
+		\vdots \\
+		y_T
+	\end{pmatrix} \quad
+	\begin{pmatrix}
+		\max\{y_1, y_2\} & \min\{y_1, y_2\} \\
+		\max\{y_2, y_3\} & \min\{y_1, y_2, y_3\} \\
+		\max\{y_3, y_4\} & \min\{y_1, \ldots, y_4\} \\
+		\vdots & \vdots \\
+		\max\{y_{T-2}, y_{T-1}\} & \min\{y_1, \ldots, y_{T-1}\} \\
+	\end{pmatrix}
+	\]
+	\pause
+	Sample for \alert{prediction}:
+	\[
+	\begin{pmatrix}
+		?
+	\end{pmatrix} \quad
+	\begin{pmatrix}
+		\max\{y_{T-1}, y_{T}\} & \min\{y_1, \ldots, y_{T}\} \\
+	\end{pmatrix}
+	\]
+	
+\end{frame}
+
+
+
+
+\begin{frame}{Forecasting without a model: Summary}
+	
+	\begin{itemize}[<+->]
+		\item Remember about \alert{random forest}, \alert{gradient boosting} and even \alert{regular regression}
+		\item Add \alert{dependent variable lags}
+		\item Add \alert{aggregation functions} as a sliding and growing window
+	\end{itemize}
+\end{frame}

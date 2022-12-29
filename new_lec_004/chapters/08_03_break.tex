@@ -1,0 +1,140 @@
+% !TEX root = ../om_ts_004.tex
+
+\begin{frame} % frame name
+	
+	\videotitle{Structural break detection}
+	
+\end{frame}
+
+
+
+\begin{frame}{Structural break detection: Plan}
+	\begin{itemize}[<+->]
+		\item What is \alert{structural break}?
+		\item Detecting \alert{single} structural break
+		\item Detecting \alert{several} structural breaks
+	\end{itemize}
+	
+\end{frame}
+
+\begin{frame}
+	\frametitle{What is considered a structural break?}
+	
+	\pause
+	Division of the time series into periods between structural break points is \alert{subjective}.
+	
+	\pause
+	Informally, at the moment of structural break  the behavior (pattern) of the series \alert{changes}.
+	
+	\pause
+	What is considered by "changing"?
+	
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{The idea of detecting a single break}
+	
+	\begin{itemize}
+		\onslide<1->{\item We start with a penalty function that measures \alert{heterogeneity}  in 
+			observations $y_a$, $y_{a+1}$, \ldots, $y_b$,
+			\[
+			C(y_{a:b})
+			\]
+		}
+		\onslide<2->{\item Then we iterate over all moments  $\tau \in [1;T-1]$ and find the minimum of the value
+			\[
+			C(y_{1:\tau}) + C(y_{\tau+1 : T})
+			\]}
+		\onslide<3->{We suspect that the break could be  at this point $\tau^*$}
+		
+		\onslide<4->{\item We assume that the break was in $\tau^*$ if
+			the total heterogeneity of the the two fragments is  \alert{significantly}  less than the heterogeneity of the entire series,
+			\[
+			C(y_{1:\tau^*}) + C(y_{\tau^*+1 : T}) < C(y_{1:T}) - \beta
+			\]
+		}
+	\end{itemize}
+	
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Choice of penalty function $C$}
+	
+	\begin{itemize}
+		\onslide<1->{\item There are \alert{many} options}
+		\onslide<2->{\item Often we can take the log-likelihood function \alert{of some} model,
+			multiplied by minus two:
+			\[
+			C(y_{a:b}) = -2 \max_{\theta} \ln L(y_a, \ldots, y_b \mid \theta )
+			\]
+		}
+		\onslide<3->{\alert{The simplest model}: $y_t \sim \cN(\mu, \sigma^2)$ and are independent}
+		\onslide<4->{\item The choice of the $C$ function is related to the choice of $\beta$ when checking for a break at the assumed break point $\tau^*$,
+			\[
+			C(y_{1:\tau^*}) + C(y_{\tau^*+1 : T}) < C(y_{1:T}) - \beta
+			\]
+		}
+		\onslide<5->{The more parameters in $\theta$, the larger $\beta$ should be}
+	\end{itemize}
+	
+\end{frame}
+
+\begin{frame}
+	\frametitle{How to detect many structural breaks?}
+	
+	\begin{itemize}
+		\onslide<1->{\item Run algorithm to detect \alert{single} structural break}
+		
+		\onslide<2->{If the algorithm did not detect a break, then we consider that there are no structural break in the series}
+		
+		\onslide<3->{\item Else  divide the original series into \alert{two sections} according to the detected structural break}
+		
+		\onslide<4->{\item Then  \alert{recursively} run the detection algorithm for one structural break to \alert{each} of the detected subsections }
+	\end{itemize}
+	
+	
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Transformations before the search}
+	
+	The structural break can be  \alert{easier} to detect on the transformed series
+	
+	\begin{itemize}
+		\onslide<1->{\item \alert{Simple transformations } of the initial series: logarithm, Box-Cox transformation, transition to differences}
+		
+		\onslide<2->{\item Decomposition of the series: $STL$, $ETS$, \ldots }
+		
+	\end{itemize}
+	
+	
+\end{frame}
+
+
+
+\begin{frame}
+	\frametitle{Why look for structural breaks?}
+	
+	\begin{itemize}[<+->]
+		\item Sometimes structural break detection is the \alert{main goal}
+		\item Ability to get \alert{more accurate} forecasts if a dummy variable (equal to one after the break) is added to the set of predictors
+		\item Possibility to get \alert{more accurate} forecasts of other series if
+		corrected for the structural break series is used as the predictor
+	\end{itemize}
+	
+	
+\end{frame}
+
+
+\begin{frame}{Structural break detection: Summary}
+	
+	\begin{itemize}[<+->]
+		\item There are \alert{many} specialized  algorithms
+		\item Does the \alert{sum of inhomogeneities} on the left and right sections to the possible break strongly differ from the heterogeneity of the entire series?
+		\item To find \alert{several} breaks, it is enough to search for the next break in the already identified subsections of the series
+		\item $STL$ decomposition allows you to search for \alert{breaks in the components} of a series
+	\end{itemize}
+\end{frame}

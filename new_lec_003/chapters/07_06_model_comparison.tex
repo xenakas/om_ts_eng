@@ -1,0 +1,624 @@
+% !TEX root = ../om_ts_003.tex
+
+\begin{frame} % frame name
+	
+	\videotitle{Model Quality}
+	
+\end{frame}
+
+
+
+\begin{frame}{Model Quality: Plan}
+	\begin{itemize}[<+->]
+		\item Scale-based metrics
+		\item Percentage-based metrics
+%		\item Akaike Criterion.
+	\end{itemize}
+	
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Remember the goal!}
+	
+	
+	
+	If the goal of building a model is forecasts one step ahead,
+	then it is reasonable to compare models in predictive strength one step ahead.
+	
+	\pause
+	\
+	
+	If the goal is to detect  the moment of model discord,
+	then it is reasonable to look for a model that gives the minimum error when there is no discord,
+	and the maximum error when there is discord.
+	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Notations for brevity}
+	
+	For the forecast, it is important \alert{when} it is built, and for \alert{how many steps ahead}:
+	\[
+	\hat y_{t+h \mid t}
+	\]
+	
+	\pause
+	Sometimes for \alert{short}:
+	\[
+	\hat y_{t+h}
+	\]
+	\pause
+	Problem:
+	\[
+	\hat y_{(t+1) + 2} \neq \hat y_{(t+2) + 1}
+	\]
+	
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Anti-quality metrics}
+	
+	\alert{Forecast error}: $e_{t+h} = y_{t+h} - \hat y_{t+h}$
+	
+	\pause
+	\alert{Mean Absolute Error}:
+	\[
+	MAE = \frac{\abs {e_{T+1}} + \abs{e_{T+2}}+ \ldots + \abs{e_{T+H}} }{H}
+	\]
+	\pause
+	\alert{Root Mean Squared Error}:
+	\[
+	RMSE = \sqrt{ \frac{e^2_{T+1} + e^2_{T+2}+ \ldots + e^2_{T+H} }{H} }
+	\]
+	
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Scaling}
+	
+	Convert error $e_{t+h} = y_{t+h} - \hat y_{t+h}$ \alert{to percentage} $p_t= e_t/y_t \cdot 100$ or
+	$p^s_t = e_t/(0.5 y_t + 0.5\hat y_t) \cdot 100$
+	
+	\pause
+	\alert{Mean Absolute Percentage Error}:
+	\[
+	MAPE = \frac{\abs {p_{T+1}} + \abs{p_{T+2}}+ \ldots + \abs{p_{T+H}} }{H}
+	\]
+	\pause
+	\alert{Symmetric Mean Absolute Percentage Error}:
+	\[
+	sMAPE = \frac{\abs {p^s_{T+1}} + \abs{p^s_{T+2}}+ \ldots + \abs{p^s_{T+H}} }{H} 
+	\]
+	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Automatically compare with naive model}
+	
+	\alert{Naive}: $\hat y^{naive}_t = y_{t-1}$ or $\hat y^{naive}_t = y_{t-12}$
+	\pause
+	Let's scale our forecast error $e_t$ to $MAE^{naive}$:
+	\[
+	q_t = \frac{e_t}{MAE^{naive}}
+	\]
+	
+	\pause
+	\alert{Mean Absolute Scaled Error}:
+	\[
+	MASE = \frac{\abs {q_{T+1}} + \abs{q_{T+2}}+ \ldots + \abs{q_{T+H}} }{H}
+	\]
+	
+	\pause
+	Comparing $q$ to 1 compares our model with the naive one
+	
+	
+\end{frame}
+
+
+
+\begin{frame}{Model Quality: Summary}
+	
+	\begin{itemize}[<+->]
+		\item MAE, RMSE
+		\item MAPE
+		\item MASE
+	\end{itemize}
+\end{frame}
+
+
+
+
+\begin{frame} % frame name
+	
+	\videotitle{Model Comparison}
+	
+\end{frame}
+
+
+
+\begin{frame}{Model Comparison: Plan}
+	\begin{itemize}[<+->]
+		\item Cross-validation
+		\item Akaike criterion
+	\end{itemize}
+	
+\end{frame}
+
+
+
+
+\begin{frame}
+	\frametitle{Train and test set}
+	
+	Strategy:
+	\begin{enumerate}[<+->]
+		\item Split the entire sample into \alert{training} (at the beginning) and \alert{test} (at the end) sets
+		\item \alert{Evaluate} several models on the training set
+		\item \alert{Predict} each observation of the test sample using each model
+		\item Calculate prediction \alert{errors}
+		\item \alert{Compare} models by $MAE$ and choose the best one
+	\end{enumerate}
+	
+	\pause
+	Disadvantage: \alert{forecasts have different horizons}
+	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Dividing into train and test}
+	    
+        \begin{tikzpicture}[
+            roundnode/.style={circle, draw=black!60, fill=black!20, very thick, minimum size=7mm},
+            rednode/.style={circle, draw=orange!60, fill=orange!20, very thick, minimum size=7mm},
+            unusednode/.style={circle, draw=black!60, fill=black!2, very thick, minimum size=5mm},
+            ]
+            \node[roundnode] (1) {};
+            \node[roundnode] (2) [right=of 1] {};
+            \node[roundnode] (3) [right=of 2] {};
+            \node[roundnode] (4) [right=of 3] {};
+            \node[roundnode] (5) [right=of 4] {};
+            \node[rednode] (6) [right=of 5] {};
+            \node[unusednode] (7) [right=of 6] {};
+            \node[unusednode] (8) [right=of 7] {};
+            \node[unusednode] (9) [right=of 8] {};
+            \node[unusednode] (10) [right=of 9] {};
+            \draw[->] (5.north) to [out=30,in=150] (6.north);
+            \draw (1) -- (2);
+            \draw (2) -- (3);
+            \draw (3) -- (4);
+            \draw (4) -- (5);
+    
+        \end{tikzpicture}
+            
+        \begin{tikzpicture}[
+            roundnode/.style={circle, draw=black!60, fill=black!20, very thick, minimum size=7mm},
+            rednode/.style={circle, draw=orange!60, fill=orange!20, very thick, minimum size=7mm},
+            unusednode/.style={circle, draw=black!60, fill=black!2, very thick, minimum size=5mm},
+            ]
+            \node[roundnode] (1) {};
+            \node[roundnode] (2) [right=of 1] {};
+            \node[roundnode] (3) [right=of 2] {};
+            \node[roundnode] (4) [right=of 3] {};
+            \node[roundnode] (5) [right=of 4] {};
+            \node[unusednode] (6) [right=of 5] {};
+            \node[rednode] (7) [right=of 6] {};
+            \node[unusednode] (8) [right=of 7] {};
+            \node[unusednode] (9) [right=of 8] {};
+            \node[unusednode] (10) [right=of 9] {};
+            \draw[->] (5.north) to [out=30,in=150] (7.north);
+            \draw (1) -- (2);
+            \draw (2) -- (3);
+            \draw (3) -- (4);
+            \draw (4) -- (5);
+    
+        \end{tikzpicture}
+    
+        \begin{tikzpicture}[
+            roundnode/.style={circle, draw=black!60, fill=black!20, very thick, minimum size=7mm},
+            rednode/.style={circle, draw=orange!60, fill=orange!20, very thick, minimum size=7mm},
+            unusednode/.style={circle, draw=black!60, fill=black!2, very thick, minimum size=5mm},
+            ]
+            \node[roundnode] (1) {};
+            \node[roundnode] (2) [right=of 1] {};
+            \node[roundnode] (3) [right=of 2] {};
+            \node[roundnode] (4) [right=of 3] {};
+            \node[roundnode] (5) [right=of 4] {};
+            \node[unusednode] (6) [right=of 5] {};
+            \node[unusednode] (7) [right=of 6] {};
+            \node[rednode] (8) [right=of 7] {};
+            \node[unusednode] (9) [right=of 8] {};
+            \node[unusednode] (10) [right=of 9] {};
+            \draw[->] (5.north) to [out=30,in=150] (8.north);
+            \draw (1) -- (2);
+            \draw (2) -- (3);
+            \draw (3) -- (4);
+            \draw (4) -- (5);
+        \end{tikzpicture}
+    
+        \begin{tikzpicture}[
+            roundnode/.style={circle, draw=black!60, fill=black!20, very thick, minimum size=7mm},
+            rednode/.style={circle, draw=orange!60, fill=orange!20, very thick, minimum size=7mm},
+            unusednode/.style={circle, draw=black!60, fill=black!2, very thick, minimum size=5mm},
+            ]
+            \node[roundnode] (1) {};
+            \node[roundnode] (2) [right=of 1] {};
+            \node[roundnode] (3) [right=of 2] {};
+            \node[roundnode] (4) [right=of 3] {};
+            \node[roundnode] (5) [right=of 4] {};
+            \node[unusednode] (6) [right=of 5] {};
+            \node[unusednode] (7) [right=of 6] {};
+            \node[unusednode] (8) [right=of 7] {};
+            \node[rednode] (9) [right=of 8] {};
+            \node[unusednode] (10) [right=of 9] {};
+            \draw[->] (5.north) to [out=30,in=150] (9.north);
+            \draw (1) -- (2);
+            \draw (2) -- (3);
+            \draw (3) -- (4);
+            \draw (4) -- (5);
+        \end{tikzpicture}
+    
+        \begin{tikzpicture}[
+            roundnode/.style={circle, draw=black!60, fill=black!20, very thick, minimum size=7mm},
+            rednode/.style={circle, draw=orange!60, fill=orange!20, very thick, minimum size=7mm},
+            unusednode/.style={circle, draw=black!60, fill=black!2, very thick, minimum size=5mm},
+            ]
+            \node[roundnode] (1) {};
+            \node[roundnode] (2) [right=of 1] {};
+            \node[roundnode] (3) [right=of 2] {};
+            \node[roundnode] (4) [right=of 3] {};
+            \node[roundnode] (5) [right=of 4] {};
+            \node[unusednode] (6) [right=of 5] {};
+            \node[unusednode] (7) [right=of 6] {};
+            \node[unusednode] (8) [right=of 7] {};
+            \node[unusednode] (9) [right=of 8] {};
+            \node[rednode] (10) [right=of 9] {};
+            \draw[->] (5.north) to [out=30,in=150] (10.north);
+            \draw (1) -- (2);
+            \draw (2) -- (3);
+            \draw (3) -- (4);
+            \draw (4) -- (5);
+        \end{tikzpicture}
+    
+    
+\end{frame}
+
+\begin{frame}
+	\frametitle{Sliding window Cross-validation}
+	
+	Strategy:
+	\begin{enumerate}[<+->]
+		\item Select the starting size for  \alert{train} sample (at the beginning)
+		\item \alert{Evaluate} several models on the train set
+		\item \alert{Predict} one step ahead with each model
+		\item Calculate  prediction \alert{errors}
+		\item \alert{Shift} the training sample one observation to the right
+		\item Repeat steps 2-5
+		\item \alert{Compare} models by $MAE$ and choose the best one
+	\end{enumerate}
+	
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Sliding window Cross-validation}
+	
+    \begin{tikzpicture}[
+        roundnode/.style={circle, draw=black!60, fill=black!20, very thick, minimum size=7mm},
+        rednode/.style={circle, draw=orange!60, fill=orange!20, very thick, minimum size=7mm},
+        unusednode/.style={circle, draw=black!60, fill=black!2, very thick, minimum size=5mm},
+        ]
+        \node[roundnode] (1) {};
+        \node[roundnode] (2) [right=of 1] {};
+        \node[roundnode] (3) [right=of 2] {};
+        \node[roundnode] (4) [right=of 3] {};
+        \node[roundnode] (5) [right=of 4] {};
+        \node[rednode] (6) [right=of 5] {};
+        \node[unusednode] (7) [right=of 6] {};
+        \node[unusednode] (8) [right=of 7] {};
+        \node[unusednode] (9) [right=of 8] {};
+        \node[unusednode] (10) [right=of 9] {};
+        \draw[->] (5.north) to [out=30,in=150] (6.north);
+        \draw (1) -- (2);
+        \draw (2) -- (3);
+        \draw (3) -- (4);
+        \draw (4) -- (5);
+
+    \end{tikzpicture}
+        
+    \begin{tikzpicture}[
+        roundnode/.style={circle, draw=black!60, fill=black!20, very thick, minimum size=7mm},
+        rednode/.style={circle, draw=orange!60, fill=orange!20, very thick, minimum size=7mm},
+        unusednode/.style={circle, draw=black!60, fill=black!2, very thick, minimum size=5mm},
+        ]
+        \node[unusednode] (1) {};
+        \node[roundnode] (2) [right=of 1] {};
+        \node[roundnode] (3) [right=of 2] {};
+        \node[roundnode] (4) [right=of 3] {};
+        \node[roundnode] (5) [right=of 4] {};
+        \node[roundnode] (6) [right=of 5] {};
+        \node[rednode] (7) [right=of 6] {};
+        \node[unusednode] (8) [right=of 7] {};
+        \node[unusednode] (9) [right=of 8] {};
+        \node[unusednode] (10) [right=of 9] {};
+        \draw[->] (6.north) to [out=30,in=150] (7.north);
+        \draw (2) -- (3);
+        \draw (3) -- (4);
+        \draw (4) -- (5);
+        \draw (5) -- (6);
+
+    \end{tikzpicture}
+
+    \begin{tikzpicture}[
+        roundnode/.style={circle, draw=black!60, fill=black!20, very thick, minimum size=7mm},
+        rednode/.style={circle, draw=orange!60, fill=orange!20, very thick, minimum size=7mm},
+        unusednode/.style={circle, draw=black!60, fill=black!2, very thick, minimum size=5mm},
+        ]
+        \node[unusednode] (1) {};
+        \node[unusednode] (2) [right=of 1] {};
+        \node[roundnode] (3) [right=of 2] {};
+        \node[roundnode] (4) [right=of 3] {};
+        \node[roundnode] (5) [right=of 4] {};
+        \node[roundnode] (6) [right=of 5] {};
+        \node[roundnode] (7) [right=of 6] {};
+        \node[rednode] (8) [right=of 7] {};
+        \node[unusednode] (9) [right=of 8] {};
+        \node[unusednode] (10) [right=of 9] {};
+        \draw[->] (7.north) to [out=30,in=150] (8.north);
+        \draw (3) -- (4);
+        \draw (4) -- (5);
+        \draw (5) -- (6);
+        \draw (6) -- (7);
+    \end{tikzpicture}
+
+    \begin{tikzpicture}[
+        roundnode/.style={circle, draw=black!60, fill=black!20, very thick, minimum size=7mm},
+        rednode/.style={circle, draw=orange!60, fill=orange!20, very thick, minimum size=7mm},
+        unusednode/.style={circle, draw=black!60, fill=black!2, very thick, minimum size=5mm},
+        ]
+        \node[unusednode] (1) {};
+        \node[unusednode] (2) [right=of 1] {};
+        \node[unusednode] (3) [right=of 2] {};
+        \node[roundnode] (4) [right=of 3] {};
+        \node[roundnode] (5) [right=of 4] {};
+        \node[roundnode] (6) [right=of 5] {};
+        \node[roundnode] (7) [right=of 6] {};
+        \node[roundnode] (8) [right=of 7] {};
+        \node[rednode] (9) [right=of 8] {};
+        \node[unusednode] (10) [right=of 9] {};
+        \draw[->] (8.north) to [out=30,in=150] (9.north);
+        \draw (4) -- (5);
+        \draw (5) -- (6);
+        \draw (6) -- (7);
+        \draw (7) -- (8);
+    \end{tikzpicture}
+
+    \begin{tikzpicture}[
+        roundnode/.style={circle, draw=black!60, fill=black!20, very thick, minimum size=7mm},
+        rednode/.style={circle, draw=orange!60, fill=orange!20, very thick, minimum size=7mm},
+        unusednode/.style={circle, draw=black!60, fill=black!2, very thick, minimum size=5mm},
+        ]
+        \node[unusednode] (1) {};
+        \node[unusednode] (2) [right=of 1] {};
+        \node[unusednode] (3) [right=of 2] {};
+        \node[unusednode] (4) [right=of 3] {};
+        \node[roundnode] (5) [right=of 4] {};
+        \node[roundnode] (6) [right=of 5] {};
+        \node[roundnode] (7) [right=of 6] {};
+        \node[roundnode] (8) [right=of 7] {};
+        \node[roundnode] (9) [right=of 8] {};
+        \node[rednode] (10) [right=of 9] {};
+        \draw[->] (9.north) to [out=30,in=150] (10.north);
+        \draw (5) -- (6);
+        \draw (6) -- (7);
+        \draw (7) -- (8);
+        \draw (8) -- (9);
+    \end{tikzpicture}
+
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Growing window Cross-validation}
+	
+	Strategy:
+	\begin{enumerate}
+		\item Select the starting size for  \alert{train} sample (at the beginning)
+		\item Evaluate several models on the training set
+		\item Predict one step ahead with each model
+		\item Calculate prediction errors
+		\item \alert{Increase} the training set by one observation.
+		\item Repeat steps 2-5
+		\item Compare models by $MAE$ and choose the best one
+	\end{enumerate}
+	
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Growing window Cross-validation}
+
+    \begin{tikzpicture}[
+        roundnode/.style={circle, draw=black!60, fill=black!20, very thick, minimum size=7mm},
+        rednode/.style={circle, draw=orange!60, fill=orange!20, very thick, minimum size=7mm},
+        unusednode/.style={circle, draw=black!60, fill=black!2, very thick, minimum size=5mm},
+        ]
+        \node[roundnode] (1) {};
+        \node[roundnode] (2) [right=of 1] {};
+        \node[roundnode] (3) [right=of 2] {};
+        \node[roundnode] (4) [right=of 3] {};
+        \node[roundnode] (5) [right=of 4] {};
+        \node[rednode] (6) [right=of 5] {};
+        \node[unusednode] (7) [right=of 6] {};
+        \node[unusednode] (8) [right=of 7] {};
+        \node[unusednode] (9) [right=of 8] {};
+        \node[unusednode] (10) [right=of 9] {};
+        \draw[->] (5.north) to [out=30,in=150] (6.north);
+        \draw (1) -- (2);
+        \draw (2) -- (3);
+        \draw (3) -- (4);
+        \draw (4) -- (5);
+
+    \end{tikzpicture}
+        
+    \begin{tikzpicture}[
+        roundnode/.style={circle, draw=black!60, fill=black!20, very thick, minimum size=7mm},
+        rednode/.style={circle, draw=orange!60, fill=orange!20, very thick, minimum size=7mm},
+        unusednode/.style={circle, draw=black!60, fill=black!2, very thick, minimum size=5mm},
+        ]
+        \node[roundnode] (1) {};
+        \node[roundnode] (2) [right=of 1] {};
+        \node[roundnode] (3) [right=of 2] {};
+        \node[roundnode] (4) [right=of 3] {};
+        \node[roundnode] (5) [right=of 4] {};
+        \node[roundnode] (6) [right=of 5] {};
+        \node[rednode] (7) [right=of 6] {};
+        \node[unusednode] (8) [right=of 7] {};
+        \node[unusednode] (9) [right=of 8] {};
+        \node[unusednode] (10) [right=of 9] {};
+        \draw[->] (6.north) to [out=30,in=150] (7.north);
+        \draw (1) -- (2);
+        \draw (2) -- (3);
+        \draw (3) -- (4);
+        \draw (4) -- (5);
+        \draw (5) -- (6);
+
+    \end{tikzpicture}
+
+    \begin{tikzpicture}[
+        roundnode/.style={circle, draw=black!60, fill=black!20, very thick, minimum size=7mm},
+        rednode/.style={circle, draw=orange!60, fill=orange!20, very thick, minimum size=7mm},
+        unusednode/.style={circle, draw=black!60, fill=black!2, very thick, minimum size=5mm},
+        ]
+        \node[roundnode] (1) {};
+        \node[roundnode] (2) [right=of 1] {};
+        \node[roundnode] (3) [right=of 2] {};
+        \node[roundnode] (4) [right=of 3] {};
+        \node[roundnode] (5) [right=of 4] {};
+        \node[roundnode] (6) [right=of 5] {};
+        \node[roundnode] (7) [right=of 6] {};
+        \node[rednode] (8) [right=of 7] {};
+        \node[unusednode] (9) [right=of 8] {};
+        \node[unusednode] (10) [right=of 9] {};
+        \draw[->] (7.north) to [out=30,in=150] (8.north);
+        \draw (1) -- (2);
+        \draw (2) -- (3);
+        \draw (3) -- (4);
+        \draw (4) -- (5);
+        \draw (5) -- (6);
+        \draw (6) -- (7);
+    \end{tikzpicture}
+
+    \begin{tikzpicture}[
+        roundnode/.style={circle, draw=black!60, fill=black!20, very thick, minimum size=7mm},
+        rednode/.style={circle, draw=orange!60, fill=orange!20, very thick, minimum size=7mm},
+        unusednode/.style={circle, draw=black!60, fill=black!2, very thick, minimum size=5mm},
+        ]
+        \node[roundnode] (1) {};
+        \node[roundnode] (2) [right=of 1] {};
+        \node[roundnode] (3) [right=of 2] {};
+        \node[roundnode] (4) [right=of 3] {};
+        \node[roundnode] (5) [right=of 4] {};
+        \node[roundnode] (6) [right=of 5] {};
+        \node[roundnode] (7) [right=of 6] {};
+        \node[roundnode] (8) [right=of 7] {};
+        \node[rednode] (9) [right=of 8] {};
+        \node[unusednode] (10) [right=of 9] {};
+        \draw[->] (8.north) to [out=30,in=150] (9.north);
+        \draw (1) -- (2);
+        \draw (2) -- (3);
+        \draw (3) -- (4);
+        \draw (4) -- (5);
+        \draw (5) -- (6);
+        \draw (6) -- (7);
+        \draw (7) -- (8);
+    \end{tikzpicture}
+
+    \begin{tikzpicture}[
+        roundnode/.style={circle, draw=black!60, fill=black!20, very thick, minimum size=7mm},
+        rednode/.style={circle, draw=orange!60, fill=orange!20, very thick, minimum size=7mm},
+        unusednode/.style={circle, draw=black!60, fill=black!2, very thick, minimum size=5mm},
+        ]
+        \node[roundnode] (1) {};
+        \node[roundnode] (2) [right=of 1] {};
+        \node[roundnode] (3) [right=of 2] {};
+        \node[roundnode] (4) [right=of 3] {};
+        \node[roundnode] (5) [right=of 4] {};
+        \node[roundnode] (6) [right=of 5] {};
+        \node[roundnode] (7) [right=of 6] {};
+        \node[roundnode] (8) [right=of 7] {};
+        \node[roundnode] (9) [right=of 8] {};
+        \node[rednode] (10) [right=of 9] {};
+        \draw[->] (9.north) to [out=30,in=150] (10.north);
+        \draw (1) -- (2);
+        \draw (2) -- (3);
+        \draw (3) -- (4);
+        \draw (4) -- (5);
+        \draw (5) -- (6);
+        \draw (6) -- (7);
+        \draw (7) -- (8);
+        \draw (8) -- (9);
+    \end{tikzpicture}
+
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Cross-validation Discussion}
+	
+	\alert{Sliding} window cross-validation:  there are many observations and we suspect that dependencies between values can change.
+	
+	\pause
+	\
+	
+	\alert{Growing} window cross-validation: there are few observations or we are sure that the dependency persists.
+	
+	\pause
+	\
+		
+	Cross-validation can be \alert{time consuming}!
+	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Let's make cross-validation quicker!}
+	
+	Approximate cross-validation by one step forward based on  $RMSE$ using...
+	\alert{Akaike Information Criterion}:
+	\pause
+	\[
+	AIC = -2\ln L + 2k,
+	\]
+	where $\ln L$ is the logarithm of the maximum likelihood on the training set, $k$ is the total number of model parameters
+	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Nuances of $AIC$}
+	
+	\begin{itemize}[<+->]
+		\item $AIC$ has \alert{theoretical grounds}:
+		\[
+		\frac{AIC_A - AIC_B}{2} \approx KL(\text{Truth} || \text{Model A}) - \]
+		\[
+		- KL(\text{Truth} || \text{Model B})
+		\]
+		\item May be used \alert{for non-nested models}
+		\item For Gaussian $y_t$ models, the criterion approximates \alert{comparison over $RMSE$}
+		\item The models being compared must be for the \alert{same} observations
+	\end{itemize}
+	
+	
+	
+\end{frame}
+
+
+\begin{frame}{Model Comparison: Summary}
+	
+	\begin{itemize}[<+->]
+		\item Cross-validation: sliding and growing window
+		\item AIC is a fast and approximate analogue of cross-validation
+	\end{itemize}
+\end{frame}

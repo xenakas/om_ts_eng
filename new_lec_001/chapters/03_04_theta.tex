@@ -1,0 +1,156 @@
+% !TEX root = ../om_ts_01.tex
+
+\begin{frame} % frame name
+	
+	\videotitle{Theta method}
+	
+\end{frame}
+
+
+\begin{frame}{Theta method: Plan}
+	\begin{itemize}[<+->]
+		\item An unexpected leader
+		\item Author's version
+		\item Special case of ETS
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Theta method}
+	
+	Appeared in 2000 and became a sensation at the \alert{competition M3} for predicting series.
+	
+	\pause
+	
+	Works for \alert{non-seasonal} series.
+	
+	\pause
+	
+	Initially suggested \alert{without a statistical model}.
+	
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Author's version}
+	
+	\begin{enumerate}[<+->]
+		\item Expand the series into two \alert{theta lines} ($\theta=0$, $\theta = 2$) 
+		\item Predict zero-line using linear regression 
+		\item Predict the second line using ETS(ANN)
+		\item Average the forecasts
+	\end{enumerate}
+	
+	\pause
+	You can pre-delete seasonality and add it back in the end
+	
+\end{frame}
+
+\begin{frame}
+	\frametitle{What is a theta line?}
+	
+	Zero theta line — \alert{regression} on time:
+	
+	\[
+	\hat y_t = \hat \beta_1 + \hat \beta_2 t
+	\]
+	\pause
+	
+	Theta line for arbitrary theta:
+	\[
+	\Delta^2 y^{new}_t = \theta \Delta^2 y_t
+	\]
+	
+\end{frame}
+
+
+\begin{frame}{Intuition}
+	
+	\begin{itemize}[<+->]
+		\item The zero theta line catches the long-term trend of the series
+		\item Theta line ($\theta=2$) catches the short-term trend:
+		
+		\alert{acceleration} of theta line is $\theta$ times stronger
+		than  of the initial series
+		
+		
+		\item Averaging reduces the variance of predictions
+	\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}
+	\frametitle{How is the theta line selected?}
+	
+	We take $\theta = 2$:
+	\[
+	\Delta^2 y^{new}_t = 2 \Delta^2 y_t
+	\]
+	\pause
+	Or
+	\[
+	y^{new}_t - 2 y^{new}_{t-1} + y^{new}_{t-2} = 2(y_t - 2 y_{t-1} + y_{t-2} )
+	\]
+	
+	\pause
+	The new series $y^{new}_t$ is completely determined by $y_1^{new}$, $y_{2}^{new}$
+	
+	\pause
+	We solve the optimization problem:
+	\[
+	\sum_{t=1}^T (y_t - y_t^{new})^2 \to \min
+	\]
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Statistical Model}
+	
+	Formal model appeared in 2003:
+	
+	\[
+	\begin{cases}
+		y_t = \ell_t + b + u_t; \\
+		\ell_t = \ell_{t-1} + b + \alpha u_t; \\
+		\ell_1 = y_1 \\
+	\end{cases}
+	\]
+	
+	\pause
+	Or:
+	\[
+	\Delta y_t = b + (\alpha - 1) u_{t-1} + u_t
+	\]
+\end{frame}
+
+\begin{frame}
+	\frametitle{Theta method — ETS variant}
+	
+	A special case of a more general model — ETS(AAN):
+	\[
+	\begin{cases}
+		y_t = \ell_{t-1} + b_{t-1} + u_t; \\
+		\ell_t = \ell_{t-1} + b_{t-1} + \alpha u_t, \text{ starts at } \ell_1; \\
+		b_t = b_{t-1} + \beta u_t, \text{ starts at } b_0; \\
+		u_t \sim \dN(0;\sigma^2) \text{ and are independent.} \\
+	\end{cases}
+	\]
+	\pause
+	Remove the trend stochasticity setting $\beta = 0$.
+	
+	\pause
+	\alert{Nuances} of initialization are possible.
+\end{frame}
+
+
+
+
+\begin{frame}{Theta method: Summary}
+	
+	\begin{itemize}[<+->]
+		\item Works well for \alert{non-seasonal} data
+		\item A special \alert{variation} of the ETS model
+	\end{itemize}
+\end{frame}

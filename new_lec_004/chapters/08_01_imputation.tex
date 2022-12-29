@@ -1,0 +1,106 @@
+% !TEX root = ../om_ts_004.tex
+
+\begin{frame} % frame name
+	
+	\videotitle{Handling missing data}
+	
+\end{frame}
+
+
+
+\begin{frame}{Handling missing data: Plan}
+	\begin{itemize}[<+->]
+		\item Linear \alert{interpolation}
+		\item \alert{Modelling} approach
+		\item Using \alert{STL decomposition}
+	\end{itemize}
+	
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Linear Interpolation}
+	
+	\begin{block}{Idea}
+		To  fill in missing data  we need to the restore the values so that they fit perfectly on the straight line (form an \alert{arithmetic progression}),
+		\[
+		\Delta y_t^{imp} = const
+		\]
+	\end{block}
+	\pause
+	
+	Example:
+	
+	10, \alert{NA}, \alert{NA}, 100
+	
+	\pause
+	
+	10, \alert{40}, \alert{70}, 100
+	
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Modelling approach to handle the missing data}
+	
+	\begin{enumerate}[<+->]
+		\item Evaluate a model that \alert{allows} the missing data:
+		
+		ARIMA or automatic ARIMA works fine!
+
+		\item Missing values of $y_t$ can be replaced by the conditional mathematical expectation,
+		assuming the estimated parameters of the model to be true,
+		\[
+		y_t^{imp} = \E(y_t \mid \text{data})
+		\]
+		For that \alert{Kalman filter} is used
+	\end{enumerate}
+	
+	\pause
+	The ability to evaluate a model on data with missing values is highly dependent on \alert{implementation}
+	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Using STL decomposition}
+	
+	\begin{enumerate}[<+->]
+		\item We decompose the series with missing data into components:
+		\[
+		y_t = \text{trend}_t + \text{seasonal}_t + \text{remainder}_t = \text{seasonal}_t + \text{deseason}_t.
+		\]	
+		STL restores the \alert{seasonal component} without the gaps
+		!
+		\item Recover the missing values of the deseasoned series by \alert{linear} interpolation
+		
+		\item The missing values of $y_t$ are replaced by the sum of the restored deseasoned values and the seasonal component,
+		\[
+		y_t^{imp} = \text{seasonal}_t + \text{deseason}_t^{imp}
+		\]
+		
+	\end{enumerate}
+	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Why we need to handle the missing data?}
+	
+	\begin{itemize}[<+->]
+		\item Filling in the gaps is sometimes a \alert{main task}
+		\item Possibility to use \alert{more algorithms} of prediction for the reconstructed series
+		\item Ability to use the restored row \alert{as a predictor}
+	\end{itemize}
+	
+	
+\end{frame}
+
+
+\begin{frame}{Handling missing data: Summary}
+	
+	\begin{itemize}[<+->]
+		\item Linear \alert{interpolation}: simple and fast!
+		\item Using \alert{ARIMA} or more complex models
+		\item \alert{STL decomposition} and restoring components
+		\item \alert{Variations} for each algorithm
+	\end{itemize}
+\end{frame}

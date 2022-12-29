@@ -1,0 +1,123 @@
+% !TEX root = ../om_ts_003.tex
+
+\begin{frame} % frame name
+	
+	\videotitle{Predictors and $ARIMA$}
+	
+\end{frame}
+
+\begin{frame}{Predictors and $ARIMA$: Plan}
+	\begin{itemize}[<+->]
+		\item Regression with \alert{$ARMA$ errors}
+		\item \alert{$ARMAX$ model}
+		\item \alert{$ARDL$ model}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Regression with $ARMA$ errors}
+	
+	\begin{block}{Equation}
+		\[
+		y_t = \beta_1 + \beta_2 a_t + \beta_3 b_t + \varepsilon_t,
+		\]
+		where $a_t$ and $b_t$ are \alert{predictors}
+	\end{block}
+	\pause
+	\begin{itemize}[<+->]
+		\item The series $(y_t)$, $(a_t)$, $(b_t)$, $(\varepsilon_t)$ \alert{stationary}
+		\item $\varepsilon_t \sim ARMA(p, q)$ with respect to white noise $(u_t)$
+		\item $\E(\varepsilon_t \mid a_{t-1}, b_{t-1}, a_{t-2}, b_{t-2}, \ldots) = 0$
+		\item \alert{Fourth moments} of predictors are finite
+	\end{itemize}
+	
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{$ARMAX$ model}
+	
+	\begin{block}{Equation}
+		\[
+		y_t = c + \gamma_1 a_t + \gamma_2 b_t + \beta_1 y_{t-1} + \ldots + \beta_p y_{t-p} + 
+		\]
+				\[
+		 + u_t + \alpha_1 u_{t-1} + \ldots + \alpha_q u_{t-q },
+		\]
+		
+		where $a_t$ and $b_t$ are \alert{predictors} and $(u_t)$ is \alert{white noise}
+	\end{block}
+	\pause
+	\begin{itemize}[<+->]
+		\item Series $(y_t)$, $(a_t)$, $(b_t)$ \alert{stationary}
+		\item $\E(u_t \mid a_{t-1}, b_{t-1}, y_{t-1}, a_{t-2}, b_{t-2}, y_{t-2} , \ldots) = 0$
+		\item \alert{The fourth predictor moments} are finite
+	\end{itemize}
+	\pause
+	$ARMAX$ model is not completely equivalent to regression with $ARMA$ errors, but gives \alert{approximately the same} quality of predictions
+	
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Properties of the $ARMAX$ model and regression with $ARMA$ errors}
+	
+	\begin{itemize}[<+->]
+		\item If the model assumptions aren't violated, then the maximum likelihood estimators \alert{are consistent}
+		\item For non-stationary variables $(y_t)$ and predictors $(a_t)$ and $(b_t)$, we can switch to the first \alert{differences}
+		\item Estimators \alert{remain} consistent if trend, seasonality dummy and trigonometric predictors are added
+		\item \alert{Not any} predictor makes it possible to obtain a consistent estimator of the coefficient
+		\item \alert{Sometimes} you can get good predictions even if the assumptions are violated
+	\end{itemize}
+	
+\end{frame}
+
+
+
+\begin{frame}
+	\frametitle{$ARDL$ model}
+	
+	\alert{ARDL} — \alert{A}uto\alert{R}egressive \alert{D}istributed \alert{L}ag model
+	
+	Autoregressive model with distributed lags
+	
+	\begin{block}{The $ARDL(p, q)$ model equation}
+		\[
+		y_t = c + \beta_1 y_{t-1} + \ldots + \beta_p y_{t-p} + 
+		\]
+		\[
+		+ x_t + \alpha_1 x_{t-1} + \ldots + \alpha_q x_{t-q} + u_t
+		\]
+
+	\end{block}
+	\pause
+	\begin{itemize}[<+->]
+		\item $(u_t)$ errors are \alert{white noise}
+		\item Process $(x_t)$ \alert{or} process $(\Delta x_t)$ is stationary
+		\item Process $(y_t)$ is \alert{non-stationary}, but $(\Delta y_t)$ is stationary
+		\item $\E(u_t \mid y_{t-1}, x_{t-1}, y_{t-2}, x_{t-2}, \ldots) = 0$
+	\end{itemize}
+	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Properties of the $ARDL$ model}
+	\begin{itemize}[<+->]
+		\item Using \alert{predictor lags} $(x_t)$ instead of noise lags $(u_t)$ 
+		\item Suitable for \alert{non-stationary} $(y_t)$
+		\item Used to find a \alert{long-term relationships} between time series
+		\item If  the model assumptions aren't violated, then \alert{the OLS estimators are consistent}, although they are biased
+		\item You can add \alert{multiple predictors} with different number of lags
+	\end{itemize}
+	
+\end{frame}
+
+
+\begin{frame}{Predictors and $ARIMA$: Summary}
+	\begin{itemize}[<+->]
+		\item For \alert{stationary data} you can use regression with $ARMA$ errors or $ARMAX$ model
+		\item Regression with $ARMA$ errors can be constructed for the   \alert{differences}
+		\item For \alert{non-stationary series} it is sometimes possible to use the $ARDL$ model
+	\end{itemize}
+	
+\end{frame}
