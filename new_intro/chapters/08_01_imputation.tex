@@ -1,4 +1,4 @@
-% !TEX root = ../om_ts_004.tex
+% !TEX root = ../om_ts_000.tex
 
 \begin{frame} % frame name
 	
@@ -10,13 +10,23 @@
 
 \begin{frame}{Final Project: Plan}
 	
-	Goal: compare models  
+	Goal: compare models by prediction quality
 	
 	\begin{itemize}[<+->]
-		\item Pre-process data.
-		\item Choose models (e.g. ARIMA, ETS, Theta, OLS etc.).
-		\item Choose parameters (or predictors). Select a winning model in each class.
-		\item Compare models by their predicting power.
+		\item \alert{Pre-process data} (outliers, structural breaks and missing data)
+		\item Choose \alert{models}:
+
+				1. ARIMA (e.g. ARIMA(2,1,12), SARIMA(1,0,2)[1,1,1], etc.)
+				
+				2. ETS (e.g. ETS(AAA), ETS(MAM))
+				
+				
+				3. OLS (e.g. $y\mid t, D_{weekdays}, \ldots$ with ARMA errors, etc.)
+				
+				4. Comparator of your choice (e.g. gradient boosting, LSTM, BSTS, ORBIT, Prophet, etc.)
+
+		\item Choose \alert{parameters} (or predictors). Select a winning model in \alert{each class}.
+		\item Compare models by their \alert{predicting power}.
 	\end{itemize}
 	
 \end{frame}

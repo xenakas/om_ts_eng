@@ -1,0 +1,31 @@
+Question
+========
+
+Select the correct statements about STL.
+
+Answerlist
+----------
+
+*  Within the inner loop the low-frequency component is extracted using LOESS applied to double moving average of the original time series
+*  The algorithm contains two loops: outer and inner loop
+*  The weights for the outer loop should be chosen by cross-validation  
+*  Increasing the number of iterations of the outer loop can help in case of severe outliers
+
+Solution
+========
+
+Answerlist
+----------
+
+*  False. No it's applied to seasonal subcomponents $C_t$
+*  True.
+*  False. The weights are recalculated on each iteration of the algorithm depending on $R_t$. 
+*  True.
+
+Meta-information
+================
+exname: STL - STL    
+extype: mchoice
+exsolution: 0101
+exshuffle: 4
+

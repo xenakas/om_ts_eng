@@ -1,0 +1,38 @@
+```{r data generation, echo = FALSE, results = 'hide'}
+## DATA GENERATION
+
+library(forecast)
+options(scipen=999)
+
+mod <- ets(gas,"ZNZ")
+
+
+
+
+sol_round <- round(mod$initstate[1],2)
+
+
+
+
+```
+
+Question
+========
+
+Consider gas dataset. Estimate ETS model without a trend and automatically selected error and seasonality specification.   Provide initial state for trend component as an answer. Provide the answer with 2 decimal digits.
+
+
+You can load the gas dataset in R by importing forecast library or if you use other programming languages you can download it [here](https://github.com/vincentarelbundock/Rdatasets/blob/master/csv/forecast/gas.csv).
+
+
+Solution
+========
+
+You can use ets(x,"ZZZ") function.
+
+Meta-information
+================
+exname:  ETS - zzz 
+extype: num
+exsolution: `r sol_round`
+extol: 0.001

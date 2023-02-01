@@ -1,0 +1,20 @@
+Question
+========
+
+How many parameters should be estimated in ETS(MAdM) with 4 seasons? 
+
+$\begin{array}{l c r}{y_{t}=(\ell_{t-1}+\phi b_{t-1})s_{t-m}(1+\varepsilon_{t})}\\ {\ell_{t}=(\ell_{t-1}+\phi b_{t-1})(1+\alpha\varepsilon_{t})}\\ {b_{t}=\phi b_{t-1}+\beta(\ell_{t-1}+\phi b_{t-1})\varepsilon_{t}}\\ {s_{t}=s_{t-m}(1+\gamma\varepsilon_{t})}&{}\end{array}$
+
+
+Solution
+========
+
+4 model parameters + variance of the error term + (6-1) starting observations   
+
+Meta-information
+================
+exname: ETS - formulas
+extype: num
+exsolution: 10
+extol: 0
+	

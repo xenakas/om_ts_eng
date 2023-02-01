@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+
+
+<question type="category">
+<category>
+<text>$course$/moodlequiz/Exercise 1</text>
+</category>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> Q1 : base_week1_F_add_test_F11_02_mch </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[
+<p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> False. It’s an iterative procedure </li>
+<li> False. Depends on the series </li>
+<li> True. </li>
+<li> True. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>false</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+To estimate STL components generalized method of moments is used
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False. It’s an iterative procedure
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+Naive random walk can’t predict better than ETS(AAdA)
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False. Depends on the series
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="50" format="html">
+<text><![CDATA[<p>
+Seasonal component is observed within one period, while cyclical component can have periodicity varying over time and span over several periods
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="50" format="html">
+<text><![CDATA[<p>
+By l’Hopital’s rule Taking a limit for of a Box-Cox transformation at <span class="math inline">\(\lambda=0\)</span> will be equal to a logarithm
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/moodlequiz/Exercise 2</text>
+</category>
+</question>
+
+
+<question type="numerical">
+<name>
+<text> Q2 : base_week1_F_add_test_F11_05_num </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[
+<p>
+<p>Consider a seasonal random walk model for the following sample <span class="math inline">\(y^T = [1, 3, 2, -1, 2, 4, 2, -3]\)</span> of quarterly observations. Construct a 95% prediction interval 19 steps ahead. Provide upper margin of thw interval as the answer.</p>
+<p>Provide the answer with 2 decimal digits.</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>Check lecture “Naive models”.</p>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<answer fraction="100" format="moodle_auto_format">
+<text>9.4</text>
+<tolerance>0.011</tolerance>
+</answer>
+</question>
+
+</quiz>

@@ -1,0 +1,29 @@
+```{r data generation, echo = FALSE, results = 'hide'}
+## DATA GENERATION
+n = sample(5:11, size = 1)
+sol = 1/ sqrt(1^2 + ((n-2)/(n-1))^2 + (n-2)/(n-1)^2)
+sol_round = round(sol, digits = 2)
+```
+
+Question
+========
+The variables $X_1$, $X_2$, ... are independent with mean $5$ and variance $7$. 
+
+Let $S = X_{2} + X_{3} + \ldots + X_{`r n`}$.
+
+Find partial correlation $\mathrm{pCorr}(X_1, X_1 + X_2; S)$.
+
+Solution
+========
+
+
+Find the correlation between $X_1$ and $X_1+X_2 - \beta (X_{2} + X_{3} + \ldots + X_{`r n`})$. Note, that $\hat{\beta}_{OLS} \to \beta$, as $n\to \infty$
+
+
+Meta-information
+================
+exname: Pcorr
+extype: num
+exsolution: `r sol_round`
+extol: 0.011
+

@@ -1,0 +1,54 @@
+```{r data generation, echo = FALSE, results = 'hide'}
+## DATA GENERATION
+
+library(forecast)
+options(scipen=999)
+
+```
+
+Question
+========
+
+Let's continue conducting a Box-Jenkins procedure for the differenced log(gas) time series. 
+
+
+You can load the gas dataset in R by importing forecast library or if you use other programming languages you can download it [here](https://github.com/vincentarelbundock/Rdatasets/blob/master/csv/forecast/gas.csv).
+
+
+
+
+```{r, echo = FALSE}
+ggtsdisplay(diff(diff(log(gas)),12), lag.max = 48)
+
+```
+
+Now let's determine the parameters for SARIMA model.
+
+By analysing ACF and PACF functions answer, what can the underlying SARMA(p,q) process for the transformed and differenced gas series be?
+
+
+Answerlist
+----------
+* SARMA(0,0)[0,1]
+* SARMA(0,1)[0,0]
+* SARMA(0,1)[0,1]
+* SARMA(1,0)[0,0]
+* SARMA(0,0)[1,0]
+* SARMA(1,0)[1,0]
+
+
+Solution
+========
+
+MA process shows a gradually declining PACF and the ACF has a 1st significant lag corresponding to MA part and 12th significant lag corresponding to seasonal MA part. 
+
+
+
+
+Meta-information
+================
+exname: bj 
+extype: schoice
+exsolution: 001000
+exshuffle: 6
+

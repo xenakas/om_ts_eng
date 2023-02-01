@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+
+
+<question type="category">
+<category>
+<text>$course$/moodlequiz/Exercise 1</text>
+</category>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> Q1 : base_week2_1_test_21_01_mch </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[
+<p>
+<p>Consider the following process <span class="math inline">\(y_t = 3t + y_{t-1}+u_t\)</span>, where <span class="math inline">\(u_t\)</span> is a whte noise.
+Which of the weakly stationarity conditions are violated.</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>Check mean and covariance functions.</p>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>false</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+Autocovariance function depends only on the difference between time indexes
+</p>]]></text>
+</answer>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+None of the conditions are violated, the process is stationary
+</p>]]></text>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+Constant mean
+</p>]]></text>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+Constant variance
+</p>]]></text>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/moodlequiz/Exercise 2</text>
+</category>
+</question>
+
+
+<question type="numerical">
+<name>
+<text> Q2 : base_week2_1_test_21_02_num </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[
+<p>
+<p>The variables <span class="math inline">\(X_1\)</span>, <span class="math inline">\(X_2\)</span>, … are independent with mean <span class="math inline">\(5\)</span> and variance <span class="math inline">\(7\)</span>.</p>
+<p>Let <span class="math inline">\(S = X_{2} + X_{3} + \ldots + X_{9}\)</span>.</p>
+<p>Find partial correlation <span class="math inline">\(\mathrm{pCorr}(X_1, X_1 + X_2; S)\)</span>.</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>Find the correlation between <span class="math inline">\(X_1\)</span> and <span class="math inline">\(X_1+X_2 - \beta (X_{2} + X_{3} + \ldots + X_{9})\)</span>. Note, that <span class="math inline">\(\hat{\beta}_{OLS} \to \beta\)</span>, as <span class="math inline">\(n\to \infty\)</span></p>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<answer fraction="100" format="moodle_auto_format">
+<text>0.73</text>
+<tolerance>0.011</tolerance>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/moodlequiz/Exercise 3</text>
+</category>
+</question>
+
+
+<question type="numerical">
+<name>
+<text> Q3 : base_week2_1_test_21_03_num </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[
+<p>
+<p>Consider a process <span class="math inline">\(y_t = 4 + 0.8 y_{t-1} + u_t\)</span>, where <span class="math inline">\(u_t\)</span> is a white noise with variance 3.</p>
+<p>Find it’s autocovariance function <span class="math inline">\(\gamma_k\)</span>. Give <span class="math inline">\(\gamma_0\)</span> as an answer. Provide the answer with 3 decimal digits.</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>You are need to find the variance of <span class="math inline">\(y_t\)</span>. Note, that the process is stationary, so its variance does not change over time.</p>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<answer fraction="100" format="moodle_auto_format">
+<text>8.333</text>
+<tolerance>0.011</tolerance>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/moodlequiz/Exercise 4</text>
+</category>
+</question>
+
+
+<question type="numerical">
+<name>
+<text> Q4 : base_week2_1_test_21_04_num </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[
+<p>
+<p>Consider a process <span class="math inline">\(y_t = 4 + 0.8 y_{t-1} + u_t\)</span>, where <span class="math inline">\(u_t\)</span> is a white noise with variance 3.</p>
+<p>Find it’s autocorrelation function <span class="math inline">\(\rho_k\)</span>. Give <span class="math inline">\(\rho_3\)</span> as an answer.</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>To find autocorrelation function consider MA(<span class="math inline">\(\infty\)</span>) representation of an AR(1) process.</p>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<answer fraction="100" format="moodle_auto_format">
+<text>0.512</text>
+<tolerance>0.011</tolerance>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/moodlequiz/Exercise 5</text>
+</category>
+</question>
+
+
+<question type="numerical">
+<name>
+<text> Q5 : base_week2_1_test_21_05_num </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[
+<p>
+<p>Consider a process <span class="math inline">\(y_t = 4 + 0.8 y_{t-1} + u_t\)</span>, where <span class="math inline">\(u_t\)</span> is a white noise with variance 3.</p>
+<p>Find it’s autocovariance function <span class="math inline">\(\gamma_k\)</span>. Give <span class="math inline">\(\gamma_4\)</span> as an answer.</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>To find autocovariance function consider MA(<span class="math inline">\(\infty\)</span>) representation of an AR(1) process.</p>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<answer fraction="100" format="moodle_auto_format">
+<text>3.413</text>
+<tolerance>0.011</tolerance>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/moodlequiz/Exercise 6</text>
+</category>
+</question>
+
+
+<question type="numerical">
+<name>
+<text> Q6 : base_week2_1_test_21_06_num </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[
+<p>
+<p>Consider a process <span class="math inline">\(y_t = 6 + u_t + 0.7 u_{t-1} - 0.1 u_{t-1}\)</span>, where <span class="math inline">\(u_t\)</span> is a white noise with variance 2.</p>
+<p>Check that the process is invertible. If the process is invertible give the sum of the lag polynomial roots as an answer, else give 0 as an answer.
+Provide the answer with 3 decimal digits.</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>The process</p>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<answer fraction="100" format="moodle_auto_format">
+<text>7</text>
+<tolerance>0.011</tolerance>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/moodlequiz/Exercise 7</text>
+</category>
+</question>
+
+
+<question type="numerical">
+<name>
+<text> Q7 : base_week2_1_test_21_07_num </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[
+<p>
+<p>Consider a process <span class="math inline">\(y_t = 6 + 0.3y_{t-1}+ u_t + 0.7 u_{t-1} - 0.1 u_{t-1}\)</span>, where <span class="math inline">\(u_t\)</span> is a white noise with variance 3.</p>
+<p>Construct a point forecast 2 steps ahead, given that <span class="math inline">\(y_T=2, \hat{u}_T=1, \hat{u}_{T-1}=-1\)</span>.<br />
+Provide the answer with 3 decimal digits.</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>The point forecast will be equal to <span class="math inline">\(E(y_{t+2}\mid \mathcal{F}_t) = 6+0.3E(y_{t+1}\mid \mathcal{F}_t)-0.1\hat{u}_T\)</span></p>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<answer fraction="100" format="moodle_auto_format">
+<text>8.12</text>
+<tolerance>0.011</tolerance>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/moodlequiz/Exercise 8</text>
+</category>
+</question>
+
+
+<question type="numerical">
+<name>
+<text> Q8 : base_week2_1_test_21_08_prog </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[
+<p>
+<p>Consider gas dataset. Estimate MA(12) model for the first differene of gas series. Find point forecast 12 steps aheaad. Provide the answer with 2 decimal digits.</p>
+<p>You can load the gas dataset in R by importing forecast library or if you use other programming languages you can download it <a href="https://github.com/vincentarelbundock/Rdatasets/blob/master/csv/forecast/gas.csv">here</a>.</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>You can use Arima(x, order = c(0, 0, q)) function.</p>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<answer fraction="100" format="moodle_auto_format">
+<text>-2366.43</text>
+<tolerance>0.001</tolerance>
+</answer>
+</question>
+
+</quiz>

@@ -1,0 +1,32 @@
+
+Question
+========
+
+
+Consider the following ARMA equation  $y_t= 0.4 y_{t-1} + 0.45 y_{t-2} + u_t + u_{t-1}+ 0.25 u_{t-2}$, where $u_t$ is a white noise with variance 1. Which of the following is true?
+
+
+
+Answerlist
+----------
+
+*  The equation is irreducible 
+*  The corresponding ARMA process satisfying the  is stationary 
+*  The ARMA equation has a unique solution
+*  The process is non-invertible
+
+
+Solution
+========
+
+There is one common factor, hence in fact it is an ARMA(1,1). If you check the roots for this reduced process, it will be clear the process is stationary and invertible. 
+
+
+
+Meta-information
+================
+exname: stat cond
+extype: mchoice
+exsolution: 0110
+exshuffle: 4
+

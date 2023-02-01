@@ -1,0 +1,32 @@
+Question
+========
+
+Suppose you want to predict future values of $y_t$. Which of the following statements is correct? 
+
+Answerlist
+----------
+
+*  In gradient boosting, if you suppose that the linear trend slows down over time you should use square root of trend instead of linear trend
+*  If you suppose that the linear trend slows down over time you can apply Box-Cox transformation and use a linear trend as a regressor for the transformed data 
+*  In a regression with a constant term you can add 7 dummies for each day of the week to model  weekly seasonality 
+*  You can model yearly seasonality for daily data using fourier series
+
+Solution
+========
+
+Answerlist
+----------
+
+*  False. Decision trees are invariant under monotonic transformations of time
+*  False. Box-Cox transformation will be useful if the variance of the time series monotonically  changes over time
+*  False. It's a trap!
+*  True.
+
+
+Meta-information
+================
+exname: Forecast 3
+extype: schoice
+exsolution: 0001
+exshuffle: 4
+

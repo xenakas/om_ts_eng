@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+
+
+<question type="category">
+<category>
+<text>$course$/moodlequiz/Exercise 1</text>
+</category>
+</question>
+
+
+<question type="numerical">
+<name>
+<text> Q1 : base_week3_2_test_32_01_match </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[
+<p>
+<p>Match forecast quality metrics’ formulas</p>
+<p>A: <span class="math inline">\(\dfrac{\sum_{k=1}^H \left| {\frac{y_{t+k} - \hat y_{t+k}}{y_{t+k}} \cdot 100} \right| }{H}\)</span></p>
+<p>B: <span class="math inline">\(\dfrac{\sum_{k=1}^H \left| {y_{t+k} - \hat y_{t+k}} \right| }{H}\)</span></p>
+<p>C: <span class="math inline">\(\dfrac{\sum_{k=1}^H \left|\frac{y_{t+k} - \hat y_{t+k}}{MAE^{naive}}\right| }{H}\)</span></p>
+<p>D: <span class="math inline">\(\dfrac{\sum_{k=1}^H \left| {\frac{y_{t+k} - \hat y_{t+k}}{0.5 y_t + 0.5\hat y_t} \cdot 100} \right| }{H}\)</span></p>
+<p>and their names:</p>
+<ol style="list-style-type: decimal">
+<li><p>Mean Absolute Error</p></li>
+<li><p>Mean Absolute Scaled Error</p></li>
+<li><p>Mean Absolute Percentage Error</p></li>
+<li><p>Symmetric Mean Absolute Percentage Error</p></li>
+</ol>
+<p>Write down in the solution the sequence of numbers without spaces or delimeters corresponding to the formulas in each case (e.g. 4231).</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>Check lecture Model Quality.</p>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<answer fraction="100" format="moodle_auto_format">
+<text>3124</text>
+<tolerance>0</tolerance>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/moodlequiz/Exercise 2</text>
+</category>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> Q2 : base_week3_2_test_32_02_mch </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[
+<p>
+<p>Suppose you forecast the price of a flat calcucated in euros.
+Which of the following statements is correct?</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> NA </li>
+<li> NA </li>
+<li> Check lecture Model Quality. </li>
+<li> NA </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>true</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+MASE is calculated in percents
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+NA
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+RMSE is calculated in the euros squared
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+NA
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+MAPE is calculated in the euros
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+Check lecture Model Quality.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+sMAPE is calculated in percents
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+NA
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/moodlequiz/Exercise 3</text>
+</category>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> Q3 : base_week3_2_test_32_03_mch </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[
+<p>
+<p>Which of the following statements ARE correct?</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> True. </li>
+<li> True. </li>
+<li> False. IF MASE is greater than 1 then a naive model is worse </li>
+<li> False. RMSE is sensitive to outliers </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>false</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="50" format="html">
+<text><![CDATA[<p>
+MAPE can be used to compare models performances between datasets
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="50" format="html">
+<text><![CDATA[<p>
+For SMAPE if the actual value or forecast value is 0, the value of error will approach 100%
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+IF MASE is greater than 1 then a naive model is better
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False. IF MASE is greater than 1 then a naive model is worse
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+RMSE is robust to outliers
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False. RMSE is sensitive to outliers
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/moodlequiz/Exercise 4</text>
+</category>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> Q4 : base_week3_2_test_32_04_mch </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[
+<p>
+<p>Suppose we have splitted time series into training and test sets and estimated three different models. Which of the following statements ARE correct?</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> True. </li>
+<li> True. </li>
+<li> False. We certainly can! </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>false</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="50" format="html">
+<text><![CDATA[<p>
+This approach can be preferred to a cross-validation if the dataset is small
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="50" format="html">
+<text><![CDATA[<p>
+Since forecasts have different horizons we cannot differentiate models which are better for short-term forecasts and long-term forecasts
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+We cannot choose the best model using this method since forecasts have different horizons
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False. We certainly can!
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/moodlequiz/Exercise 5</text>
+</category>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> Q5 : base_week3_2_test_32_05_sch </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[
+<p>
+<p>Suppose we have splitted time series into training and test sets and estimated three different models. Which of the following statements is correct?</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> True. </li>
+<li> False. A short data sample increases the chance that your parameter estimates are imprecis </li>
+<li> False. Either the number of observations for a training set or the number of CV-iterations will be small </li>
+<li> False. This is true for RMSE based CV </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>true</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+Growing window cross-validation is better than the sliding window cross-validation if the process is stationary
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+For sliding window cross-validation a selected window size should be as small as possible
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False. A short data sample increases the chance that your parameter estimates are imprecis
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+Sliding window cross-validation can be used on a small dataset
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False. Either the number of observations for a training set or the number of CV-iterations will be small
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+Approximate cross-validation by one step forward based on MAPE can be done using Akaike Information Criterion
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False. This is true for RMSE based CV
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/moodlequiz/Exercise 6</text>
+</category>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> Q6 : base_week3_2_test_32_06_mch </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[
+<p>
+<p>Which of the following statements about Diebold-Mariano-test ARE correct?</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> False. The simpler the better, if by Diebold-Mariano-test the forecasts aren’t different, probably a naive model can be preferred </li>
+<li> False. DM-test is not suitable for pairwise comparison of multiple forecasts </li>
+<li> True. </li>
+<li> True. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>false</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+If model A has smaller RMSE than a naive model then model A should always be preferred
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False. The simpler the better, if by Diebold-Mariano-test the forecasts aren’t different, probably a naive model can be preferred
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+Diebold-Mariano-test can be used to compare 3 or more forecasts to each other
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False. DM-test is not suitable for pairwise comparison of multiple forecasts
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="50" format="html">
+<text><![CDATA[<p>
+Diebold-Mariano-test is based on the idea of testing that the square loss by model A equals to the square loss by model B
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="50" format="html">
+<text><![CDATA[<p>
+Diebold-Mariano-test can be used to compare short and long-term forecasts
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/moodlequiz/Exercise 7</text>
+</category>
+</question>
+
+
+<question type="numerical">
+<name>
+<text> Q7 : base_week3_2_test_32_07_prog </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[
+<p>
+<p>Consider LakeHuron dataset. You need to estimate an ARIMA and ETS model with automatically chosen parameters. Compare in-sample one-step forecasts using Diebold-Mariano test applied to model residuals. Provide the DM statistics if the forecasts are different with 3 decimal digits, else give 0 as an answer.</p>
+<p>You can load the LakeHuron data set in R by issuing the following command at the console data(“LakeHuron”) or if you use other programming languages you can download it <a href="https://github.com/vincentarelbundock/Rdatasets/blob/master/csv/datasets/LakeHuron.csv">here</a>.</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>You can use dm.test(residuals(f1),residuals(f2),h=1) function.</p>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<answer fraction="100" format="moodle_auto_format">
+<text>0</text>
+<tolerance>0</tolerance>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/moodlequiz/Exercise 8</text>
+</category>
+</question>
+
+
+<question type="numerical">
+<name>
+<text> Q8 : base_week3_2_test_32_08_prog </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[
+<p>
+<p>Consider gas dataset. You need to estimate an ARIMA and ETS model with automatically chosen parameters. Compare out-of-sample forecasts 6 steps ahead using MAPE. Provide MAPE for the best of the compared models with 3 decimal digits as an answer.</p>
+<p>You can load the LakeHuron data set in R by issuing the following command at the console data(“LakeHuron”) or if you use other programming languages you can download it <a href="https://github.com/vincentarelbundock/Rdatasets/blob/master/csv/datasets/LakeHuron.csv">here</a>.</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>You can use dm.test(residuals(f1),residuals(f2),h=1) function.</p>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<answer fraction="100" format="moodle_auto_format">
+<text>0.279</text>
+<tolerance>0.001</tolerance>
+</answer>
+</question>
+
+</quiz>

@@ -77,7 +77,7 @@
 	\hat\sigma^2_{ML} = \frac{\sum(\Delta y_i - \overline {\Delta y})^2}{T - 1}
 	\]
 	\pause
-	\alert{Interval forecast} $h$ steps ahead:
+	\alert{Interval forecast} $h$ \alert{steps} ahead:
 	\[
 	[y_T - 1.96 \hat \sigma \sqrt{h}; y_T + 1.96 \hat \sigma \sqrt{h}]
 	\]
@@ -107,11 +107,18 @@
 	\hat\sigma^2_{ML} = \frac{\sum(\Delta_{12} y_i - \overline {\Delta_{12} y})^2}{T - 12}
 	\]
 	\pause
-	\alert{Interval forecast} for $h$ \alert{seasons} ahead:
+	\alert{Interval forecast} for $h$ \alert{steps} ahead:
 	\[
-	[y_{T} - 1.96 \hat \sigma \sqrt{h}; y_{T} + 1.96 \hat \sigma \sqrt{h}]
+	\left[y_{T-12+h\%12} - 1.96 \hat \sigma \sqrt{\left\lceil \frac{h}{12} \right\rceil}; y_{T-12+h\%12} + 1.96 \hat \sigma \sqrt{\left\lceil \frac{h}{12} \right\rceil}\right]
 	\]
+	
+	where $\%$ - remainder from the division, $\lceil x \rceil$ - ceiling function
+ 	
+	
 \end{frame}
+	
+	
+
 
 \begin{frame}{Not bad already!}
 	

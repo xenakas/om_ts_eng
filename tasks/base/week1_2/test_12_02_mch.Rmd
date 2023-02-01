@@ -1,0 +1,34 @@
+Question
+========
+
+What is correct about LOESS?
+
+Answerlist
+----------
+
+*  The bigger the window $h$ the smoother the resulting curve
+*  You can only use normal Kernel function
+*  The higher the degree of the polynomial the smoother the resulting curve
+*  You can predict using LOESS
+
+Solution
+========
+
+Answerlist
+----------
+
+*  True.
+*  False. You can use any kernel function
+*  False. It works other way around
+*  True.
+
+
+
+Meta-information
+================
+exname: LOESS
+extype: mchoice
+exsolution: 1001 
+exshuffle: 4  
+
+	

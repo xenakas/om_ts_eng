@@ -1,0 +1,28 @@
+
+\begin{question}
+Let's continue conducting a Box-Jenkins procedure for the differenced log(gas) time series.
+
+You can load the gas dataset in R by importing forecast library or if you use other programming languages you can download it \href{https://github.com/vincentarelbundock/Rdatasets/blob/master/csv/forecast/gas.csv}{here}.
+
+At last we should estimate the chosen SARMA(0,1){[}0,1{]} for the transformed and differenced gas series and analyse the model.
+
+Which of the following are true?
+\begin{answerlist}
+  \item Both MA and SMA coefficients are significant
+  \item Residuals are uncorrelated (autocorrelation of 1st order)
+  \item Residuals are seasonally uncorrelated
+  \item The residual ACF and PACF are not significant
+  \item Distribution of residuals is normal
+\end{answerlist}
+\end{question}
+
+\begin{solution}
+\begin{answerlist}
+  \item Check model summary
+  \item To check if residual are correlated try Box.test(x) and Box.test(x, lag=12)
+  \item To check if residual are correlated try Box.test(x) and Box.test(x, lag=12)
+  \item ACF(11) and PACF(11) are sigificant
+  \item To check normality you can use shapiro.test(x) and jarque.bera.test(x) funcions Also, you can use checkresiduals(model) function to analyse the residuals
+\end{answerlist}
+\end{solution}
+

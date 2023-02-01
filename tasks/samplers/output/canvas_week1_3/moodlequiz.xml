@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+
+
+<question type="category">
+<category>
+<text>$course$/moodlequiz/Exercise 1</text>
+</category>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> Q1 : base_week1_3_test_13_01_mch </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[
+<p>
+<p>Select the characteristics of STL.</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> True. </li>
+<li> True. </li>
+<li> True. </li>
+<li> False. You also need to estimate starting obrevation <span class="math inline">\(\ell_0\)</span> and variance of the error term <span class="math inline">\(\sigma^2\)</span> </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>false</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+Forecast 10 steps ahead for ETS(ANN) is the last observation
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+Formally there are 30 options for ETS model
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+ETS is estimated using MLE
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+To estimate ETS(ANN) model you only need to estimate one parameter in the trend component <span class="math inline">\(\ell_t\)</span>
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False. You also need to estimate starting obrevation <span class="math inline">\(\ell_0\)</span> and variance of the error term <span class="math inline">\(\sigma^2\)</span>
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/moodlequiz/Exercise 2</text>
+</category>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> Q2 : base_week1_3_test_13_02_mch </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[
+<p>
+<p>Select the characteristics of STL.</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> True. </li>
+<li> True. </li>
+<li> False. It can! </li>
+<li> False. It’s better to use model with multiplicative seasonality </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>false</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="50" format="html">
+<text><![CDATA[<p>
+In long run in model with damped trend the trend disappears
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="50" format="html">
+<text><![CDATA[<p>
+If the seasonal oscillation amplitude is increasing over time you can use Box-Cox transformation
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+Trend in ETS model can’t be negative
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False. It can!
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+If the seasonal oscillation amplitude is decreasing over time it’s better to use ETS without seasonal component
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False. It’s better to use model with multiplicative seasonality
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/moodlequiz/Exercise 3</text>
+</category>
+</question>
+
+
+<question type="numerical">
+<name>
+<text> Q3 : base_week1_3_test_13_03_num </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[
+<p>
+<p>How many parameters should be estimated in ETS(MAdM) with 4 seasons?</p>
+<p><span class="math inline">\(\begin{array}{l c r}{y_{t}=(\ell_{t-1}+\phi b_{t-1})s_{t-m}(1+\varepsilon_{t})}\\ {\ell_{t}=(\ell_{t-1}+\phi b_{t-1})(1+\alpha\varepsilon_{t})}\\ {b_{t}=\phi b_{t-1}+\beta(\ell_{t-1}+\phi b_{t-1})\varepsilon_{t}}\\ {s_{t}=s_{t-m}(1+\gamma\varepsilon_{t})}&amp;{}\end{array}\)</span></p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>4 model parameters + variance of the error term + (6-1) starting observations</p>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<answer fraction="100" format="moodle_auto_format">
+<text>10</text>
+<tolerance>0</tolerance>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/moodlequiz/Exercise 4</text>
+</category>
+</question>
+
+
+<question type="numerical">
+<name>
+<text> Q4 : base_week1_3_test_13_04_match </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[
+<p>
+<p>Match ETS models with their formulas:</p>
+<p>A:</p>
+<p><span class="math inline">\(\begin{array}{l}{{y_{t}=\ell_{t-1}+\phi b_{t-1}+\varepsilon_{t}}}\\ {{\ell_{t}=\ell_{t-1}+\phi b_{t-1}+\alpha\varepsilon_{t}}}\\ {{b_{t}=\phi b_{t-1}+\beta\varepsilon_{t}}}\end{array}\)</span></p>
+<p>B:</p>
+<p><span class="math inline">\(\begin{array}{l c r}{{y_{t}=\ell_{t-1}s_{t-m}+\varepsilon_{t}}}\\ {{\ell_{t}=\ell_{t-1}+\alpha\varepsilon_{t}/s_{t-m}}}\\ {{s_{t}=s_{t-m}+\gamma\varepsilon_{t}/\ell_{t-1}}}\end{array}\)</span></p>
+<p>s
+C:</p>
+<p><span class="math inline">\(\begin{array}{c}{{y_{t}=\mathcal{E}_{t-1}\left(1+\mathcal{E}_{t}\right)}}\\ {{\ell_{t}=\ell_{t-1}\left(1+\alpha\mathcal{E}_{t}\right)}}\end{array}\)</span></p>
+<p>D:</p>
+<p><span class="math inline">\(\begin{array}{l c r}{y_{t}=(\ell_{t-1}+b_{t-1}+s_{t-m})(1+\varepsilon_{t})}\\ {\ell_{t}=\ell_{t-1}+b_{t-1}+\alpha(\ell_{t-1}+b_{t-1}+s_{t-m})\varepsilon_{l}}\\ {b_{t}=b_{t-1}+\beta(\ell_{t-1}+b_{t-1}+s_{t-m})\varepsilon_{l}}\\ {\ell_{t}=s_{t-m}+\gamma(\ell_{t-1}+b_{t-1}+s_{t-m})\varepsilon_{t}}\end{array}\)</span></p>
+<ol style="list-style-type: decimal">
+<li><p>ETS(ANM)</p></li>
+<li><p>ETS(AAdN)</p></li>
+<li><p>ETS(MAA)</p></li>
+<li><p>ETS(MNN)</p></li>
+</ol>
+<p>Write down in the solution the sequence of numbers without spaces or delimeters corresponding to the formulas for the ETS models in each case (e.g. 4231).</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>Check lectures ETS Model (I) and (II).</p>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<answer fraction="100" format="moodle_auto_format">
+<text>2143</text>
+<tolerance>0</tolerance>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/moodlequiz/Exercise 5</text>
+</category>
+</question>
+
+
+<question type="numerical">
+<name>
+<text> Q5 : base_week1_3_test_13_05_num </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[
+<p>
+<p>Consider ETS(AAdN) model with <span class="math inline">\(\ell_0 = 90, b0 = 10, \phi=0.9, \alpha=0.1,\beta=0.2,\sigma^2=10\)</span>. We know that <span class="math inline">\(y_1=100\)</span>.</p>
+<p>Find smoothed value <span class="math inline">\(\ell_1\)</span>.</p>
+<p>Provide the answer with 2 decimal digits.</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>Plug everything in a model and derive <span class="math inline">\(\ell_1\)</span>.</p>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<answer fraction="100" format="moodle_auto_format">
+<text>99.1</text>
+<tolerance>0.011</tolerance>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/moodlequiz/Exercise 6</text>
+</category>
+</question>
+
+
+<question type="numerical">
+<name>
+<text> Q6 : base_week1_3_test_13_06_num </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[
+<p>
+<p>Consider ETS(MAM) with <span class="math inline">\(\alpha=0.1, \beta=0.3, \gamma=0.2, \sigma^2=0.5, l_T = 10, b_T = 1, s_{T} = 0.1, s_{T-1} = 0.5, s_{T-2} = -0.1, s_{T-3} = -0.5\)</span> and quarterly seasonality</p>
+<p><span class="math inline">\(\begin{array}{l c r}{{y_{t}=(\ell_{t-1}+b_{t-1})s_{t-m}(1+\varepsilon_{t})}}\\ {{\ell_{t}=(\ell_{t-1}+b_{t-1})(1+\alpha\varepsilon_{t})}}\\ {{b_{t}=b_{t-1}+\beta(\ell_{t-1}+b_{t-1})\varepsilon_{t}}}\\ {{s_{t}=s_{t-m}(1+\gamma\varepsilon_{t})}}\end{array}\)</span></p>
+<p>Construct a point forecast 2 steps ahead.</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>Check lectures ETS Model (I) and (II).</p>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<answer fraction="100" format="moodle_auto_format">
+<text>-0.9</text>
+<tolerance>0.011</tolerance>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/moodlequiz/Exercise 7</text>
+</category>
+</question>
+
+
+<question type="numerical">
+<name>
+<text> Q7 : base_week1_3_test_13_07_prog </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[
+<p>
+<p>Consider gas dataset. Estimate ETS model without a trend and automatically selected error and seasonality specification. Provide initial state for trend component as an answer. Provide the answer with 2 decimal digits.</p>
+<p>You can load the gas dataset in R by importing forecast library or if you use other programming languages you can download it <a href="https://github.com/vincentarelbundock/Rdatasets/blob/master/csv/forecast/gas.csv">here</a>.</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>You can use ets(x,“ZZZ”) function.</p>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<answer fraction="100" format="moodle_auto_format">
+<text>2077.97</text>
+<tolerance>0.001</tolerance>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/moodlequiz/Exercise 8</text>
+</category>
+</question>
+
+
+<question type="numerical">
+<name>
+<text> Q8 : base_week1_3_test_13_08_prog </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[
+<p>
+<p>Consider gas dataset. Estimate ETS model without a trend and automatically selected error and seasonality specification. Calculate point forecast 2 years ahead. Provide the answer with 2 decimal digits.</p>
+<p>You can load the gas dataset in R by importing forecast library or if you use other programming languages you can download it <a href="https://github.com/vincentarelbundock/Rdatasets/blob/master/csv/forecast/gas.csv">here</a>.</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>You can use ets(x,“ZZZ”) function.</p>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<answer fraction="100" format="moodle_auto_format">
+<text>63628.08</text>
+<tolerance>0.01</tolerance>
+</answer>
+</question>
+
+</quiz>

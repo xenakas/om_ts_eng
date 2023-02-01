@@ -1,0 +1,40 @@
+Question
+========
+
+Match forecast quality metrics' formulas
+
+A: $\dfrac{\sum_{k=1}^H \left| {\frac{y_{t+k} - \hat y_{t+k}}{y_{t+k}} \cdot 100} \right|  }{H}$ 
+
+B: $\dfrac{\sum_{k=1}^H \left| {y_{t+k} - \hat y_{t+k}} \right|  }{H}$
+
+C: $\dfrac{\sum_{k=1}^H \left|\frac{y_{t+k} - \hat y_{t+k}}{MAE^{naive}}\right| }{H}$
+
+D: $\dfrac{\sum_{k=1}^H \left| {\frac{y_{t+k} - \hat y_{t+k}}{0.5 y_t + 0.5\hat y_t} \cdot 100} \right|  }{H}$ 
+
+
+and their names:
+
+
+1. Mean Absolute Error
+
+2. Mean Absolute Scaled Error
+
+3. Mean Absolute Percentage Error
+
+4. Symmetric Mean Absolute Percentage Error
+
+
+Write down in the solution the sequence of numbers without spaces or delimeters corresponding to the formulas in each case (e.g. 4231).
+
+Solution
+========
+
+Check lecture Model Quality.
+
+Meta-information
+================
+exname: Quality 1
+extype: num
+exsolution: 3124
+extol: 0
+	

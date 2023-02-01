@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+
+
+<question type="category">
+<category>
+<text>$course$/moodlequiz/Exercise 1</text>
+</category>
+</question>
+
+
+<question type="numerical">
+<name>
+<text> Q1 : base_week2_F_test_2_1_02_num </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[
+<p>
+<p>The variables <span class="math inline">\(X_1\)</span>, <span class="math inline">\(X_2\)</span>, … are independent with mean <span class="math inline">\(5\)</span> and variance <span class="math inline">\(7\)</span>.</p>
+<p>Let <span class="math inline">\(S = X_{2} + X_{3} + \ldots + X_{6}\)</span>.</p>
+<p>Find partial correlation <span class="math inline">\(\mathrm{pCorr}(X_1, X_1 + X_2; S)\)</span>.</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>Find the correlation between <span class="math inline">\(X_1\)</span> and <span class="math inline">\(X_1+X_2 - \beta (X_{2} + X_{3} + \ldots + X_{6})\)</span>. Note, that <span class="math inline">\(\hat{\beta}_{OLS} \to \beta\)</span>, as <span class="math inline">\(n\to \infty\)</span></p>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<answer fraction="100" format="moodle_auto_format">
+<text>0.75</text>
+<tolerance>0.011</tolerance>
+</answer>
+</question>
+
+</quiz>

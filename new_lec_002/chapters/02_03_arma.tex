@@ -29,7 +29,7 @@
 	\end{itemize}
 	\pause
 	
-	Requirement \alert{reversibility of the equation} \pause
+	Requirement: \alert{invertibility of the equation} \pause
 	\begin{itemize}
 		\item $MA(\infty)$ has \alert{infinite} number of parameters
 	\end{itemize}
@@ -283,13 +283,13 @@
 	The same $ARMA(p, q)$ process $(y_t)$ can be described by different equations!
 	\pause
 	
-	\begin{block}{Reversibility}
+	\begin{block}{Invertibility}
 		If the series $(y_t)$ is an $ARMA(p, q)$ process with the equation $P(L) y_t = c + Q(L) u_t$,
-		then this equation will be unique if the $MA$ part satisfies the reversibility condition.
+		then this equation will be unique if the $MA$ part satisfies the invertibility condition.
 	\end{block}
 	
 	\pause
-	Condition for $ARMA$ reversibility of the equation:
+	Condition for  invertibility of the $ARMA$ equation:
 	\begin{itemize}
 		\item the characteristic polynomial $\phi_{MA}(\lambda)$ has all roots $\abs{\lambda_i} <1$;
 		\item the lag polynomial $Q(L)$ has all roots $\abs{\ell_i} >1$
@@ -306,7 +306,7 @@
 		\item The process is stationary by \alert{definition}
 		\item $AR$ and $MA$ processes are \alert{special cases} of the $ARMA$ process
 		\item Theoretical $ACF$ and $PACF$ decrease \alert{exponentially}
-		\item The reversibility condition guarantees \alert{uniqueness}
+		\item The invertibility condition guarantees \alert{uniqueness}
 		\item An irreducible equation either has a \alert{unique} stationary solution  or it does not exist
 	\end{itemize}
 \end{frame}

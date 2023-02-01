@@ -1,0 +1,30 @@
+```{r data generation, echo = FALSE, results = 'hide'}
+## DATA GENERATION
+
+
+sol_round <- 90+0.9*10+0.1*1
+
+
+```
+
+Question
+========
+
+
+Consider  ETS(AAdN)  model with $\ell_0 = 90, b0 = 10, \phi=0.9, \alpha=0.1,\beta=0.2,\sigma^2=10$. We know that $y_1=100$.
+
+Find smoothed value  $\ell_1$.
+
+Provide the answer with 2 decimal digits.
+
+Solution
+========
+
+Plug everything in a model and derive   $\ell_1$.
+
+Meta-information
+================
+exname: Naive - IO 
+extype: num
+exsolution: `r sol_round`
+extol: 0.011

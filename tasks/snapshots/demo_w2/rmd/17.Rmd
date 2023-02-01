@@ -1,0 +1,30 @@
+
+Question
+========
+
+
+Consider a process  $y_t  = 4 + 0.8 y_{t-1} - 0.2 y_{t-2} + 0.6 y_{t-12} + u_t - 0.5 u_{t-1} +  0.2 u_{t-2} - 0.1 u_{t-12}$. 
+
+Which SARIMA(p,d,q)[P,D,Q] model describes $y_t$.
+
+
+
+Answerlist
+----------
+* SARIMA(2,1,2)[1,1,1]
+* SARIMA(1,0,1)[2,0,2]
+* SARIMA(2,0,2)[1,0,1]
+* SARIMA(12,0,12)[0,0,0]
+
+Solution
+========
+
+Check lecture about SARIMA.
+
+Meta-information
+================
+exname: sarma pdq 
+extype: mchoice
+exsolution: 0010
+exshuffle: 4
+

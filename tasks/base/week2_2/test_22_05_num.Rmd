@@ -1,0 +1,35 @@
+```{r data generation, echo = FALSE, results = 'hide'}
+## DATA GENERATION
+
+
+sol_round <- (1 + 0.3 + 0.3^2 + 0.3^3)*5+0.3^4*2
+
+
+```
+
+
+Question
+========
+
+
+Consider a process  $y_t  = 5  + 0.3 y_{t-1}$, where $u_t$ is a white noise with variance 2.  
+
+Construct a point forecast 4 steps ahead given that $y_T=2$.  
+Provide the answer with 3 decimal digits.
+
+
+
+
+
+Solution
+========
+
+The point forecast will be equal to $E(y_{t+4}\mid \mathcal{F}_t) = (1 + 0.3 + 0.3^2 + 0.3^3)*5+0.3^4*2$.
+
+
+Meta-information
+================
+exname: ma forecast
+extype: num
+exsolution: `r sol_round`
+extol: 0.011

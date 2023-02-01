@@ -1,0 +1,28 @@
+Question
+========
+
+Which of the following statements ARE true?
+
+
+Answerlist
+----------
+
+*  $y_t = 3 + 3t +u_t$ where $u_t$ is a white noise is trend-stationary
+*  If the irreducible ARMA equations has lag polynomial roots for the AR part which equal to 1, there are no stationary solutions 
+*  If the ARMA equation has common roots, than it's irreducible
+*  If the irreducible ARMA equations has lag polynomial roots for the AR part which are greater than 1, there are no stationary solutions
+
+
+Solution
+========
+
+Check lection about ARMA and ARIMA processes.
+
+
+Meta-information
+================
+exname: F2 5
+extype: mchoice
+exsolution: 1100
+exshuffle: 4
+

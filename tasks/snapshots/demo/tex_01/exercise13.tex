@@ -1,0 +1,11 @@
+
+\begin{question}
+Consider LakeHuron dataset. You need to estimate a linear regression model with two regressors: sliding window for mean applied to 2 previous values and growing window for mean. Provide the R squared for the estimated model as an answer with 3 decimal digits.
+
+You can load the LakeHuron data set in R by issuing the following command at the console data(``LakeHuron'') or if you use other programming languages you can download it \href{https://github.com/vincentarelbundock/Rdatasets/blob/master/csv/datasets/LakeHuron.csv}{here}.
+\end{question}
+
+\begin{solution}
+You can use cummean() and lag() functions to create regressors.
+\end{solution}
+

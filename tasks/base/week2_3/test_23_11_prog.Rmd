@@ -1,0 +1,47 @@
+```{r data generation, echo = FALSE, results = 'hide'}
+## DATA GENERATION
+
+library(forecast)
+options(scipen=999)
+
+```
+
+Question
+========
+
+
+At last, if you aren't satisfied with prediction quality you can modify the model. 
+What can be the reasonable suggestions for model modification?
+
+
+
+Answerlist
+----------
+* There is still seasonal correlation in the residuals, so you can consider other parameter for SARMA part. 
+* Probably logarithm wasn't the optimal transformation, better use Box-Cox transformation with parameter other than 0.  
+* In ACF(11) and PACF(11) for residuals were significant, better use ARMA(0,12) instead of SARMA.
+* The process could have been trend-stationary, you can remove trend instead of applying first differencing  
+
+
+Solution
+========
+
+
+Answerlist
+----------
+
+*  It can work
+*  It can work
+*  Increasing number of estimated parameters from 3 to 13 is not a good idea
+*  It can work, but note, that trend here is non-linear
+
+
+
+
+Meta-information
+================
+exname: bj 
+extype: mchoice
+exsolution: 1101
+exshuffle: 4
+

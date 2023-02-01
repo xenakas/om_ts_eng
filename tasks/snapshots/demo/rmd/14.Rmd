@@ -1,0 +1,33 @@
+Question
+========
+
+Which of the following statements about Diebold-Mariano-test ARE correct? 		
+		
+Answerlist
+----------
+
+*  Diebold-Mariano-test can be used to compare 3 or more forecasts to each other
+*  Diebold-Mariano-test can be used to compare short and long-term forecasts
+*  Diebold-Mariano-test is based on the idea of testing that the square loss by model A equals to the square loss by model B
+*  If model A has smaller RMSE than a naive model then model A should always be preferred  
+
+
+Solution
+========
+
+Answerlist
+----------
+
+*  False. DM-test is not suitable for pairwise comparison of multiple forecasts
+*  True. 
+*  True.
+*  False. The simpler the better, if by Diebold-Mariano-test the forecasts aren't different, probably a naive model can be preferred
+
+
+Meta-information
+================
+exname: Quality 6
+extype: mchoice
+exsolution: 0110
+exshuffle: 4
+

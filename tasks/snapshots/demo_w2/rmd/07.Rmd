@@ -1,0 +1,36 @@
+```{r data generation, echo = FALSE, results = 'hide'}
+## DATA GENERATION
+
+yt = 2
+ut =1
+ut1 = -1
+
+sol_round <- 6 + 0.3 *(6+0.3*yt+0.7*ut-0.1*ut1) - 0.1*ut 
+
+
+```
+
+
+Question
+========
+
+
+Consider a process   $y_t  = 6  + 0.3y_{t-1}+ u_t + 0.7 u_{t-1} - 0.1  u_{t-1}$, where $u_t$ is a white noise with variance 3.  
+
+Construct a point forecast 2 steps ahead, given that $y_T=2, \hat{u}_T=1,  \hat{u}_{T-1}=-1$.  
+Provide the answer with 3 decimal digits.
+
+
+
+Solution
+========
+
+The point forecast will be equal to $E(y_{t+2}\mid \mathcal{F}_t) = 6+0.3E(y_{t+1}\mid \mathcal{F}_t)-0.1\hat{u}_T$
+
+
+Meta-information
+================
+exname: ma forecast
+extype: num
+exsolution: `r sol_round`
+extol: 0.011

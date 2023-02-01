@@ -1,0 +1,28 @@
+
+\begin{question}
+Select all of the assumptions for ARMAX model
+
+\[y_t = c + \gamma a_t +  \beta_1 y_{t-1} + \ldots + \beta_p y_{t-p}  + u_t + \alpha_1 u_{t-1} + \ldots + \alpha_q u_{t-q }\]
+
+where \(a_t\) is a predictors and \((u_t)\) is white noise
+\begin{answerlist}
+  \item \(E(a^4_t) < \infty\)
+  \item Series \((y_t)\) is non-stationary
+  \item Predictor \((a_t)\) is stationary
+  \item \(E(u_t \mid a_{t-1}, b_{t-1}, y_{t-1}, a_{t-2}, b_{t-2}, y_{t-2} , \ldots) = 0\)
+  \item Predictor \((a_t)\) is non-stationary, but \(\Delta(a_t)\) is stationary
+  \item Series \((y_t)\) is stationary
+\end{answerlist}
+\end{question}
+
+\begin{solution}
+\begin{answerlist}
+  \item True.
+  \item False. \((y_t)\) and \((a_t)\) should be stationary
+  \item True.
+  \item True.
+  \item False. \((y_t)\) and \((a_t)\) should be stationary
+  \item True.
+\end{answerlist}
+\end{solution}
+

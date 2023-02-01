@@ -1,0 +1,37 @@
+```{r data generation, echo = FALSE, results = 'hide'}
+## DATA GENERATION
+
+library(forecast)
+
+
+df <- stl(log(gas),s.window = 12, inner = 2, outer = 1)
+df <- df$time.series[,1]
+a <- df[1:238]
+b <- df[239:476]
+
+tt <- var.test(a, b, alternative = "two.sided")
+
+sol_round <- round(tt$p.value,2)
+
+
+```
+
+Question
+========
+
+Consider gas dataset. You need to do STL with 2 inner and 1 outer loop for log(gas). Next check whether the variance of the first half of the seasonal component equals to the second using F-test. Provide the p-value rounded up to 2 decimal digits.
+
+You can load the gas dataset in R by importing forecast library or if you use other programming languages you can download it [here](https://github.com/vincentarelbundock/Rdatasets/blob/master/csv/forecast/gas.csv).
+
+
+Solution
+========
+
+You can use var.test(x, y, alternative = "two.sided").
+
+Meta-information
+================
+exname:  STL - gas halves
+extype: num
+exsolution: `r sol_round`
+extol: 0.001

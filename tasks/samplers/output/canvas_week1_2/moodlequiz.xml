@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+
+
+<question type="category">
+<category>
+<text>$course$/moodlequiz/Exercise 1</text>
+</category>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> Q1 : base_week1_2_test_12_01_mch </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[
+<p>
+<p>Select the correct statements about STL.</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> True. </li>
+<li> False. No it’s applied to seasonal subcomponents <span class="math inline">\(C_t\)</span> </li>
+<li> False. The weights are recalculated on each iteration of the algorithm depending on <span class="math inline">\(R_t\)</span>. </li>
+<li> True. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>false</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="50" format="html">
+<text><![CDATA[<p>
+Increasing the number of iterations of the outer loop can help in case of severe outliers
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+Within the inner loop the low-frequency component is extracted using LOESS applied to double moving average of the original time series
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False. No it’s applied to seasonal subcomponents <span class="math inline">\(C_t\)</span>
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+The weights for the outer loop should be chosen by cross-validation
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False. The weights are recalculated on each iteration of the algorithm depending on <span class="math inline">\(R_t\)</span>.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="50" format="html">
+<text><![CDATA[<p>
+The algorithm contains two loops: outer and inner loop
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/moodlequiz/Exercise 2</text>
+</category>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> Q2 : base_week1_2_test_12_02_mch </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[
+<p>
+<p>What is correct about LOESS?</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> True. </li>
+<li> False. It works other way around </li>
+<li> True. </li>
+<li> False. You can use any kernel function </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>false</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="50" format="html">
+<text><![CDATA[<p>
+You can predict using LOESS
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+The higher the degree of the polynomial the smoother the resulting curve
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False. It works other way around
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="50" format="html">
+<text><![CDATA[<p>
+The bigger the window <span class="math inline">\(h\)</span> the smoother the resulting curve
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+You can only use normal Kernel function
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False. You can use any kernel function
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/moodlequiz/Exercise 3</text>
+</category>
+</question>
+
+
+<question type="numerical">
+<name>
+<text> Q3 : base_week1_2_test_12_03_prog </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[
+<p>
+<p>Consider gas dataset. You need to do STL with 2 inner and 1 outer loop for log(gas). Next check whether the variance of the first half of the seasonal component equals to the second using F-test. Provide the p-value rounded up to 2 decimal digits.</p>
+<p>You can load the gas dataset in R by importing forecast library or if you use other programming languages you can download it <a href="https://github.com/vincentarelbundock/Rdatasets/blob/master/csv/forecast/gas.csv">here</a>.</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>You can use var.test(x, y, alternative = “two.sided”).</p>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<answer fraction="100" format="moodle_auto_format">
+<text>0.02</text>
+<tolerance>0.001</tolerance>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/moodlequiz/Exercise 4</text>
+</category>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> Q4 : base_week1_2_test_12_04_mch </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[
+<p>
+<p>Which of the following statements are true?</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> False. You can! </li>
+<li> False. This is ACF(3) </li>
+<li> True. </li>
+<li> True. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>false</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+You can’t cluster time series just by using ACF and PACF features.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False. You can!
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+PACF(3) shows how <span class="math inline">\(y_{t-3}\)</span> influences <span class="math inline">\(y_t\)</span> on average.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False. This is ACF(3)
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="50" format="html">
+<text><![CDATA[<p>
+To calculate ACF(2) you can either evaluate a paired regression of <span class="math inline">\(y_t\)</span> on <span class="math inline">\(y_{t-2}\)</span> or calculate the sample correlation between them.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="50" format="html">
+<text><![CDATA[<p>
+PACF(12) for monthly data would show how the change in the value of the series one year ago would influence current value if all the other values between were being constant.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/moodlequiz/Exercise 5</text>
+</category>
+</question>
+
+
+<question type="numerical">
+<name>
+<text> Q5 : base_week1_2_test_12_05_prog </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[
+<p>
+<p>Consider gas dataset. You need to do STL with 2 inner and 1 outer loop for log(gas). Calculate the strength of seasonality using the ideal and practical formula. Choose the one that is bigger as an answer. Provide the answer rounded up to 4 decimal digits.</p>
+<p>You can load the gas dataset in R by importing forecast library or if you use other programming languages you can download it <a href="https://github.com/vincentarelbundock/Rdatasets/blob/master/csv/forecast/gas.csv">here</a>.</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>Calculate strength of seasonality according to the formulas given in the lecture.</p>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<answer fraction="100" format="moodle_auto_format">
+<text>0.9448</text>
+<tolerance>0.011</tolerance>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/moodlequiz/Exercise 6</text>
+</category>
+</question>
+
+
+<question type="numerical">
+<name>
+<text> Q6 : base_week1_2_test_12_06_prog </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[
+<p>
+<p>Consider gas dataset. You need to do STL with 2 inner and 1 outer loop for log(gas). Calculate the strength of trend using the practical formula for the first 12 years of observations and for the last 12 years. Give the absolute value of the difference between them as an answer. Provide the answer rounded up to 4 decimal digits.</p>
+<p>You can load the gas dataset in R by importing forecast library or if you use other programming languages you can download it <a href="https://github.com/vincentarelbundock/Rdatasets/blob/master/csv/forecast/gas.csv">here</a>.</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>Calculate strength of trend according to the formulas given in the lecture.</p>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<answer fraction="100" format="moodle_auto_format">
+<text>0.101</text>
+<tolerance>0.011</tolerance>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/moodlequiz/Exercise 7</text>
+</category>
+</question>
+
+
+<question type="numerical">
+<name>
+<text> Q7 : base_week1_2_test_12_08_prog </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[
+<p>
+<p>Consider LakeHuron dataset. You need to calculate sample ACF(6). Provide the answer with 4 decimal digits.</p>
+<p>You can load the LakeHuron data set in R by issuing the following command at the console data(“LakeHuron”) or if you use other programming languages you can download it <a href="https://github.com/vincentarelbundock/Rdatasets/blob/master/csv/datasets/LakeHuron.csv">here</a>.</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>Use acf(x, plot = FALSE) function.</p>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<answer fraction="100" format="moodle_auto_format">
+<text>0.2849</text>
+<tolerance>0.011</tolerance>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/moodlequiz/Exercise 8</text>
+</category>
+</question>
+
+
+<question type="numerical">
+<name>
+<text> Q8 : base_week1_2_test_12_09_prog </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[
+<p>
+<p>Consider LakeHuron dataset. You need to calculate how many lags in ACF are significant.</p>
+<p>You can load the LakeHuron data set in R by issuing the following command at the console data(“LakeHuron”) or if you use other programming languages you can download it <a href="https://github.com/vincentarelbundock/Rdatasets/blob/master/csv/datasets/LakeHuron.csv">here</a>.</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>Use acf(x, plot = FALSE) function.</p>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<answer fraction="100" format="moodle_auto_format">
+<text>9</text>
+<tolerance>0</tolerance>
+</answer>
+</question>
+
+</quiz>

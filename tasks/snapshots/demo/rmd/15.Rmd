@@ -1,0 +1,41 @@
+```{r data generation, echo = FALSE, results = 'hide'}
+## DATA GENERATION
+
+library(forecast)
+
+
+
+f1 <- auto.arima(LakeHuron)
+f2 <- ets(LakeHuron)
+
+
+sol <- dm.test(residuals(f1),residuals(f2),h=1)
+
+
+
+sol_round <- 0
+
+
+```
+
+Question
+========
+
+Consider LakeHuron dataset. You need to estimate an ARIMA and ETS model with automatically chosen parameters. Compare in-sample one-step forecasts using Diebold-Mariano test applied to model residuals. Provide the DM statistics if the forecasts are different  with 3 decimal digits, else give  0 as an answer.
+
+
+You can load the LakeHuron data set in R by issuing the following command at the console data("LakeHuron") or if you use other programming languages you can download it [here](https://github.com/vincentarelbundock/Rdatasets/blob/master/csv/datasets/LakeHuron.csv).
+
+
+
+Solution
+========
+
+You can use dm.test(residuals(f1),residuals(f2),h=1) function.
+
+Meta-information
+================
+exname: Quality 7
+extype: num
+exsolution: `r sol_round`
+extol: 0

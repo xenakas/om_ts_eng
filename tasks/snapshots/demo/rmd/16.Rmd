@@ -1,0 +1,41 @@
+```{r data generation, echo = FALSE, results = 'hide'}
+## DATA GENERATION
+
+library(forecast)
+
+
+df <- log(gas)
+
+f1 <- auto.arima(head(df,470))
+f2 <- ets(head(df,470))
+
+
+df_ac <- rbind(accuracy(tail(df,6), predict(f1, 6)$pred),
+accuracy(tail(df,6), predict(f2, 6)$mean))
+
+sol_round <- round(df_ac[2,5],3)
+
+
+```
+
+Question
+========
+
+Consider gas dataset. You need to estimate an ARIMA and ETS model with automatically chosen parameters. Compare out-of-sample forecasts 6 steps ahead using MAPE. Provide  MAPE for the best of the compared models with 3 decimal digits as an answer.
+
+
+You can load the LakeHuron data set in R by issuing the following command at the console data("LakeHuron") or if you use other programming languages you can download it [here](https://github.com/vincentarelbundock/Rdatasets/blob/master/csv/datasets/LakeHuron.csv).
+
+
+
+Solution
+========
+
+You can use dm.test(residuals(f1),residuals(f2),h=1) function.
+
+Meta-information
+================
+exname: Quality 7
+extype: num
+exsolution: `r sol_round`
+extol: 0.001

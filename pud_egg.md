@@ -1,87 +1,56 @@
-# Аннотация
+# Syllabus
 
-Формат курса: онлайн с предварительно записанными лекциями и вебинарами в реальном времени. 
-Продолжительность курса: около 8-9 недель. Курс поделён на 8 тем, актуальная продолжительность может быть чуть больше 8 недель 
-в зависимости от фактических темпов прохождения курса. 
+Course Format: Online with pre-recorded lectures and live webinars.
 
-Курс рассказывает прежде всего о прогнозировании одномерных временных рядов с помощью статистических моделей. 
-Курс также кратко покрывает задачи построения признаков рядов, обнаружения структурных сдвигов и аномалий, 
-разложения ряда на составляющие. 
-Предполагается, что студенты знакомы с теорией вероятностей, математической статистикой и с эконометрикой.
-Из эконометрики требуется только знание множественной регрессии. 
-В записанных скринкастах используется R, однако студенту знакомому с питоном не составит большого труда оценить 
-аналогичные модели в питоне с помощью библиотеки sktime. 
+Course duration: about 4 weeks. The course is divided into 4 topics, the actual duration can be a little more than 4 weeks
+depending on the actual pace of the course completion.
 
-При успешном окончании курса студент сможет решать практические задачи описанные в программе курса. 
+The course focuses primarily on forecasting univariate time series using statistical models.
+The course also briefly covers the tasks of constructing series features, detecting structural shifts and anomalies,
+decomposition of a series into components.
 
+Students are expected to be familiar with probability theory, mathematical statistics, and econometrics.
+From econometrics, only knowledge of multiple regression is required.
 
-# Программа курса
+In the recorded screencasts Jupyter Notebooks with R kernel are used, but a student familiar with python will not have any difficulty evaluating similar models in python using the sktime library.
 
-Тема 1. Разложение ряда на составляющие и признаки рядов 
+After successful completion of the course, the student will be able to solve the practical problems described in the course program.
 
-Задачи, решаемые с помощью рядов. STL алгоритм выделения структурных составляющих. 
-Выборочная автокорреляционная и частная автокорреляционная функции. 
-Выраженность тренда и сезонности. 
+# Course Program
 
-Тема 2. Аддитивные ETS модели, сравнение моделей
+Week 1. Trend-seasonal decomposition and exponential smoothing models
 
-ETS(ANN) модель. ETS(AAN) модель. ETS(AAA) модель. Преобразования ряда. 
-Усреднение моделей. Кросс-валидация растущим и скользящим окном. 
+	Tasks for time series. Series components and features. Naive models, STL algorithm, ETS model and theta method.
+	
+	
+Week 2. ARIMA processes
+	
+	Stationary processes. MA, ARMA, ARIMA, SARIMA. Unit root tests: ADF test and KPSS test.
+	
+Week 3. Forecasting
+	
+	Forecasting without a model. Choosing predictors. Predictors and ARIMA model. Assessing model quality. Comparing models and forecasts.
+	
+Week 4. Pre-processing data
 
-Тема 3. Вариации ETS модели
+	Handling missing data. Anomaly detection. Structural break detection
+	
 
-Мультипликативные составляющие. Дампированный тренд. Тета-метод.
+# Grading Formula
 
-Тема 4. MA модель 
+Forms of control: 2 online tests (for a Week 1 and Weeks 2 & 3) and  final project.
 
-Определение стационарного процесса. Существование бесконечных сумм. 
-Теоретические ACF и PACF. Определение и свойства MA процесса. 
+The online test involves multiple choice questions or entering a numerical answer, for some of the tasks you will need to use programming using R (though you can solve them using any programming language or statistical package). Online tests are evaluated automatically.
 
-Тема 5. AR и ARMA модели 
+Final project involves independent work of the student with real data. Final project is assessed by a person.
 
-Структура решений ARMA уравнения. Вид стационарных решений. 
-Определение и свойства AR и ARMA моделей. 
+Final grade = 0.2 * Test 1 + 0.3 Test 2 + 0.5 Project 
 
-Тема 6. SARIMA модель 
+Each component of the final grade is translated into a 10-point scale (rounded to a whole number of points), then the total is calculated, then rounded arithmetically. None of the components are blocking.
 
-Единичный корень. KPSS и ADF тесты для тестирования единичного корня. 
-Сезонная часть ARIMA модели. Алгоритм Хандакара-Хиндмана. 
-
-Тема 7. Предикторы в ARIMA моделях 
-
-Создание признаков ряда. Использование случайного леса и градиентного бустинга.
-Регрессия с ARMA ошибками. Тригонометрическая сезонность. 
-ARDL модель. 
-
-Тема 8. Обнаружение структурных сдвигов и аномалий 
-
-Заполнение пропусков. Обнаружение структурных сдвигов. 
-Использование STL разложения для обнаружения аномалий. 
-Оценивание эффекта воздействия. 
-
-# Формула оценивания 
-
-Формы контроля: онлайн тесты неделю, домашнее задание, проект, финальный экзамен. 
-
-Онлайн тест предполагает вопросы множественного выбора или ввода числового ответа. 
-Онлайн тест проверяется автоматически. 
-
-Домашнее задание и проект предполагают самостоятельную работу студента с реальными данными. 
-
-Финальный экзамен состоит из открытых вопросов. 
-
-Домашнее задание, проект и финальный экзамен проверяет человек. 
-
-Итоговая оценка = 0.1 * Тест + 0.3 Дз + 0.3 Проект + 0.3 Экзамен
-
-Каждая составляющая итоговой оценки переводится в 10-балльную шкалу с целыми баллами, затем рассчитывается итог, затем округляется арифметически. Ни одна составляющая не является блокирующей.
-
-# Литература 
+# Additional Literature  
 
 1. Rob Hyndman, Forecasting Principles and Practice
 
 https://otexts.com/fpp3/
 
-2. Сергей Мастицкий, Анализ временных рядов с помощью R
-
-https://ranalytics.github.io/tsa-with-r/

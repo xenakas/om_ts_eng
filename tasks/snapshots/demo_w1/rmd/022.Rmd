@@ -1,0 +1,39 @@
+```{r data generation, echo = FALSE, results = 'hide'}
+## DATA GENERATION
+bt = 1
+b=0.3
+lt=10
+st2 = -0.1
+
+sol_round = (2*bt+(1-b)*lt)*st2
+
+```
+
+
+Question
+========
+
+Consider ETS(MAM) with $\alpha=0.1, \beta=0.3, \gamma=0.2, \sigma^2=0.5, l_T = 10, b_T = 1, s_{T} = 0.1, s_{T-1} = 0.5, s_{T-2} = -0.1, s_{T-3} = -0.5$ and quarterly seasonality
+
+$\begin{array}{l c r}{{y_{t}=(\ell_{t-1}+b_{t-1})s_{t-m}(1+\varepsilon_{t})}}\\ {{\ell_{t}=(\ell_{t-1}+b_{t-1})(1+\alpha\varepsilon_{t})}}\\ {{b_{t}=b_{t-1}+\beta(\ell_{t-1}+b_{t-1})\varepsilon_{t}}}\\ {{s_{t}=s_{t-m}(1+\gamma\varepsilon_{t})}}\end{array}$
+
+Construct a point forecast 2 steps ahead.
+
+
+
+
+
+
+
+Solution
+========
+
+Check lectures ETS Model (I) and (II).
+
+
+Meta-information
+================
+exname: ETS Model - F
+extype: num
+exsolution: `r sol_round`
+extol: 0.011

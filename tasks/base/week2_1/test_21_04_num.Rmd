@@ -1,0 +1,30 @@
+```{r data generation, echo = FALSE, results = 'hide'}
+## DATA GENERATION
+r = 0.8
+sol_round = r^3
+
+```
+
+
+Question
+========
+
+
+Consider a process  $y_t  = 4 + 0.8 y_{t-1}  + u_t$, where $u_t$ is a white noise with variance 3.  
+
+Find it's autocorrelation function $\rho_k$. Give $\rho_3$ as an answer.
+
+
+
+Solution
+========
+
+To find autocorrelation function consider MA($\infty$) representation of an AR(1) process.
+
+
+Meta-information
+================
+exname: ar acf
+extype: num
+exsolution: `r sol_round`
+extol: 0.011

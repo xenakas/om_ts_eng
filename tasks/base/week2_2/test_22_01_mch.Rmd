@@ -1,0 +1,28 @@
+Question
+========
+
+Which of the following is correct?
+
+
+Answerlist
+----------
+
+*  If the irreducible ARMA equations has lag polynomial roots which are smaller than one by its absolute value, there are no stationary solutions 
+*  If the ARMA equation has common roots, than it's irreducible
+*  Stationarity of the process is determined by AR part and invertibility by MA part
+*  Initial conditions can determine stationarity of the process
+
+
+Solution
+========
+
+Check ARMA lectures.
+
+
+Meta-information
+================
+exname: arma all
+extype: mchoice
+exsolution: 0011
+exshuffle: 4
+

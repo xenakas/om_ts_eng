@@ -1,0 +1,48 @@
+```{r data generation, echo = FALSE, results = 'hide'}
+## DATA GENERATION
+
+library(forecast)
+options(scipen=999)
+
+
+
+mod <- Arima(log(gas), order = c(0,1,1), seasonal = c(0,1,1))
+
+fore <- forecast(mod,24)
+
+
+sol_round <- round(exp(fore$mean)[24],2)
+
+
+
+
+```
+
+Question
+========
+
+
+
+Final step of the Box Jenkins procedure would be forecasting using the chosen model and analysing the prediction quality.
+
+You can load the gas dataset in R by importing forecast library or if you use other programming languages you can download it [here](https://github.com/vincentarelbundock/Rdatasets/blob/master/csv/forecast/gas.csv).
+
+
+Calculate forecast 2 years ahead for gas time series using the model selected on the previous steps.
+
+Provide the answer with 2 decimal digits.
+
+
+
+Solution
+========
+
+Don't forget you have applied transformation and differencing to the initial time series.
+
+
+Meta-information
+================
+exname:  bj 
+extype: num
+exsolution: `r sol_round`
+extol: 0.001

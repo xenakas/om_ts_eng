@@ -1,0 +1,307 @@
+----------------
+Plan:
+----------------
+
+Intro
+TIMESERIESANALYSIS - DAY 06 - PART 01 v1
+
+1) Trend-seasonal decomposition and exponential smoothing models
+
+	- Data and Tasks
+		TIMESERIESANALYSIS - DAY 04 - PART 01 v1 	
+	- Series Components
+		TIMESERIESANALYSIS - DAY 04 - PART 02 v1 	
+	- Naive Models
+		TIMESERIESANALYSIS - DAY 04 - PART 03 v1 	
+		CHECK formula for srw forecast
+	- STL algorithm
+		TIMESERIESANALYSIS - DAY 04 - PART 04 v1 	
+	- Screencast: STL algorithm
+		TIMESERIESANALYSIS - DAY 07 - PART 01 v1 
+	- Series Characteristics
+		TIMESERIESANALYSIS - DAY 04 - PART 05 v1 	
+	- ETS Model (Part I)
+		TIMESERIESANALYSIS - DAY 04 - PART 06 v1 	
+	- ETS Model (Part II)
+		TIMESERIESANALYSIS - DAY 04 - PART 07 v1 	
+	- Screencast: ETS Model
+		TIMESERIESANALYSIS - DAY 07 - PART 02 v1 
+	- Theta method
+		TIMESERIESANALYSIS - DAY 04 - PART 08 v1 	
+	
+	
+2) ARIMA processes
+	
+	- Stationary processes
+		TIMESERIESANALYSIS - DAY 05 - PART 01 v1 	
+	- MA Process
+		TIMESERIESANALYSIS - DAY 05 - PART 02 v1 	
+	- ARMA equation
+		TIMESERIESANALYSIS - DAY 05 - PART 03 v1 	
+	- ARMA process
+		TIMESERIESANALYSIS - DAY 05 - PART 04 v1 	
+	- Screencast: ARMA model
+		TIMESERIESANALYSIS - DAY 07 - PART 03 v1 
+	- ARIMA process
+		TIMESERIESANALYSIS - DAY 05 - PART 05 v1 		
+	- SARIMA process
+		TIMESERIESANALYSIS - DAY 05 - PART 06 v1 		
+	- Unit root tests: ADF test
+		TIMESERIESANALYSIS - DAY 05 - PART 07 v1 		
+ 	- Unit root tests: KPSS test
+		TIMESERIESANALYSIS - DAY 06 - PART 03 v1 
+	- Screencast: ARIMA model
+		TIMESERIESANALYSIS - DAY 07 - PART 04 v1 
+
+3) Forecasting
+	
+	- Forecasting without a model
+		TIMESERIESANALYSIS - DAY 03 - PART 01 v2
+	- More predictors!
+		TIMESERIESANALYSIS - DAY 03 - PART 02 v2
+	- Screencast: Forecasting
+		TIMESERIESANALYSIS - DAY 07 - PART 05 v1 
+	- Predictors and ARIMA
+		TIMESERIESANALYSIS - DAY 03 - PART 03 v2
+	- Model Quality
+		TIMESERIESANALYSIS - DAY 03 - PART 04 v2
+	- Model Comparison
+		TIMESERIESANALYSIS - DAY 03 - PART 05 v2
+	- Forecast comparison
+		TIMESERIESANALYSIS - DAY 03 - PART 06 v2
+	
+4) Pre-processing data
+
+	- Handling missing data
+		TIMESERIESANALYSIS - DAY 02 - PART 01 v2	
+	- Screencast: Handling missing data
+		TIMESERIESANALYSIS - DAY 07 - PART 06 v1 	
+	- Anomaly detection
+		TIMESERIESANALYSIS - DAY 02 - PART 02 v2	
+	- Screencast: Anomaly detection
+		TIMESERIESANALYSIS - DAY 07 - PART 07 v1 
+	- Structural break detection
+		TIMESERIESANALYSIS - DAY 02 - PART 03 v2	
+	- Screencast: Structural break detection
+		TIMESERIESANALYSIS - DAY 07 - PART 08 v1 
+	
+	
+Final Project:	
+	TIMESERIESANALYSIS - DAY 06 - PART 02 v1 
+
+
+
+
+
+
+
+
+
+
+
+
+Заметки 
+
+	- добавить комментарии для неправильных вариантов (можно с решением)
+
+
+Time series (Master of Science)
+
+0) Видео-введение:
+	- цели и задачи 
+	- знакомство с курсом/карта курса (возможно через тренд-сезонное разложение?)
+	
+
+
+2) Итоговое задание: 
+	- на 1 и 3 неделе
+	- 25-30 заданий
+	- к неправильным вариантам подсказка (например, посмотри внимательней лекцию 1.2), частичное решение.. 
+	
+3) Вебинары:
+	- 2 вебинара на 1 и 3 неделе 
+	
+4) Проектное задание: 
+	Box-Jenkins procedure (сделать заранее ноутбук, чтобы проверить, работает ли?)	
+
+5) Слайды:
+	- обращать внимание на переносы и widowed lines
+	- вместо ссылок/датасетов указать "см. доп. материалы"
+	- подумать про системыне символы (например, звездочка - опредлеление или стрелочка - см. доп. материалы...) - если будут сказать в интро-видео к курсу	
+	- Начать запись со 2-3 лекции, потом 4, 1, потом промо и интро
+	
+6) Доп. материалы: 
+	 - доп. чтение
+	 - разбор кейсов
+	 - презы...
+В лекции сделать акцент, если что-то нужно для решения задач	
+	
+
+
+
+
+
+----------------
+
+Plan:
+
+----------------
+
+1) Trend-seasonal decomposition and exponential smoothing models
+
+	- Data and Tasks
+	- Series Components
+		Why expand?
+	- Naive Models
+		CHECK formula for srw forecast
+	- STL algorithm
+	- Series Characteristics
+	- ETS Model (Part I)
+	- ETS Model (Part II)
+	- Theta method
+	
+	
+2) ARIMA processes
+	
+	- Stationary processes
+	- MA Process
+	- ARMA equation
+	- ARMA process
+	- ARIMA process
+	- SARIMA process
+	- Unit root tests: ADF test
+	- Unit root tests: KPSS test
+	
+3) Forecasting
+	
+	- Forecasting without a model
+	- More predictors!
+	- Predictors and ARIM A
+	- Model Quality
+	- Model Comparison
+	- Forecast comparison
+	
+4) Pre-processing data
+
+	- Handling missing data
+	- Anomaly detection
+	- Structural break detection
+	
+	
+	
+	
+Question
+========
+
+Select the characteristics of STL.
+
+Answerlist
+----------
+
+* Seasonal component should not change over time 
+* Errors should be uniformely distributed
+* STL does not have an underlying model
+*	STL can provide the confidence interval for the seasonal component
+* STL can only provide the confidence interval for the predicted values
+
+Solution
+========
+
+Answerlist
+----------
+
+*	False. No assumptions for DGP are required
+* False. No assumptions for DGP are required		
+* True. 
+* False. STL is not a model
+* False. STL is not a model
+
+
+Meta-information
+================
+exname: Data and Tasks - STL    
+extype: mchoice
+exsolution: 00100
+exshuffle: 5
+
+	
+	
+	
+	
+Question
+========
+
+Calculate conditional expected value $E[3 W_7 + 6 W_5 + e^{W_5} \mid W_5]$.
+
+Answerlist
+----------
+* $9 W_5 + e^{W_5}$
+* $6 W_5 + e^{W_5}$
+* $3 W_7$
+* $3 W_2$
+* $3 W_2 + 6 W_5 + e^{W_5}$
+* $e^{W_5}$
+
+Solution
+========
+
+$E[W_6 \mid W_4]=E[(W_6-W_4)+(W_4-W_0) \mid W_4]=W_4$
+
+Meta-information
+================
+exname: conditional expected value
+extype: schoice
+exsolution: 100000
+exshuffle: 6
+exextra[Type]: Calculation
+exextra[Language]: English
+exextra[Level]: Literacy
+exsection: Stochastic calculus
+
+
+Question
+========
+
+Find unconditional expected value $E[W_5^4]$, where  $W_5$ is a Wiener process.
+
+Solution
+========
+
+Think about moments of Normal distribution
+
+Meta-information
+================
+exname: unconditional expected value
+extype: num
+exsolution: 75
+extol: 0.01
+exextra[Type]: Calculation
+exextra[Language]: English
+exextra[Level]: Literacy
+exsection: Stochastic calculus
+
+
+	
+	
+	
+	
+----------------
+
+Tasks:
+
+----------------				
+			
+	4) Pre-processing data
+		
+	Form: 10 tasks
+	
+	- Handling missing data (3)
+	- Anomaly detection (4)
+	- Structural break detection (3)
+	
+* * * * * * * * * * * * * * * * * * * *	* * * * * * * * * * * * * * * * * * * 
+	
+		
+
+
+

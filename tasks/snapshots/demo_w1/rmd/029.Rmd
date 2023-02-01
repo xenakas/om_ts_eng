@@ -1,0 +1,33 @@
+```{r data generation, echo = FALSE, results = 'hide'}
+## DATA GENERATION
+mu = 0.5 
+ss = 2 
+
+
+c <- round(cumsum(rnorm(4, 0, 2)),2)
+
+sol_round <- round(qnorm(0.95)*var(diff(c))*2,2)
+
+
+
+```
+
+Question
+========
+
+
+Consider a random walk model. You have a sample $y^T = [`r c`]$ and you want to check if forecast 2 steps ahead would be non-positive at 5% significance level. Calculate right hand side of your confidence interval, corresponding to a required test. 
+
+Provide the answer with 2 decimal digits.
+
+Solution
+========
+
+Check lecture "Naive models".
+
+Meta-information
+================
+exname: Naive - IO 
+extype: num
+exsolution: `r sol_round`
+extol: 0.011

@@ -1,0 +1,33 @@
+Question
+========
+
+Select the characteristics of STL.
+
+Answerlist
+----------
+
+*  ETS is estimated using MLE 
+*  To estimate ETS(ANN) model you only need to estimate one parameter in the trend component $\ell_t$
+*  Forecast 10 steps ahead for ETS(ANN) is the last observation 
+*  Formally there are 30 options for ETS model
+
+
+Solution
+========
+
+Answerlist
+----------
+
+*  True.
+*  False. You also need to estimate starting obrevation $\ell_0$ and variance of the error term $\sigma^2$ 
+*  True. 
+*  True. 
+
+
+Meta-information
+================
+exname: ETS - ANN
+extype: mchoice
+exsolution: 1011
+exshuffle: 4
+

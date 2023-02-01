@@ -1,0 +1,36 @@
+```{r data generation, echo = FALSE, results = 'hide'}
+## DATA GENERATION
+v = 3 
+r = 0.8
+
+vary = v/(1-r^2)
+
+
+sol_round = round(r^4*vary,3)
+
+```
+
+
+
+Question
+========
+
+
+Consider a process  $y_t  = 4 + 0.8 y_{t-1}  + u_t$, where $u_t$ is a white noise with variance 3.  
+
+Find it's autocovariance function $\gamma_k$. Give $\gamma_4$ as an answer.
+
+
+
+Solution
+========
+
+To find autocovariance function consider MA($\infty$) representation of an AR(1) process.
+
+
+Meta-information
+================
+exname: ar acf
+extype: num
+exsolution: `r sol_round`
+extol: 0.011

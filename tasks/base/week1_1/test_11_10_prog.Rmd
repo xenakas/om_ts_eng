@@ -1,0 +1,29 @@
+```{r data generation, echo = FALSE, results = 'hide'}
+## DATA GENERATION
+library(forecast)
+
+
+sol_round <- 0
+
+```
+
+Question
+========
+
+Consider gas dataset. You need to use seasonal naive model to forecast gas production one year ahead. Calculate the width of prediction interval 2 and 12 steps ahead. Give the absolute value of the difference of these widths as an answer. 
+
+
+You can load the gas dataset in R by importing forecast library or if you use other programming languages you can download it [here](https://github.com/vincentarelbundock/Rdatasets/blob/master/csv/forecast/gas.csv).
+
+
+Solution
+========
+
+Check lecture "Naive models".
+
+Meta-information
+================
+exname:  SNaive - gas ci
+extype: num
+exsolution: `r sol_round`
+extol: 0

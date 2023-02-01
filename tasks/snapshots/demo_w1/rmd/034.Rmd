@@ -1,0 +1,47 @@
+```{r data generation, echo = FALSE, results = 'hide'}
+## DATA GENERATION
+library(forecast)
+library(ggplot2)
+```
+
+Question
+========
+
+
+Consider the following time series on Australian monthly gas production: 
+
+```{r, echo = FALSE}
+ggtsdisplay(gas)
+```
+
+Which ETS model is more appropriate to use?
+
+Answerlist
+----------
+
+*  ETS(MAM)
+*  ETS(AAA)
+*  ETS(MAdM)
+*  ETS(AAdA)
+
+Solution
+========
+
+Answerlist
+----------
+
+*  True. 
+*  False. Does not account for changing seasonality
+*  True.
+*  False. Does not account for changing seasonality
+
+
+
+Meta-information
+================
+exname: Series Components - Changing Seasnality
+extype: mchoice
+exsolution: 1010 
+exshuffle: 4  
+
+	

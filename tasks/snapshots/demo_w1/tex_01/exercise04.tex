@@ -1,0 +1,20 @@
+
+\begin{question}
+Select the correct statements about STL.
+\begin{answerlist}
+  \item The algorithm contains two loops: outer and inner loop
+  \item Increasing the number of iterations of the outer loop can help in case of severe outliers
+  \item Within the inner loop the low-frequency component is extracted using LOESS applied to double moving average of the original time series
+  \item The weights for the outer loop should be chosen by cross-validation
+\end{answerlist}
+\end{question}
+
+\begin{solution}
+\begin{answerlist}
+  \item True.
+  \item True.
+  \item False. No it's applied to seasonal subcomponents \(C_t\)
+  \item False. The weights are recalculated on each iteration of the algorithm depending on \(R_t\).
+\end{answerlist}
+\end{solution}
+

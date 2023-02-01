@@ -1,0 +1,30 @@
+Question
+========
+
+Which of the following is regressors should be chosen for modelling yearly seasonality in daily data?  
+
+
+Answerlist
+----------
+
+*  Either $\operatorname{cos}\left({\frac{2\pi}{365}}\cdot\,t\right)$ or $\operatorname{sin}\left({\frac{2\pi}{365}}\cdot\,t\right)$
+*  Both $\operatorname{cos}\left({\frac{2\pi}{365}}\cdot\,t\right)$ and $\operatorname{sin}\left({\frac{2\pi}{365}}\cdot\,t\right)$
+*  365 dummies for each day of the year 
+
+
+Solution
+========
+
+Answerlist
+----------
+
+Check lecture "More predictors".
+
+
+Meta-information
+================
+exname: Forecast 4 
+extype: schoice
+exsolution: 010
+exshuffle: 4
+

@@ -1,0 +1,23 @@
+
+\begin{question}
+Let's conduct a Box-Jenkins procedure for gas time series to determine the specification of SARIMA model.
+
+You can load the gas dataset in R by importing forecast library or if you use other programming languages you can download it \href{https://github.com/vincentarelbundock/Rdatasets/blob/master/csv/forecast/gas.csv}{here}.
+
+\begin{figure}[H]
+\centering
+\includegraphics{unnamed-chunk-1-1-4.pdf}
+\caption{plot of chunk unnamed-chunk-1}
+\end{figure}
+
+Is the variance stable?
+\begin{answerlist}
+  \item Yes, we can proceed with gas time series
+  \item No, the logarithmic transformation should be applied
+\end{answerlist}
+\end{question}
+
+\begin{solution}
+The variance grows over time, a transformation is required.
+\end{solution}
+

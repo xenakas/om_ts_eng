@@ -1,0 +1,47 @@
+```{r data generation, echo = FALSE, results = 'hide'}
+## DATA GENERATION
+library(forecast)
+library(ggplot2)
+```
+
+Question
+========
+
+
+Consider the following time series on Australian monthly gas production: 
+
+```{r, echo = FALSE}
+ggtsdisplay(gas)
+```
+
+Which model is more appropriate to use?
+
+Answerlist
+----------
+
+*  Use $y_t = trend_t \cdot seas_t  \cdot remainder_t$
+*  Use $\ln y_t = \ln trend_t + \ln seas_t + \ln remainder_t$
+*  Use models with built in Box-Cox transformation
+*  Use $ETS(AAA)$
+
+Solution
+========
+
+Answerlist
+----------
+
+*  True.
+*  True.
+*  True.
+*  False. Does not account for changing seasonality
+
+
+
+Meta-information
+================
+exname: Series Components - Changing Seasnality
+extype: mchoice
+exsolution: 1110 
+exshuffle: 4  
+
+	

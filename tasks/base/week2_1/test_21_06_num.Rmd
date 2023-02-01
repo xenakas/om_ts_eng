@@ -1,0 +1,50 @@
+```{r data generation, echo = FALSE, results = 'hide'}
+## DATA GENERATION
+
+c=1
+b=0.7
+a=-0.1
+
+quad <- function(a, b, c)
+{
+  a <- as.complex(a)
+  answer <- c((-b + sqrt(b^2 - 4 * a * c)) / (2 * a),
+              (-b - sqrt(b^2 - 4 * a * c)) / (2 * a))
+  if(all(Im(answer) == 0)) answer <- Re(answer)
+  if(answer[1] == answer[2]) return(answer[1])
+  answer
+}
+
+
+
+sol_round = round(sum(quad(a, b, c)),3)
+
+```
+
+
+
+Question
+========
+
+
+Consider a process  $y_t  = 6  + u_t + 0.7 u_{t-1} - 0.1  u_{t-1}$, where $u_t$ is a white noise with variance 2.  
+
+Check that  the process is invertible.  If the process is invertible give the sum of the lag polynomial roots as an answer, else give 0 as an answer.
+Provide the answer with 3 decimal digits.
+
+
+
+
+
+Solution
+========
+
+The process
+
+
+Meta-information
+================
+exname: roots
+extype: num
+exsolution: `r sol_round`
+extol: 0.011

@@ -1,0 +1,28 @@
+```{r data generation, echo = FALSE, results = 'hide'}
+## DATA GENERATION
+options(scipen=999)
+
+sol_round <- 38410
+
+```
+
+Question
+========
+
+Consider gas dataset. You need to use seasonal naive model to forecast gas production in December, 2099. Provide the answer with 2 decimal digits.
+
+
+You can load the gas dataset in R by importing forecast library or if you use other programming languages you can download it [here](https://github.com/vincentarelbundock/Rdatasets/blob/master/csv/forecast/gas.csv).
+
+
+Solution
+========
+
+Check lecture "Naive models".
+
+Meta-information
+================
+exname:  SNaive - gass 
+extype: num
+exsolution: `r sol_round`
+extol: 0.001

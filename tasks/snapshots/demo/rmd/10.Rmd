@@ -1,0 +1,30 @@
+Question
+========
+
+Suppose you forecast the price  of a flat calcucated in euros.
+Which of the following statements is correct? 		
+		
+Answerlist
+----------
+
+*  MAPE is calculated in the euros
+*  MASE is calculated in percents
+*  RMSE is calculated in the euros squared
+*  sMAPE is calculated in percents
+
+Solution
+========
+
+Answerlist
+----------
+
+Check lecture Model Quality.
+
+
+Meta-information
+================
+exname: Quality 2
+extype: schoice
+exsolution: 0001
+exshuffle: 4
+

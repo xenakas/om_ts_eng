@@ -1,0 +1,33 @@
+Question
+========
+
+Suppose we have splitted time series into training and test sets and estimated three different models. Which of the following statements is correct? 		
+		
+Answerlist
+----------
+
+*  Sliding window cross-validation can be used on a small dataset
+*  Growing window cross-validation is better than the sliding window cross-validation if the process is stationary
+*  Approximate cross-validation by one step forward based on MAPE can be done using Akaike Information Criterion
+*  For sliding window cross-validation a selected window size should be as small as possible
+
+
+Solution
+========
+
+Answerlist
+----------
+
+*  False. Either the number of observations for a training set or the number of CV-iterations will be small   
+*  True. 
+*  False. This is true for RMSE based CV 
+*  False. A short data sample increases the chance that your parameter estimates are imprecis
+
+
+Meta-information
+================
+exname: Quality 5
+extype: schoice
+exsolution: 0100
+exshuffle: 4
+

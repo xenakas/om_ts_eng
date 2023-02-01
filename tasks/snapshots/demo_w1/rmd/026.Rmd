@@ -1,0 +1,35 @@
+```{r data generation, echo = FALSE, results = 'hide'}
+## DATA GENERATION
+s = 4
+h = 19
+
+c = c(1,3,2,-1,2,4,2,-3)
+
+ss <-  var(diff(c,4))
+
+
+sol_round <- round(tail(c,s-h%%s)[1]+2*1.96*sqrt(ss*ceiling(19/4)),2)
+
+
+
+
+```
+
+Question
+========
+
+Consider a seasonal random walk model for the following sample   $y^T = [`r c`]$ of quarterly observations. Construct a 95%  prediction  interval 19 steps ahead. Provide upper margin of thw interval as the answer.
+
+Provide the answer with 2 decimal digits.
+
+Solution
+========
+
+Check lecture "Naive models".
+
+Meta-information
+================
+exname: Naive - SRW 
+extype: num
+exsolution: `r sol_round`
+extol: 0.011

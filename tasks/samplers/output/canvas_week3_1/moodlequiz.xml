@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+
+
+<question type="category">
+<category>
+<text>$course$/moodlequiz/Exercise 1</text>
+</category>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> Q1 : base_week3_1_test_31_01_mch </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[
+<p>
+<p>Suppose you want to predict future values of <span class="math inline">\(y_t\)</span>. Which of the following statements is correct?</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> True. </li>
+<li> False. You can! </li>
+<li> False. It’s a sliding window function </li>
+<li> False. It depends on data </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>true</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+When working with weekly data adding <span class="math inline">\(L^7y_t\)</span> as a regressor can improve forecast quality
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+You cannot make predictions for future values of <span class="math inline">\(y_t\)</span> using linear regression model
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False. You can!
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+An example of growing window function is mean of 2 previous values
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False. It’s a sliding window function
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+Averaging forecasts from random forest algorithm and ETS model will improve forecast quality
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False. It depends on data
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/moodlequiz/Exercise 2</text>
+</category>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> Q2 : base_week3_1_test_31_02_match </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[
+<p>
+<p>Suppose you want to predict future values of monthly observations for China’s GDP <span class="math inline">\(y_t\)</span> using the following set of regressors: seasonal lag, lag of a second difference, mean as a growing window and median as a sliding window of 3 values. What should the prediction sample 1 step ahead be?</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> NA </li>
+<li> NA </li>
+<li> NA </li>
+<li> Check lecture “Forecasting without a model”. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>true</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(\left(y_{T-11}, (y_T-y_{T-1}) - (y_{T-1}-y_{T-2}), \mathrm{Mean}\{y_{1},\,\cdot\cdot\cdot,\,y_{T}\}, \mathrm{Med}\{y_{T-2}, y_{T-1},\,y_{T}\}\right)\)</span>
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+NA
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(\left(y_{T-11}, (y_T-y_{T-1}) - (y_{T-1}-y_{T-2}), \mathrm{Mean}\{y_{T-2}, y_{T-1},\,y_{T}\}, \mathrm{Med}\{y_{1},\,\cdot\cdot\cdot,\,y_{T}\}\right)\)</span>
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+NA
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(\left(y_{T-12}, y_T-y_{T-1}, \mathrm{Mean}\{y_{1},\,\cdot\cdot\cdot,\,y_{T}\}, \mathrm{Med}\{y_{T-2}, y_{T-1},\,y_{T}\}\right)\)</span>
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+NA
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(\left(y_{T-12}, (y_T-y_{T-1}) - (y_{T-1}-y_{T-2}), \mathrm{Mean}\{y_{T-2}, y_{T-1},\,y_{T}\}, \mathrm{Med}\{y_{1},\,\cdot\cdot\cdot,\,y_{T}\}\right)\)</span>
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+Check lecture “Forecasting without a model”.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/moodlequiz/Exercise 3</text>
+</category>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> Q3 : base_week3_1_test_31_03_mch </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[
+<p>
+<p>Suppose you want to predict future values of <span class="math inline">\(y_t\)</span>. Which of the following statements is correct?</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> False. Box-Cox transformation will be useful if the variance of the time series monotonically changes over time </li>
+<li> True. </li>
+<li> False. It’s a trap! </li>
+<li> False. Decision trees are invariant under monotonic transformations of time </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>true</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+If you suppose that the linear trend slows down over time you can apply Box-Cox transformation and use a linear trend as a regressor for the transformed data
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False. Box-Cox transformation will be useful if the variance of the time series monotonically changes over time
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+You can model yearly seasonality for daily data using fourier series
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+In a regression with a constant term you can add 7 dummies for each day of the week to model weekly seasonality
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False. It’s a trap!
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+In gradient boosting, if you suppose that the linear trend slows down over time you should use square root of trend instead of linear trend
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False. Decision trees are invariant under monotonic transformations of time
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/moodlequiz/Exercise 4</text>
+</category>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> Q4 : base_week3_1_test_31_04_mch </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[
+<p>
+<p>Which of the following is regressors should be chosen for modelling yearly seasonality in daily data?</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> NA </li>
+<li> Check lecture “More predictors”. </li>
+<li> NA </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>true</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+Both <span class="math inline">\(\operatorname{cos}\left({\frac{2\pi}{365}}\cdot\,t\right)\)</span> and <span class="math inline">\(\operatorname{sin}\left({\frac{2\pi}{365}}\cdot\,t\right)\)</span>
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+NA
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+Either <span class="math inline">\(\operatorname{cos}\left({\frac{2\pi}{365}}\cdot\,t\right)\)</span> or <span class="math inline">\(\operatorname{sin}\left({\frac{2\pi}{365}}\cdot\,t\right)\)</span>
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+Check lecture “More predictors”.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+365 dummies for each day of the year
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+NA
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/moodlequiz/Exercise 5</text>
+</category>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> Q5 : base_week3_1_test_31_05_mch </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[
+<p>
+<p>Which of the following statements ARE correct?</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> True. </li>
+<li> False. You can use as many predictors as you like (unless you have enough data) </li>
+<li> False. In ARMAX regressors should be stationary </li>
+<li> True. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>false</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="50" format="html">
+<text><![CDATA[<p>
+In ARDL model lags of the predictors are used instead of noise lags <span class="math inline">\(u_t\)</span>
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+In regression with ARMA errors you can use no more than two predictors
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False. You can use as many predictors as you like (unless you have enough data)
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+ARMAX can work with non-stationary predictors
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False. In ARMAX regressors should be stationary
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="50" format="html">
+<text><![CDATA[<p>
+ARDL model can be used if you want to find a long-term relationships between time series
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/moodlequiz/Exercise 6</text>
+</category>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> Q6 : base_week3_1_test_31_06_mch </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[
+<p>
+<p>Select all of the assumptions for ARMAX model</p>
+<p><span class="math display">\[y_t = c + \gamma a_t +  \beta_1 y_{t-1} + \ldots + \beta_p y_{t-p}  + u_t + \alpha_1 u_{t-1} + \ldots + \alpha_q u_{t-q }\]</span></p>
+<p>where <span class="math inline">\(a_t\)</span> is a predictors and <span class="math inline">\((u_t)\)</span> is white noise</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> False. <span class="math inline">\((y_t)\)</span> and <span class="math inline">\((a_t)\)</span> should be stationary </li>
+<li> False. <span class="math inline">\((y_t)\)</span> and <span class="math inline">\((a_t)\)</span> should be stationary </li>
+<li> True. </li>
+<li> True. </li>
+<li> True. </li>
+<li> True. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>false</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+Predictor <span class="math inline">\((a_t)\)</span> is non-stationary, but <span class="math inline">\(\Delta(a_t)\)</span> is stationary
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False. <span class="math inline">\((y_t)\)</span> and <span class="math inline">\((a_t)\)</span> should be stationary
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+Series <span class="math inline">\((y_t)\)</span> is non-stationary
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False. <span class="math inline">\((y_t)\)</span> and <span class="math inline">\((a_t)\)</span> should be stationary
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="25" format="html">
+<text><![CDATA[<p>
+Predictor <span class="math inline">\((a_t)\)</span> is stationary
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="25" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(E(a^4_t) &lt; \infty\)</span>
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="25" format="html">
+<text><![CDATA[<p>
+<span class="math inline">\(E(u_t \mid a_{t-1}, b_{t-1}, y_{t-1}, a_{t-2}, b_{t-2}, y_{t-2} , \ldots) = 0\)</span>
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="25" format="html">
+<text><![CDATA[<p>
+Series <span class="math inline">\((y_t)\)</span> is stationary
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/moodlequiz/Exercise 7</text>
+</category>
+</question>
+
+
+<question type="numerical">
+<name>
+<text> Q7 : base_week3_1_test_31_07_prog </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[
+<p>
+<p>Consider gas dataset. You need to estimate a linear regression model for the logarithm of gas series staring from 1970. Use square root of the trend as a regressor. Provide the forecast 10 steps ahead for the log(gas) rounded up to 3 decimal digits as an answer.</p>
+<p>You can load the gas dataset in R by importing forecast library or if you use other programming languages you can download it <a href="https://github.com/vincentarelbundock/Rdatasets/blob/master/csv/forecast/gas.csv">here</a>.</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>You can use lm() and predict() functions.</p>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<answer fraction="100" format="moodle_auto_format">
+<text>11.086</text>
+<tolerance>0.011</tolerance>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/moodlequiz/Exercise 8</text>
+</category>
+</question>
+
+
+<question type="numerical">
+<name>
+<text> Q8 : base_week3_1_test_31_08_prog </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[
+<p>
+<p>Consider LakeHuron dataset. You need to estimate a linear regression model with two regressors: sliding window for mean applied to 2 previous values and growing window for mean. Provide the R squared for the estimated model as an answer with 3 decimal digits.</p>
+<p>You can load the LakeHuron data set in R by issuing the following command at the console data(“LakeHuron”) or if you use other programming languages you can download it <a href="https://github.com/vincentarelbundock/Rdatasets/blob/master/csv/datasets/LakeHuron.csv">here</a>.</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>You can use cummean() and lag() functions to create regressors.</p>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<answer fraction="100" format="moodle_auto_format">
+<text>0.596</text>
+<tolerance>0.011</tolerance>
+</answer>
+</question>
+
+</quiz>

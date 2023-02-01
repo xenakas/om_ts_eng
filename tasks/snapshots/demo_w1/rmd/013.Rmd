@@ -1,0 +1,44 @@
+```{r data generation, echo = FALSE, results = 'hide'}
+## DATA GENERATION
+
+library(forecast)
+
+df <- stl(log(gas),s.window = 12, inner = 2, outer = 1)
+
+s <- df$time.series[,1]
+t <- df$time.series[,2]
+r <- df$time.series[,3]
+
+  
+id_f <- var(s)/(var(s)+var(r))
+
+pr_f <- 1-var(r)/var(s+r)
+
+
+
+
+
+sol_round <- round(pr_f,4)
+
+
+```
+
+Question
+========
+
+Consider gas dataset. You need to do STL with 2 inner and 1 outer loop for log(gas). Calculate the strength of seasonality using the ideal and practical formula. Choose the one that is bigger as an answer. Provide the answer rounded up to 4 decimal digits.
+
+You can load the gas dataset in R by importing forecast library or if you use other programming languages you can download it [here](https://github.com/vincentarelbundock/Rdatasets/blob/master/csv/forecast/gas.csv).
+
+
+Solution
+========
+
+Calculate strength of seasonality according to the formulas given in the lecture.
+
+Meta-information
+================
+exname:  STL - strength
+extype: num
+exsolution: `r sol_round`
+extol: 0.011

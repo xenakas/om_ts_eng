@@ -1,0 +1,35 @@
+Question
+========
+
+Consider ARDL model
+
+$$y_t = c+  \beta_1 y_{t-1} + \ldots + \beta_p y_{t-p} + x_t + \alpha_1 x_{t-1} + \ldots + \alpha_q x_{t-q }  + u_t. $$
+
+Which of the following statements about ARDL model  ARE correct? 
+
+Answerlist
+----------
+
+*  ARDL model can be used if you want to find a long-term relationships between time series
+*  ARDL model can model non-stationary $y_t$
+*  $(u_t)\sim ARMA(p,q)$ w.r.t. white noise
+*  ARDL model allows only one predictor for $y_t$ 
+
+
+
+
+Solution
+========
+
+Answerlist
+----------
+
+Check lecture about prediction with AR type models
+
+Meta-information
+================
+exname: F3 10 
+extype: mchoice
+exsolution: 1100
+exshuffle: 4
+

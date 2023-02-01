@@ -1,0 +1,33 @@
+Question
+========
+
+Select the characteristics of STL.
+
+Answerlist
+----------
+
+*  Trend in ETS model can't be negative
+*  In long run in model with damped trend the trend disappears  
+*  If the seasonal oscillation amplitude is decreasing over time it's better to use ETS without seasonal component
+*  If the seasonal oscillation amplitude is increasing over time you can use Box-Cox transformation
+
+
+Solution
+========
+
+Answerlist
+----------
+
+*  False. It can!
+*  True. 
+*  False. It's better to use model with multiplicative seasonality 
+*  True. 
+
+
+Meta-information
+================
+exname: ETS - AAdM
+extype: mchoice
+exsolution: 0101
+exshuffle: 4
+

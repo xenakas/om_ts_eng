@@ -1,0 +1,50 @@
+```{r data generation, echo = FALSE, results = 'hide'}
+## DATA GENERATION
+
+library(forecast)
+library(urca)
+options(scipen=999)
+
+
+a<-ur.df(diff(diff(log(gas)),12), type = 'none')
+a <- dput(a)
+
+sol_round <- round(attr(a, 'teststat')[1],2)
+
+
+
+```
+
+Question
+========
+
+Let's continue conducting a Box-Jenkins procedure for log(gas) time series. 
+
+
+You can load the gas dataset in R by importing forecast library or if you use other programming languages you can download it [here](https://github.com/vincentarelbundock/Rdatasets/blob/master/csv/forecast/gas.csv).
+
+
+
+Conduct a Dickey-Fuller unit root test without trend and constant to check whether after applying both first and seasonal differences the series become stationary.
+If the process is stationary give DF statistic as an answer, else give 0 as an answer.
+
+
+Provide the answer with 2 decimal digits.
+
+
+
+
+
+
+
+Solution
+========
+
+You can use ur.df(x, type = 'none') function.
+
+Meta-information
+================
+exname:  bj 
+extype: num
+exsolution: `r sol_round`
+extol: 0.001

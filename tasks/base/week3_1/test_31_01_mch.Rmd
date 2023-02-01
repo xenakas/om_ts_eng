@@ -1,0 +1,32 @@
+Question
+========
+
+Suppose you want to predict future values of $y_t$. Which of the following statements is correct? 
+
+Answerlist
+----------
+
+*  You cannot make predictions for  future values of $y_t$ using linear regression model
+*  Averaging forecasts from random forest algorithm and ETS model will improve forecast quality 
+*  When working with weekly data adding $L^7y_t$ as a regressor can improve forecast quality
+*  An example of growing window function is mean of 2 previous values 
+
+Solution
+========
+
+Answerlist
+----------
+
+*  False. You can!
+*  False. It depends on data
+*  True. 
+*  False. It's a sliding window function
+
+
+Meta-information
+================
+exname: Forecast 1
+extype: schoice
+exsolution: 0010
+exshuffle: 4
+

@@ -1,0 +1,35 @@
+```{r data generation, echo = FALSE, results = 'hide'}
+## DATA GENERATION
+library(forecast)
+
+
+df <- diff(diff(log(gas),12),1)
+ci<- qnorm((1 + 0.95)/2)/sqrt(sum(!is.na(df)))
+
+sol_round <- sum(abs(as.numeric(unlist(acf(df, plot = FALSE, lag.max = 20))[1:20]))>ci)-1
+sol_round
+
+```
+
+Question
+========
+
+Consider gas dataset. First, take logarithm, first difernece and seaasonal difference. Then calculate how many lags in ACF are significant. 
+
+
+You can load the gas dataset in R by importing forecast library or if you use other programming languages you can download it [here](https://github.com/vincentarelbundock/Rdatasets/blob/master/csv/forecast/gas.csv).
+
+
+
+
+Solution
+========
+
+Use acf(x, plot = FALSE) function.
+
+Meta-information
+================
+exname: Series Components - ACF 
+extype: num
+exsolution: `r sol_round`
+extol: 0

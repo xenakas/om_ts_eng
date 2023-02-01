@@ -1,0 +1,30 @@
+Question
+========
+
+Which of the following statements ARE correct? 		
+		
+Answerlist
+----------
+
+*  MAPE is scale-independent metric
+*  IF MASE is greater than one indicate then in-sample one-step forecasts from the naive method perform better than the forecast from the considered model 
+*  Diebold-Mariano-test can be used for pairwise comparison of 3 or more forecasts
+*  For growing window cross-validation there is a trade-off between the need for larger window size for precision and smaller window size to ensure the same time series dynamics persists 
+
+
+Solution
+========
+
+Answerlist
+----------
+
+Check lecture Model Quality.
+
+
+Meta-information
+================
+exname: F3 13
+extype: mchoice
+exsolution: 1100
+exshuffle: 4
+

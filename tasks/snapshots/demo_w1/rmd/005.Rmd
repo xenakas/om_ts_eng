@@ -1,0 +1,30 @@
+```{r data generation, echo = FALSE, results = 'hide'}
+## DATA GENERATION
+mu = 0.5 
+ss = 4
+
+
+
+sol_round <- round(2*1.96*sqrt(ss),2)
+
+
+```
+
+Question
+========
+
+Consider an independent observations model with  $u_t \sim (0, `r ss`)$. Construct a 95%  prediction  interval for independent observations model 100 steps ahead. Give the width of the interval as an answer. 
+
+Provide the answer with 2 decimal digits.
+
+Solution
+========
+
+Check lecture "Naive models".
+
+Meta-information
+================
+exname: Naive - IO 
+extype: num
+exsolution: `r sol_round`
+extol: 0.011

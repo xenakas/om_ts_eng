@@ -1,0 +1,28 @@
+
+\begin{question}
+Consider the following time series on Australian monthly gas production:
+
+\begin{figure}[H]
+\centering
+\includegraphics{unnamed-chunk-1-1-4.pdf}
+\caption{plot of chunk unnamed-chunk-1}
+\end{figure}
+
+Which model is more appropriate to use?
+\begin{answerlist}
+  \item Use \(ETS(AAA)\)
+  \item Use models with built in Box-Cox transformation
+  \item Use \(\ln y_t = \ln trend_t + \ln seas_t + \ln remainder_t\)
+  \item Use \(y_t = trend_t \cdot seas_t \cdot remainder_t\)
+\end{answerlist}
+\end{question}
+
+\begin{solution}
+\begin{answerlist}
+  \item False. Does not account for changing seasonality
+  \item True.
+  \item True.
+  \item True.
+\end{answerlist}
+\end{solution}
+

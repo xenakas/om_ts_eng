@@ -1,0 +1,38 @@
+```{r data generation, echo = FALSE, results = 'hide'}
+## DATA GENERATION
+
+library(forecast)
+options(scipen=999)
+
+mod <- Arima(diff(LakeHuron), order = c(2, 0, 0))
+fore <- forecast(mod,100)
+fore <- fore$upper-fore$lower
+sol_round <- round(fore[100,2] - fore[1,2],2)
+
+
+```
+
+Question
+========
+
+
+Consider LakeHuron dataset. 
+Estimate ARMA(2,0) model for the LakeHuron series.  Forecast 100 steps ahead and compare the width of prediction interval 100 steps ahead vs 1 step ahead.  Give the absolute value of the difference of the widths as an answer.
+
+Provide the answer with 2 decimal digits.
+
+
+You can load the gas dataset in R by importing forecast library or if you use other programming languages you can download it [here](https://github.com/vincentarelbundock/Rdatasets/blob/master/csv/forecast/gas.csv).
+
+
+Solution
+========
+
+You can use Arima(x, order = c(p, 0, 0)) function.
+
+Meta-information
+================
+exname:  arma - r 
+extype: num
+exsolution: `r sol_round`
+extol: 0.001

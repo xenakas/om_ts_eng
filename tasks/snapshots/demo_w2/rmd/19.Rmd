@@ -1,0 +1,49 @@
+```{r data generation, echo = FALSE, results = 'hide'}
+## DATA GENERATION
+
+library(forecast)
+options(scipen=999)
+
+```
+
+Question
+========
+
+Let's continue conducting a Box-Jenkins procedure for log(gas) time series. 
+
+
+You can load the gas dataset in R by importing forecast library or if you use other programming languages you can download it [here](https://github.com/vincentarelbundock/Rdatasets/blob/master/csv/forecast/gas.csv).
+
+
+
+```{r, echo = FALSE}
+ggtsdisplay(log(gas))
+
+```
+
+Is the process stationary?
+
+
+
+
+Answerlist
+----------
+* Yes, we can proceed with log(gas) time series
+* No, first differencing should be applied
+* No, seasonal differencing should be applied
+* No, both first and seasonal differencing should be applied
+
+
+Solution
+========
+
+Only if we apply both first and seasonal differences the mean will be stable over time. From analysing the ACF plot it is clear that there is a unit root and a seasonal unit root, but you can also check this using unit root tests. 
+
+
+Meta-information
+================
+exname: bj 
+extype: schoice
+exsolution: 0001
+exshuffle: 4
+

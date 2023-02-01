@@ -1,0 +1,90 @@
+```{r data generation, echo = FALSE, results = 'hide'}
+## DATA GENERATION
+library(forecast)
+```
+
+Question
+========
+
+Match ACF and PACF with their corresponding ARMA processes: 
+
+```{r, echo = FALSE}
+
+set.seed(666)
+
+
+a = arima.sim(n = 1000, list(ar = c(0.9, -0.2)),
+          sd = sqrt(0.1))
+
+
+par(mfrow = c(1, 2))
+acf(a, lag.max = 20)
+pacf(a, lag.max = 20)
+par(mfrow = c(1, 1))
+
+
+b = arima.sim(n = 1000, list(ar = c(0.9), ma = c(0.8, 0.7)),
+          sd = sqrt(0.1))
+
+
+par(mfrow = c(1, 2))
+acf(b, lag.max = 20)
+pacf(b, lag.max = 20)
+par(mfrow = c(1, 1))
+
+
+
+c = arima.sim(n = 1000, list(ma = c(0.9, -0.1)),  sd = sqrt(0.1))
+
+
+par(mfrow = c(1, 2))
+acf(c, lag.max = 20)
+pacf(c, lag.max = 20)
+par(mfrow = c(1, 1))
+
+
+
+
+d = arima.sim(n = 1000, list(ar = c(0.5)), sd = sqrt(0.1))
+  
+
+par(mfrow = c(1, 2))
+acf(d, lag.max = 20)
+pacf(d, lag.max = 20)
+par(mfrow = c(1, 1))
+
+
+
+
+```
+
+
+
+
+1. ARMA(2,0)
+
+2. ARMA(1,0)
+
+3. ARMA(1,2)
+
+4. ARMA(0,2) 
+
+
+
+
+
+Write down in the solution the sequence of numbers without spaces or delimeters corresponding to pairs of ACF and PACF in each case (e.g. 4231).
+
+Solution
+========
+
+A gradual geometrically declining ACF and a PACF that is significant for only a few lags indicate an AR process. MA process shows a gradually geometrically declining PACF and the ACF has a few significant lags. An ARMA process is indicated by geometrically filling ACF and PACF. 
+
+
+Meta-information
+================
+exname: F2 6
+extype: num
+exsolution: 1342
+extol: 0
+	

@@ -1,0 +1,31 @@
+```{r data generation, echo = FALSE, results = 'hide'}
+## DATA GENERATION
+library(forecast)
+
+sol_round <- round(as.numeric(unlist(acf(LakeHuron, plot = FALSE)[6])[1]),4)
+
+
+
+```
+
+Question
+========
+
+Consider LakeHuron dataset. You need to calculate sample ACF(6). Provide the answer with 4 decimal digits.
+
+
+
+You can load the LakeHuron data set in R by issuing the following command at the console data("LakeHuron") or if you use other programming languages you can download it [here](https://github.com/vincentarelbundock/Rdatasets/blob/master/csv/datasets/LakeHuron.csv).
+
+
+Solution
+========
+
+Use acf(x, plot = FALSE) function.
+
+Meta-information
+================
+exname: Series Components - ACF 
+extype: num
+exsolution: `r sol_round`
+extol: 0.011

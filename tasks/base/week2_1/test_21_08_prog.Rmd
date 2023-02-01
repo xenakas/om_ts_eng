@@ -1,0 +1,38 @@
+```{r data generation, echo = FALSE, results = 'hide'}
+## DATA GENERATION
+
+library(forecast)
+options(scipen=999)
+
+mod <- Arima(diff(gas), order = c(0, 0, 12))
+
+fore <- forecast(mod,20)
+
+
+sol_round <- round(fore$mean[12],2)
+
+
+
+
+```
+
+Question
+========
+
+Consider gas dataset. Estimate MA(12) model for the first differene of gas series.  Find point forecast 12 steps aheaad.  Provide the answer with 2 decimal digits.
+
+
+You can load the gas dataset in R by importing forecast library or if you use other programming languages you can download it [here](https://github.com/vincentarelbundock/Rdatasets/blob/master/csv/forecast/gas.csv).
+
+
+Solution
+========
+
+You can use Arima(x, order = c(0, 0, q)) function.
+
+Meta-information
+================
+exname:  ma - r 
+extype: num
+exsolution: `r sol_round`
+extol: 0.001

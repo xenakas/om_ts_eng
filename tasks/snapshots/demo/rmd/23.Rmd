@@ -1,0 +1,26 @@
+Question
+========
+
+Consider the process $x_t = 0.5  x_{t−1} +  2 u_{t−1} + u_{t}$, where $u_t$ is a white noise process.
+
+
+Answerlist
+----------
+* invertible and stationary
+* non-invertible and stationary
+* invertible and non-stationary
+* non-invertible and non-stationary
+
+Solution
+========
+
+Non-invertible since root of MA polynomial is not outside unit circle.
+Non-stationary, since root of AR polynomial is outside unit circle.
+
+Meta-information
+================
+exname: F3 7 
+extype: schoice
+exsolution: 0100
+exshuffle: 4
+

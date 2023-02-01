@@ -1,0 +1,32 @@
+```{r data generation, echo = FALSE, results = 'hide'}
+## DATA GENERATION
+v = 3 
+r = 0.8
+sol_round = round(v/(1-r^2),3)
+
+```
+
+
+Question
+========
+
+
+Consider a process  $y_t  = 4 + 0.8 y_{t-1}  + u_t$, where $u_t$ is a white noise with variance 3.  
+
+Find it's autocovariance function $\gamma_k$. Give $\gamma_0$ as an answer. Provide the answer with 3 decimal digits.
+
+
+
+
+Solution
+========
+
+You are need to find the variance of $y_t$. Note, that the process is stationary, so its variance does not change over time.
+
+
+Meta-information
+================
+exname: ar var
+extype: num
+exsolution: `r sol_round`
+extol: 0.011

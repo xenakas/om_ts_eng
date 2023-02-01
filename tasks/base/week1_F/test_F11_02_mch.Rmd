@@ -1,0 +1,33 @@
+Question
+========
+
+Which of the following is correct?
+
+Answerlist
+----------
+
+*  To estimate STL components generalized method of moments is used
+*  By l'Hopital's rule Taking a limit for of a Box-Cox transformation at $\lambda=0$ will be equal to a logarithm 
+*  Seasonal component is observed within one period, while cyclical component can have periodicity varying over time and span over several periods
+*  Naive random walk can't predict better than ETS(AAdA)
+
+
+Solution
+========
+
+Answerlist
+----------
+
+*  False. It's an iterative procedure
+*  True. 
+*  True. 
+*  False. Depends on the series 
+
+
+Meta-information
+================
+exname: all Coxy
+extype: mchoice
+exsolution: 0110
+exshuffle: 4
+

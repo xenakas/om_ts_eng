@@ -1,0 +1,34 @@
+Question
+========
+
+Select the characteristics of STL.
+
+Answerlist
+----------
+
+*  Seasonal component should not change over time 
+*  Errors should be uniformely distributed
+*  STL does not have an underlying model
+*  STL can provide the confidence interval for the seasonal component
+*  STL can only provide the confidence interval for the predicted values
+
+Solution
+========
+
+Answerlist
+----------
+
+*  False. No assumptions for DGP are required
+*  False. No assumptions for DGP are required		
+*  True. 
+*  False. STL is not a model
+*  False. STL is not a model
+
+
+Meta-information
+================
+exname: Data and Tasks - STL    
+extype: mchoice
+exsolution: 00100
+exshuffle: 5
+

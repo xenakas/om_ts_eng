@@ -1,0 +1,11 @@
+
+\begin{question}
+Consider gas dataset. You need to do STL with 2 inner and 1 outer loop for log(gas). Next check whether the variance of the first half of the seasonal component equals to the second using F-test. Provide the p-value rounded up to 2 decimal digits.
+
+You can load the gas dataset in R by importing forecast library or if you use other programming languages you can download it \href{https://github.com/vincentarelbundock/Rdatasets/blob/master/csv/forecast/gas.csv}{here}.
+\end{question}
+
+\begin{solution}
+You can use var.test(x, y, alternative = ``two.sided'').
+\end{solution}
+

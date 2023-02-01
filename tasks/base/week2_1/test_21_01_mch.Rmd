@@ -1,0 +1,29 @@
+Question
+========
+
+Consider the following process $y_t = 3t + y_{t-1}+u_t$, where $u_t$ is a whte noise.
+Which of the weakly stationarity conditions are violated.
+
+
+Answerlist
+----------
+
+*  Constant mean 
+*  Constant variance  
+*  Autocovariance function depends only on the difference between time indexes
+*  None of the conditions are violated, the process is stationary
+
+
+Solution
+========
+
+Check mean and covariance functions.
+
+
+Meta-information
+================
+exname: stat cond
+extype: mchoice
+exsolution: 1110
+exshuffle: 4
+

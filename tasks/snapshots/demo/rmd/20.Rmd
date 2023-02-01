@@ -1,0 +1,33 @@
+```{r data generation, echo = FALSE, results = 'hide'}
+## DATA GENERATION
+
+var = 4 
+sol_round <- var  +  0.8^2 * var
+
+
+```
+
+
+Question
+========
+
+
+Consider a process   $y_t  = -1  +  u_t + 0.8 u_{t-1} - 0.4  u_{t-2}$, where $u_t$ is a white noise with variance 4.  
+
+Construct an 95% prediction interval 2 steps ahead, given that $\hat{u}_T=0.5,  \hat{u}_{T-1}=-0.3$.  
+Provide the  variance of the point forecast  rounded to  3 decimal digits as the answer.
+
+
+
+Solution
+========
+
+The variance of the point forecast will be equal to $Var(y_{t+2}\mid \mathcal{F}_t) =  Var(u_{t+2} + 0.8 u_{t+1}  \mid \mathcal{F}_t)$
+
+
+Meta-information
+================
+exname: F2 4
+extype: num
+exsolution: `r sol_round`
+extol: 0.011

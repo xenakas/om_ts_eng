@@ -1,0 +1,50 @@
+```{r data generation, echo = FALSE, results = 'hide'}
+## DATA GENERATION
+library(forecast)
+library(ggplot2)
+library(patchwork)
+```
+
+Question
+========
+
+Consider the following time series on Australian monthly gas production: 
+
+```{r, echo = FALSE}
+autoplot(gas)
+```
+
+We have applied Box-Cox transformation with different parameters:
+
+```{r, echo = FALSE}
+
+A = BoxCox(gas,1)
+B = BoxCox(gas,0)
+C = BoxCox(gas,0.5)
+D = BoxCox(gas,-2)
+
+(autoplot(A)/autoplot(B)/autoplot(C)/autoplot(D))
+```
+
+1. $\lambda=-2$
+
+2. $\lambda=0$
+
+3. $\lambda=1$
+
+4. $\lambda=0.5$
+
+Write down in the solution the sequence of numbers without spaces or delimeters corresponding to parameters of Box-Cox transformation $\lambda_A,\lambda_B,\lambda_C,\lambda_D$ applied in each case (e.g. 4231).
+
+Solution
+========
+
+Suppose $y^{bc}$ is transformed data. If $\lambda=0$, the transformation is equivalent to $y^{bc}=\ln(y)$, if $\lambda=1$ it's $y^{bc}=y$, if $\lambda=0.5$ it's $y^{bc}=\sqrt{y}$,  if $\lambda=-2$ it's $y^{bc}=y^{-2}$.
+
+Meta-information
+================
+exname: Series Components - Box-Cox lambda
+extype: num
+exsolution: 3241
+extol: 0
+	

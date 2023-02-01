@@ -1,0 +1,31 @@
+```{r data generation, echo = FALSE, results = 'hide'}
+## DATA GENERATION
+mu = 0 
+ss = 0.01 
+h = 100
+
+sol_round <- round(sqrt(100),2)
+
+
+
+```
+
+Question
+========
+
+Consider an independent observations model with  $u_t \sim (0, `r ss`)$. Construct two 95%  prediction  interval for random walk model and independent observations model 100 steps ahead. How many times the width of the random walk PI  is bigger than of independent observations PI?
+
+
+Provide the answer with 2 decimal digits.
+
+Solution
+========
+
+Check lecture "Naive models".
+
+Meta-information
+================
+exname: Naive - IO RW 
+extype: num
+exsolution: `r sol_round`
+extol: 0.011

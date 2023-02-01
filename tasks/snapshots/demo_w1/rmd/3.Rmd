@@ -1,0 +1,33 @@
+Question
+========
+
+Which of the following statements are true?
+
+Answerlist
+----------
+
+* You can model stationary process using random walk model. 
+*	There is no model to approximate dynamics of non-stationary time series.
+*	A very complex model can perform worse than a naive independent observations model.
+*	You can improve forecast quality by averaing forecasts of a complex model and a naive one.
+
+Solution
+========
+
+Answerlist
+----------
+
+* False. The stationary series models are similar to the independent observations model; non-stationary series models are similar to a random walk.
+*	False. The stationary series models are similar to the independent observations model; non-stationary series models are similar to a random walk.
+*	True. 
+*	True. 
+
+
+Meta-information
+================
+exname: Naive Models - MCh
+extype: mchoice
+exsolution: 0011
+exshuffle: 5
+
+	

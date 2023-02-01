@@ -13,7 +13,7 @@
 		\item Definition and notations with lags
 		\item Stationarity
 		\item Predictability
-		\item Reversibility
+		\item Invertibility
 	\end{itemize}
 	
 \end{frame}
@@ -221,17 +221,17 @@
 
 
 \begin{frame}
-	\frametitle{Reversibility condition}
+	\frametitle{Invertibility condition}
 	
 	\begin{block}{Characteristic representation}
-		The equation $MA(q)$ of the process satisfies the reversibility condition if
+		The equation $MA(q)$ of the process satisfies the invertibility  condition if
 		the characteristic polynomial $\phi(\lambda)$ has all roots $\abs{\lambda_i} <1$
 	\end{block}
 	
 	\pause
 	
 	\begin{block}{Lag representation}
-		The equation $MA(q)$ of the process satisfies the reversibility condition if all roots  of 
+		The equation $MA(q)$ of the process satisfies the invertibility condition if all roots  of 
 		the lag polynomial $P(L)$ are  $\abs{\ell_i} >1$
 	\end{block}
 	
@@ -239,7 +239,7 @@
 \end{frame}
 
 \begin{frame}
-	\frametitle{Example of reversible notation $MA(1)$}
+	\frametitle{Example of invertible $MA(1)$ notation }
 	
 	\[
 	y_t = 5 + u_t + 0.5 u_{t-1}, \quad \sigma^2_u = 4
@@ -260,7 +260,7 @@
 
 
 \begin{frame}
-	\frametitle{Example of $MA(1)$ irreversible notation}
+	\frametitle{Example of noninvertible  $MA(1)$  notation}
 	
 	\[
 	y_t = 5 + u_t + 2 u_{t-1}, \quad \sigma^2_u = 1
@@ -285,11 +285,11 @@
 	\begin{block}{Difference}
 		Stationarity is a property of the $(y_t)$ process itself.
 		
-		Reversibility is a property of the equation (process  notation) for~$(y_t)$.
+		Invertibility is a property of the equation (process  notation) for~$(y_t)$.
 	\end{block}
 	
 	\pause
-    $MA(q)$ has a single notation when reversible
+    $MA(q)$ has a single notation when invertible
 	
 \end{frame}
 
@@ -302,7 +302,7 @@
 		\item $MA(q)$ — weighting of several white noises
 		\item $MA(q)$ is a stationary process
 		\item $ACF$ vanishes sharply, $PACF$ tends to zero
- 		\item Reversibility condition: roots of the characteristic polynomial $\abs{\lambda_i} < 1$ or 
+ 		\item Invertibility condition: roots of the characteristic polynomial $\abs{\lambda_i} < 1$ or 
 		roots of the lag polynomial $\abs{\ell_i} > 1$.
 	\end{itemize}
 \end{frame}
