@@ -35,11 +35,6 @@ Which of the weakly stationarity conditions are violated.</p>
 Autocovariance function depends only on the difference between time indexes
 </p>]]></text>
 </answer>
-<answer fraction="-50" format="html">
-<text><![CDATA[<p>
-None of the conditions are violated, the process is stationary
-</p>]]></text>
-</answer>
 <answer fraction="33.33333" format="html">
 <text><![CDATA[<p>
 Constant mean
@@ -48,6 +43,11 @@ Constant mean
 <answer fraction="33.33333" format="html">
 <text><![CDATA[<p>
 Constant variance
+</p>]]></text>
+</answer>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+None of the conditions are violated, the process is stationary
 </p>]]></text>
 </answer>
 </question>

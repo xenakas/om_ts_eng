@@ -13,7 +13,7 @@ library(rexamsconverter)
 
 
 files_df = tibble(filename = list.files('../base/', pattern = "*.Rmd", full.names = TRUE, recursive = TRUE))
-files_df = filter(files_df, str_detect(filename, "week1"))
+files_df = filter(files_df, str_detect(filename, "week3"))
 
 res = exams2pdf_source(files_df$filename, date = "2019-09-27", 
                        add_seed = 777,

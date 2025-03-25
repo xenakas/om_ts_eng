@@ -1,0 +1,33 @@
+Question
+========
+
+Which of the following statements ARE correct? 
+
+Answerlist
+----------
+
+*  ARDL model can be used if you want to find a long-term relationships between time series
+*  ARMAX can work with non-stationary predictors
+*  In ARDL model lags of the predictors are used instead of noise lags $u_t$
+*  In regression with ARMA errors you can use no more than two predictors  
+
+
+Solution
+========
+
+Answerlist
+----------
+
+*  True.
+*  False. In ARMAX regressors should be stationary
+*  True. 
+*  False. You can use as many predictors as you like (unless you have enough data) 
+
+
+Meta-information
+================
+exname: Forecast 5
+extype: mchoice
+exsolution: 1010
+exshuffle: 4
+

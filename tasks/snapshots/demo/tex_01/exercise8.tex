@@ -1,0 +1,13 @@
+
+\begin{question}
+Consider tsAirgap dataset on monthly totals of international airline passengers with missing values filled in with linear interpolation.
+
+Apply the log transform and then remove the linear trend. Check if there are any structural breaks using Binary Segmentation method. Give the number of structural breaks as an answer.
+
+You can load the tsAirgap data set in R by issuing the following command at the console data(``tsAirgap'') after importing ``imputeTS'' library or if you use other programming languages you can download it \href{https://github.com/SteffenMoritz/imputeTS/blob/master/data/tsAirgap.rda}{here}.
+\end{question}
+
+\begin{solution}
+You can use cpt.mean(ts, method = `BinSeg', Q = 1) function.
+\end{solution}
+

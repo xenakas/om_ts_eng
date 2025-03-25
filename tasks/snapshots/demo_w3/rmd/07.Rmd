@@ -1,0 +1,38 @@
+```{r data generation, echo = FALSE, results = 'hide'}
+## DATA GENERATION
+
+library(forecast)
+library(dplyr)
+
+df <- tail(log(gas),308)
+
+df <- data_frame(df)
+
+df <- mutate(df, t=sqrt(1:308))
+
+mod <- lm(df~t, data = df)
+
+sol_round <- round(predict(mod, data.frame(t=sqrt(308+10))),3)
+
+
+```
+
+Question
+========
+
+Consider gas dataset. You need to estimate a linear regression model for the logarithm of gas series staring from 1970. Use square root of the trend as a regressor. Provide the forecast 10 steps ahead for the log(gas) rounded up to 3 decimal digits as an answer.
+
+You can load the gas dataset in R by importing forecast library or if you use other programming languages you can download it [here](https://github.com/vincentarelbundock/Rdatasets/blob/master/csv/forecast/gas.csv).
+
+
+Solution
+========
+
+You can use lm() and predict() functions.
+
+Meta-information
+================
+exname: Forecast 7
+extype: num
+exsolution: `r sol_round`
+extol: 0.011

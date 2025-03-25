@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+
+
+<question type="category">
+<category>
+<text>$course$/moodlequiz/Exercise 1</text>
+</category>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> Q1 : base_week4_1_test_41_01_mch </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[
+<p>
+<p>Select ALL methods that can be used to fill in the missing data:</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> False. Linear interpolation of the deseasonalized component of the STL decomposition + a seasonal component </li>
+<li> True. </li>
+<li> False. </li>
+<li> True. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>false</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+Linear interpolation of the seasonal component of the STL decomposition
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False. Linear interpolation of the deseasonalized component of the STL decomposition + a seasonal component
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="50" format="html">
+<text><![CDATA[<p>
+Filling in with the conditional mathematical expectation using Kalman filter
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+Random number drawn from Cauchy distribution
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="50" format="html">
+<text><![CDATA[<p>
+Fill in missing values with previous value
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/moodlequiz/Exercise 2</text>
+</category>
+</question>
+
+
+<question type="numerical">
+<name>
+<text> Q2 : base_week4_1_test_41_02_num </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[
+<p>
+<p>Consider a sample <span class="math inline">\(y^T = [1.22, 1.61, 2.69, NA, 2.53, 4.97]\)</span> with missing value. Fill in the missing value using linear interpolation.</p>
+<p>Provide the answer with 2 decimal digits.</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>Check lecture “Handling Missing Data”.</p>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<answer fraction="100" format="moodle_auto_format">
+<text>2.61</text>
+<tolerance>0.011</tolerance>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/moodlequiz/Exercise 3</text>
+</category>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> Q3 : base_week4_1_test_41_03_mch </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[
+<p>
+<p>Which of the following statements ARE correct?</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> False. Some models are robust to outliers, also categorizing the observations into anomalous and ordinary one is subjective in the first place </li>
+<li> False. This depends on data </li>
+<li> True. </li>
+<li> True. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>false</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+You should always remove the anomalous observations
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False. Some models are robust to outliers, also categorizing the observations into anomalous and ordinary one is subjective in the first place
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+Filling in the missing values with linear interpolation always give worse results than using a modelling approach
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False. This depends on data
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="50" format="html">
+<text><![CDATA[<p>
+Structural breaks may relate to any sudden change in time series pattern, i.e. sudden volatility change
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="50" format="html">
+<text><![CDATA[<p>
+Whether an observation would be considered anomalous or not depends on an underlying model
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/moodlequiz/Exercise 4</text>
+</category>
+</question>
+
+
+<question type="numerical">
+<name>
+<text> Q4 : base_week4_1_test_41_03_num </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[
+<p>
+<p>Consider a sample <span class="math inline">\(y^T = [4.22, 666, 4.09, 4.12, 1.72, 5.44]\)</span>. Say, you want to detect an outlier based on the residuals of a model on a constant <span class="math inline">\(y_t=c+u_t\)</span>, where <span class="math inline">\(u_t\)</span> is a white noise. Give a new value for an outlier rounded to 2 decimal digits as an answer if there is one, else give 0 as an answer.</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>Check Anomaly detection algorithm from lecture “Anomaly detection”.</p>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<answer fraction="100" format="moodle_auto_format">
+<text>0</text>
+<tolerance>0.011</tolerance>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/moodlequiz/Exercise 5</text>
+</category>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> Q5 : base_week4_1_test_41_04_mch </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[
+<p>
+<p>Which of the following statements IS correct?</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<ol type = "a">
+<li> False. Point of changes of the series behavior is subjective and depends on data and underlying model. </li>
+<li> False. This depends on data, multiple structural breaks can be as probable as single ones. </li>
+<li> False. They can be applied to transformed data as well as to individual components </li>
+<li> True. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>true</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+There can only be one correct to identify the structural break
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False. Point of changes of the series behavior is subjective and depends on data and underlying model.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+Usually it’s enough to consider only one structural break
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False. This depends on data, multiple structural breaks can be as probable as single ones.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+Structural break detection algorithms should be applied to initial time series
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False. They can be applied to transformed data as well as to individual components
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+The structural break can be detected by comparing heterogeneity of the the time series subsets with heterogeneity of the entire series
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/moodlequiz/Exercise 6</text>
+</category>
+</question>
+
+
+<question type="numerical">
+<name>
+<text> Q6 : base_week4_1_test_41_05_prog </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[
+<p>
+<p>Consider tsAirgap dataset on monthly totals of international airline passengers with missing values. You need to fill in the missing data using (1) Kalman Filtering based on ARIMA model with automatically chosen parameters and (2) linear interpolation. Provide the absolute value of mean difference of the imputed values rounded with 3 decimal digits as an answer.</p>
+<p>You can load the tsAirgap data set in R by issuing the following command at the console data(“tsAirgap”) after importing “imputeTS” library or if you use other programming languages you can download it <a href="https://github.com/SteffenMoritz/imputeTS/blob/master/data/tsAirgap.rda">here</a>.</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>You can use na_kalman(ts, model = ‘auto.arima’) and na_interpolation(ts) function.</p>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<answer fraction="100" format="moodle_auto_format">
+<text>5.772</text>
+<tolerance>0.01</tolerance>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/moodlequiz/Exercise 7</text>
+</category>
+</question>
+
+
+<question type="numerical">
+<name>
+<text> Q7 : base_week4_1_test_41_06_prog </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[
+<p>
+<p>Consider tsAirgap dataset on monthly totals of international airline passengers with missing values filled in with linear interpolation.</p>
+<p>Let’s say 37th observation of that series is equal to 0.</p>
+<p>Remove anomalies based on STL decomposition. Provide the absolute value of mean difference of the initial 37th observation and the imputed value rounded with 3 decimal digits as an answer.</p>
+<p>You can load the tsAirgap data set in R by issuing the following command at the console data(“tsAirgap”) after importing “imputeTS” library or if you use other programming languages you can download it <a href="https://github.com/SteffenMoritz/imputeTS/blob/master/data/tsAirgap.rda">here</a>.</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>You can use time_decompose() %&gt;% anomalize(remainder) %&gt;% time_recompose() and clean_anomalies() functions.</p>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<answer fraction="100" format="moodle_auto_format">
+<text>7.861</text>
+<tolerance>0.01</tolerance>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/moodlequiz/Exercise 8</text>
+</category>
+</question>
+
+
+<question type="numerical">
+<name>
+<text> Q8 : base_week4_1_test_41_07_prog </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[
+<p>
+<p>Consider tsAirgap dataset on monthly totals of international airline passengers with missing values filled in with linear interpolation.</p>
+<p>Apply the log transform and then remove the linear trend. Check if there are any structural breaks using Binary Segmentation method. Give the number of structural breaks as an answer.</p>
+<p>You can load the tsAirgap data set in R by issuing the following command at the console data(“tsAirgap”) after importing “imputeTS” library or if you use other programming languages you can download it <a href="https://github.com/SteffenMoritz/imputeTS/blob/master/data/tsAirgap.rda">here</a>.</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>You can use cpt.mean(ts, method = ‘BinSeg’, Q = 1) function.</p>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<answer fraction="100" format="moodle_auto_format">
+<text>0</text>
+<tolerance>0</tolerance>
+</answer>
+</question>
+
+</quiz>

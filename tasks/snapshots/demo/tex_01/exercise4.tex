@@ -1,0 +1,11 @@
+
+\begin{question}
+Consider tsAirgap dataset on monthly totals of international airline passengers with missing values. You need to fill in the missing data using (1) Kalman Filtering based on ARIMA model with automatically chosen parameters and (2) linear interpolation. Provide the absolute value of mean difference of the imputed values rounded with 3 decimal digits as an answer.
+
+You can load the tsAirgap data set in R by issuing the following command at the console data(``tsAirgap'') after importing ``imputeTS'' library or if you use other programming languages you can download it \href{https://github.com/SteffenMoritz/imputeTS/blob/master/data/tsAirgap.rda}{here}.
+\end{question}
+
+\begin{solution}
+You can use na\_kalman(ts, model = `auto.arima') and na\_interpolation(ts) function.
+\end{solution}
+

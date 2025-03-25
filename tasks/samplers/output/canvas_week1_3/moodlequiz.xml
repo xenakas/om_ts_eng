@@ -23,9 +23,9 @@
 <text><![CDATA[<p>
 <ol type = "a">
 <li> True. </li>
-<li> True. </li>
-<li> True. </li>
 <li> False. You also need to estimate starting obrevation <span class="math inline">\(\ell_0\)</span> and variance of the error term <span class="math inline">\(\sigma^2\)</span> </li>
+<li> True. </li>
+<li> True. </li>
 </ol>
 </p>]]></text>
 </generalfeedback>
@@ -34,26 +34,6 @@
 <shuffleanswers>false</shuffleanswers>
 <single>false</single>
 <answernumbering>abc</answernumbering>
-<answer fraction="33.33333" format="html">
-<text><![CDATA[<p>
-Forecast 10 steps ahead for ETS(ANN) is the last observation
-</p>]]></text>
-<feedback format="html">
-<text><![CDATA[<p>
-True.
-</p>]]></text>
-</feedback>
-</answer>
-<answer fraction="33.33333" format="html">
-<text><![CDATA[<p>
-Formally there are 30 options for ETS model
-</p>]]></text>
-<feedback format="html">
-<text><![CDATA[<p>
-True.
-</p>]]></text>
-</feedback>
-</answer>
 <answer fraction="33.33333" format="html">
 <text><![CDATA[<p>
 ETS is estimated using MLE
@@ -71,6 +51,26 @@ To estimate ETS(ANN) model you only need to estimate one parameter in the trend 
 <feedback format="html">
 <text><![CDATA[<p>
 False. You also need to estimate starting obrevation <span class="math inline">\(\ell_0\)</span> and variance of the error term <span class="math inline">\(\sigma^2\)</span>
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+Forecast 10 steps ahead for ETS(ANN) is the last observation
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="33.33333" format="html">
+<text><![CDATA[<p>
+Formally there are 30 options for ETS model
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+True.
 </p>]]></text>
 </feedback>
 </answer>
@@ -98,9 +98,9 @@ False. You also need to estimate starting obrevation <span class="math inline">\
 <text><![CDATA[<p>
 <ol type = "a">
 <li> True. </li>
+<li> False. It’s better to use model with multiplicative seasonality </li>
 <li> True. </li>
 <li> False. It can! </li>
-<li> False. It’s better to use model with multiplicative seasonality </li>
 </ol>
 </p>]]></text>
 </generalfeedback>
@@ -116,6 +116,16 @@ In long run in model with damped trend the trend disappears
 <feedback format="html">
 <text><![CDATA[<p>
 True.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+If the seasonal oscillation amplitude is decreasing over time it’s better to use ETS without seasonal component
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False. It’s better to use model with multiplicative seasonality
 </p>]]></text>
 </feedback>
 </answer>
@@ -136,16 +146,6 @@ Trend in ETS model can’t be negative
 <feedback format="html">
 <text><![CDATA[<p>
 False. It can!
-</p>]]></text>
-</feedback>
-</answer>
-<answer fraction="-50" format="html">
-<text><![CDATA[<p>
-If the seasonal oscillation amplitude is decreasing over time it’s better to use ETS without seasonal component
-</p>]]></text>
-<feedback format="html">
-<text><![CDATA[<p>
-False. It’s better to use model with multiplicative seasonality
 </p>]]></text>
 </feedback>
 </answer>

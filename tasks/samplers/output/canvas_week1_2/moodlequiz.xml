@@ -22,9 +22,9 @@
 <generalfeedback format="html">
 <text><![CDATA[<p>
 <ol type = "a">
-<li> True. </li>
-<li> False. No it’s applied to seasonal subcomponents <span class="math inline">\(C_t\)</span> </li>
 <li> False. The weights are recalculated on each iteration of the algorithm depending on <span class="math inline">\(R_t\)</span>. </li>
+<li> False. No it’s applied to seasonal subcomponents <span class="math inline">\(C_t\)</span> </li>
+<li> True. </li>
 <li> True. </li>
 </ol>
 </p>]]></text>
@@ -34,13 +34,13 @@
 <shuffleanswers>false</shuffleanswers>
 <single>false</single>
 <answernumbering>abc</answernumbering>
-<answer fraction="50" format="html">
+<answer fraction="-50" format="html">
 <text><![CDATA[<p>
-Increasing the number of iterations of the outer loop can help in case of severe outliers
+The weights for the outer loop should be chosen by cross-validation
 </p>]]></text>
 <feedback format="html">
 <text><![CDATA[<p>
-True.
+False. The weights are recalculated on each iteration of the algorithm depending on <span class="math inline">\(R_t\)</span>.
 </p>]]></text>
 </feedback>
 </answer>
@@ -54,19 +54,19 @@ False. No it’s applied to seasonal subcomponents <span class="math inline">\(C
 </p>]]></text>
 </feedback>
 </answer>
-<answer fraction="-50" format="html">
+<answer fraction="50" format="html">
 <text><![CDATA[<p>
-The weights for the outer loop should be chosen by cross-validation
+The algorithm contains two loops: outer and inner loop
 </p>]]></text>
 <feedback format="html">
 <text><![CDATA[<p>
-False. The weights are recalculated on each iteration of the algorithm depending on <span class="math inline">\(R_t\)</span>.
+True.
 </p>]]></text>
 </feedback>
 </answer>
 <answer fraction="50" format="html">
 <text><![CDATA[<p>
-The algorithm contains two loops: outer and inner loop
+Increasing the number of iterations of the outer loop can help in case of severe outliers
 </p>]]></text>
 <feedback format="html">
 <text><![CDATA[<p>
@@ -97,10 +97,10 @@ True.
 <generalfeedback format="html">
 <text><![CDATA[<p>
 <ol type = "a">
-<li> True. </li>
+<li> False. You can use any kernel function </li>
 <li> False. It works other way around </li>
 <li> True. </li>
-<li> False. You can use any kernel function </li>
+<li> True. </li>
 </ol>
 </p>]]></text>
 </generalfeedback>
@@ -109,13 +109,13 @@ True.
 <shuffleanswers>false</shuffleanswers>
 <single>false</single>
 <answernumbering>abc</answernumbering>
-<answer fraction="50" format="html">
+<answer fraction="-50" format="html">
 <text><![CDATA[<p>
-You can predict using LOESS
+You can only use normal Kernel function
 </p>]]></text>
 <feedback format="html">
 <text><![CDATA[<p>
-True.
+False. You can use any kernel function
 </p>]]></text>
 </feedback>
 </answer>
@@ -139,13 +139,13 @@ True.
 </p>]]></text>
 </feedback>
 </answer>
-<answer fraction="-50" format="html">
+<answer fraction="50" format="html">
 <text><![CDATA[<p>
-You can only use normal Kernel function
+You can predict using LOESS
 </p>]]></text>
 <feedback format="html">
 <text><![CDATA[<p>
-False. You can use any kernel function
+True.
 </p>]]></text>
 </feedback>
 </answer>
@@ -204,8 +204,8 @@ False. You can use any kernel function
 <generalfeedback format="html">
 <text><![CDATA[<p>
 <ol type = "a">
-<li> False. You can! </li>
 <li> False. This is ACF(3) </li>
+<li> False. You can! </li>
 <li> True. </li>
 <li> True. </li>
 </ol>
@@ -218,21 +218,21 @@ False. You can use any kernel function
 <answernumbering>abc</answernumbering>
 <answer fraction="-50" format="html">
 <text><![CDATA[<p>
-You can’t cluster time series just by using ACF and PACF features.
-</p>]]></text>
-<feedback format="html">
-<text><![CDATA[<p>
-False. You can!
-</p>]]></text>
-</feedback>
-</answer>
-<answer fraction="-50" format="html">
-<text><![CDATA[<p>
 PACF(3) shows how <span class="math inline">\(y_{t-3}\)</span> influences <span class="math inline">\(y_t\)</span> on average.
 </p>]]></text>
 <feedback format="html">
 <text><![CDATA[<p>
 False. This is ACF(3)
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+You can’t cluster time series just by using ACF and PACF features.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False. You can!
 </p>]]></text>
 </feedback>
 </answer>

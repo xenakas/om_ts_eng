@@ -1,0 +1,15 @@
+
+\begin{question}
+Consider tsAirgap dataset on monthly totals of international airline passengers with missing values filled in with linear interpolation.
+
+Let's say 37th observation of that series is equal to 0.
+
+Remove anomalies based on STL decomposition. Provide the absolute value of mean difference of the initial 37th observation and the imputed value rounded with 3 decimal digits as an answer.
+
+You can load the tsAirgap data set in R by issuing the following command at the console data(``tsAirgap'') after importing ``imputeTS'' library or if you use other programming languages you can download it \href{https://github.com/SteffenMoritz/imputeTS/blob/master/data/tsAirgap.rda}{here}.
+\end{question}
+
+\begin{solution}
+You can use time\_decompose() \%\textgreater\% anomalize(remainder) \%\textgreater\% time\_recompose() and clean\_anomalies() functions.
+\end{solution}
+
